@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Turbine Engine</title>
+	<title>Defensive Publication: The Turbine-Gatling Engine</title>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 	<style>
 		body {
@@ -84,7 +84,7 @@
 
 <body>
 	<div class="container">
-		<h1>Defensive Publication: Separated Compression and Turbine-Based Combustion Engine System</h1>
+		<h1>Defensive Publication: The Turbine-Gatling Engine System</h1>
 		<div class="abstract">
 			<strong>Abstract:</strong> This disclosure describes an innovative power generation system that fundamentally separates the compression stage from the combustion and expansion stages. An external air compression system (using any compression technology such as rotary screw, reciprocating piston, centrifugal, or variable displacement compressor) supplies high-pressure air at a target compression ratio (e.g., 25:1) to a turbine-based combustion engine. The combustion engine operates with a gatling-gun architecture featuring multiple fuel-air injection points distributed around the rotating rotor, enabling rapid sequential combustion events across multiple cylinder-spans per rotation. The expansion stage uses a staged mechanism where cylinders align sequentially with expansion ports, converting pressure differentials into mechanical energy with minimal air movement and parasitic losses. This architectural separation eliminates parasitic compression losses inherent to conventional internal combustion engines and enables optimal independent design of each subsystem. This document is intended to place the described concepts into the public domain as prior art, preventing future patent claims on these innovations.
 		</div>
@@ -118,6 +118,20 @@
 			</ul>
 			
 			<p><strong>Prior Art Claim:</strong> This disclosure establishes "pneumatic autoignition" as a coined technical term describing this specific combustion mechanism, placing the concept and terminology into the public domain. Any future use of this term or substantially similar descriptions of externally-compressed air triggering fuel auto-ignition should be considered derivative of this prior art disclosure.</p>
+		</div>
+		<div class="slideshow-container" style="max-width:1400px;margin:40px auto;background:#fff;border-radius:12px;box-shadow:0 4px 24px rgba(0, 0, 0, 0.08);padding:40px 32px 32px 32px;">
+			<h2 style="color:#2a7ca3;text-align:center;margin-bottom:24px;">Combustion Animation - The Turbine-Gatling Engine in Action</h2>
+			<div id="svg-slideshow" style="background:#f7f9fa;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.06);padding:20px;height:80vh;max-height:900px;display:flex;align-items:center;justify-content:center;overflow:auto;">
+				<svg id="animation-svg" style="width:100%;height:100%;display:block;" preserveAspectRatio="xMidYMid meet"></svg>
+			</div>
+			<div style="margin-top:20px;text-align:center;">
+				<button onclick="prevFrame()" style="padding:10px 20px;font-size:1em;margin-right:10px;border-radius:6px;border:none;background:#2196f3;color:#fff;cursor:pointer;">◄ Previous</button>
+				<button id="play-btn" onclick="togglePlay()" style="padding:10px 20px;font-size:1em;margin-right:10px;border-radius:6px;border:none;background:#43a047;color:#fff;cursor:pointer;">Play</button>
+				<button onclick="nextFrame()" style="padding:10px 20px;font-size:1em;border-radius:6px;border:none;background:#2196f3;color:#fff;cursor:pointer;">Next ►</button>
+				<div style="margin-top:15px;font-size:0.95em;color:#666;">
+					Frame: <span id="frame-counter">1</span> / <span id="frame-total">0</span>
+				</div>
+			</div>
 		</div>
 		<div class="section">
 			<h2>Summary of the Design</h2>
@@ -503,20 +517,6 @@
 			<p>Any future patent applications attempting to claim these concepts, or substantial variations thereof (including but not limited to: separated compression architectures, gatling-gun fuel injection, turbine-based combustion with external compression, staged expansion mechanisms, or any combination of these elements) should be considered non‑novel in light of this publication and the prior art it establishes. This disclosure is intended to place these innovations into the public domain in perpetuity, preventing monopolistic control through patent claims.</p>
 		</div>
 	</div>
-	<div class="slideshow-container" style="max-width:1400px;margin:60px auto 0 auto;padding:40px 0 0 0;text-align:center;">
-		<h2 style="color:#1a4d7a;margin-bottom:24px;">Combustion Animation</h2>
-		<div id="svg-slideshow" style="background:#f7f9fa;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.06);padding:20px;height:80vh;max-height:900px;display:flex;align-items:center;justify-content:center;overflow:auto;">
-			<svg id="animation-svg" style="width:100%;height:100%;display:block;" preserveAspectRatio="xMidYMid meet"></svg>
-		</div>
-		<div style="margin-top:20px;text-align:center;">
-			<button onclick="prevFrame()" style="padding:10px 20px;font-size:1em;margin-right:10px;border-radius:6px;border:none;background:#2196f3;color:#fff;cursor:pointer;">◄ Previous</button>
-			<button id="play-btn" onclick="togglePlay()" style="padding:10px 20px;font-size:1em;margin-right:10px;border-radius:6px;border:none;background:#43a047;color:#fff;cursor:pointer;">Play</button>
-			<button onclick="nextFrame()" style="padding:10px 20px;font-size:1em;border-radius:6px;border:none;background:#2196f3;color:#fff;cursor:pointer;">Next ►</button>
-			<div style="margin-top:15px;font-size:0.95em;color:#666;">
-				Frame: <span id="frame-counter">1</span> / <span id="frame-total">0</span>
-			</div>
-		</div>
-	</div>
 	<script>
 		const GITHUB_BASE_URL = 'https://esanfgit.github.io/';
 		let svgFrames = [];
@@ -544,6 +544,10 @@
 				if (svgFrames.length > 0) {
 					document.getElementById('frame-total').textContent = svgFrames.length;
 					displayFrame(0);
+					// Auto-play after SVGs are loaded
+					setTimeout(() => {
+						document.getElementById('play-btn').click();
+					}, 500);
 				} else {
 					document.getElementById('svg-slideshow').innerHTML = '<p style="color:#666;">No SVG files found. Check file names and GitHub Pages URL.</p>';
 				}
