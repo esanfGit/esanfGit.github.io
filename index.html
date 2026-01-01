@@ -102,6 +102,24 @@
       </div>
 		</div>
 		<div class="section">
+			<h2>Key Terminology and Innovations</h2>
+			
+			<h3>Pneumatic Autoignition™ - Coined Term</h3>
+			<p><strong>Definition:</strong> Pneumatic autoignition is the spontaneous ignition of a fuel-air mixture triggered by rapid pneumatic compression (not spark-initiated combustion) using externally-supplied, pre-compressed air. The term describes a specific ignition mechanism where the physical compression of a low-pressure homogeneous fuel-air mixture by high-pressure compressed air (supplied from an external compressor system) causes the fuel to auto-ignite without requiring spark plugs, glow plugs, or other electrical ignition aids.</p>
+			
+			<h3>Technical Characteristics of Pneumatic Autoignition:</h3>
+			<ul>
+				<li><strong>Compression Source:</strong> High-pressure air originates externally (from a separate compressor) rather than from internal engine compression strokes</li>
+				<li><strong>Ignition Trigger:</strong> The rapid pneumatic compression of the fuel-air mixture in the combustion chamber initiates spontaneous combustion, similar to diesel engine auto-ignition but triggered by external air pressure rather than internal cylinder compression</li>
+				<li><strong>Fuel-Air Preparation:</strong> Fuel is first premixed at low pressure with ambient or slightly pressurized air, creating a homogeneous mixture before introduction to the high-pressure combustion chamber</li>
+				<li><strong>No Electrical Requirement:</strong> Pneumatic autoignition does not depend on electrical spark generation, though spark plugs may optionally assist ignition at specific operating conditions (low RPM, small chamber orientations)</li>
+				<li><strong>Thermodynamic Advantage:</strong> External compression eliminates the parasitic losses of internal compression strokes, enabling higher compression ratios (25:1 to 50:1+) without detonation risk</li>
+				<li><strong>Continuous Operation:</strong> Multiple pneumatic autoignition events occur per engine rotation due to the sequential fuel-air injection design, enabling high-frequency combustion at 20,000+ events per minute</li>
+			</ul>
+			
+			<p><strong>Prior Art Claim:</strong> This disclosure establishes "pneumatic autoignition" as a coined technical term describing this specific combustion mechanism, placing the concept and terminology into the public domain. Any future use of this term or substantially similar descriptions of externally-compressed air triggering fuel auto-ignition should be considered derivative of this prior art disclosure.</p>
+		</div>
+		<div class="section">
 			<h2>Summary of the Design</h2>
 			<h3>System Architecture Overview</h3>
 			<p>The system consists of three independently optimized subsystems:</p>
@@ -228,7 +246,7 @@
 			<p>A critical design advantage is the complete separation of combustion-exposed parts from oil-lubricated bearing and mechanical surfaces:</p>
 			<ul>
 				<li><strong>Combustion Chamber Isolation:</strong> The rotor's combustion-facing surfaces (chamber walls, injection points) are not exposed to engine oil. They remain clean and uncontaminated by lubrication residue, preventing oil-fuel interaction, sludge formation, and combustion efficiency loss</li>
-				<li><strong>Narrow Tolerance Sealing:</strong> Precision roller seals and narrow clearances (micrometers to sub-millimeters) maintain perfect separation between the combustion space and the rotor's bearing and mechanical systems underneath. Oil never contacts hot combustion surfaces</li>
+				<li><strong>Narrow Tolerance Sealing:</strong> Precision roller seals and narrow clearances (micrometers to sub-millimeters) on the combustion side maintain adequate separation between the combustion space and the rotor's bearing and mechanical systems underneath. Oil never contacts hot combustion surfaces. Note: perfect sealing is not required on the combustion side; narrow tolerances and controlled leakage are sufficient</li>
 				<li><strong>Bearing Lubrication Only:</strong> Oil circulates only through the rotor's bearing journals, mechanical linkages, and support structures—never entering the combustion chambers or contacting high-temperature combustion products</li>
 				<li><strong>Extended Oil Life:</strong> Without combustion contamination, engine oil lasts significantly longer. Oil degradation from heat, soot, and acidic combustion products is eliminated, reducing oil change frequency and maintenance costs</li>
 				<li><strong>Improved Combustion Efficiency:</strong> Combustion chamber walls remain clean and uncoated by oil residue, preventing fouling and maintaining optimal heat transfer and fuel-air mixing throughout the engine's service life</li>
@@ -269,19 +287,29 @@
 			</ol>
 		</div>
 		<div class="mechanical-systems">
-			<h2>Mechanical Sealing System: Roller Casing Design</h2>
-			<p>A critical innovation in the rotary piston system is the implementation of <strong>rolling contact sealing elements</strong> within the engine casing. Rather than relying on sliding friction seals (which generate heat, wear, and leakage), this system employs precision rollers positioned within the casing walls:</p>
+			<h2>Mechanical Sealing System: Differentiated Sealing Strategy</h2>
+			<p>The turbine-gatling system employs a differentiated sealing approach: <strong>perfect sealing is required only on the compression (air supply) side</strong>, while <strong>narrow tolerances are sufficient on the combustion/expansion side</strong>. This optimization reduces manufacturing complexity while maintaining system performance:</p>
 			
-			<h3>Roller Sealing Mechanism</h3>
+			<h3>Compression-Side Sealing: Perfect Air Seal Requirements</h3>
 			<ul>
-				<li><strong>Precision Roller Placement:</strong> Multiple rollers are positioned along the casing walls, precisely sized and aligned to contact the rotor's outer edges or sealing surfaces</li>
-				<li><strong>Narrow Tolerance Control:</strong> The rollers maintain extremely narrow clearance tolerances (micrometers to sub-millimeters), preventing gas leakage between combustion chambers while minimizing friction losses</li>
-				<li><strong>Rolling Contact vs. Sliding Seals:</strong> Unlike traditional seals that slide against the rotor surface, generating friction, heat, and wear, the rollers rotate/roll with the rotor motion, dramatically reducing energy losses and extending component life</li>
-				<li><strong>Combustion Chamber Isolation:</strong> As the rotor rotates, the rollers maintain dynamic sealing between adjacent combustion chamber sections, preventing cross-leakage of high-pressure gases and maintaining the integrity of sequential combustion events</li>
-				<li><strong>Variable Tolerance Management:</strong> The roller diameter and positioning can be precisely engineered to accommodate thermal expansion, vibration, and manufacturing tolerances, ensuring consistent sealing performance across full operating ranges</li>
-				<li><strong>Self-Adjusting Contact Pressure:</strong> Spring-loaded roller assemblies can maintain constant contact force as wear progresses, extending seal life and maintaining performance over extended engine operation</li>
+				<li><strong>Perfect Sealing Mandate:</strong> The high-pressure compressed air supply passages from the external compressor to the combustion chamber injection points must maintain perfect, zero-leakage seals. Any loss of compressed air represents a direct loss of compression efficiency and combustion pressure</li>
+				<li><strong>Dynamic Face Seals or O-Ring Assemblies:</strong> Compression-side connections use precision dynamic face seals (labyrinth or mechanical seals) or redundant O-ring assemblies to achieve hermetic sealing</li>
+				<li><strong>Pressure Retention:</strong> The pressure tank, regulator valve, injection manifold, and all high-pressure air passages must be engineered for zero-loss operation. Any leakage directly reduces available combustion pressure and power output</li>
+				<li><strong>Testing and Quality Assurance:</strong> Compression-side components require pressure testing and leak detection before assembly to ensure perfect sealing integrity</li>
 			</ul>
-			<p>This rolling-contact sealing approach is fundamental to achieving the efficiency and performance targets of the turbine-gatling system, as it enables high compression ratios and rapid sequential combustion without the parasitic losses of sliding friction seals.</p>
+			
+			<h3>Combustion-Side Sealing: Narrow Tolerance Rolling Contact</h3>
+			<ul>
+				<li><strong>Narrow Tolerance Design:</strong> Rather than requiring hermetic sealing, the combustion chamber walls, rotor sealing surfaces, and expansion ports use narrow clearance tolerances (micrometers to sub-millimeters) maintained by rolling contact elements</li>
+				<li><strong>Rolling Contact Rollers:</strong> Multiple precision rollers are positioned along the casing walls, precisely sized and aligned to contact the rotor's outer edges. Unlike sliding friction seals, the rollers rotate/roll with the rotor motion, minimizing friction, heat, and wear</li>
+				<li><strong>Controlled Gas Leakage:</strong> Small, predictable leakage between combustion chambers and expansion ports is acceptable and managed through design. The combustion pressure itself is generated continuously by sequential ignition events, so minor leakage does not compromise system performance</li>
+				<li><strong>Combustion Chamber Isolation:</strong> The narrow tolerances maintain adequate separation between adjacent combustion chambers, preventing cross-leakage that would degrade combustion event independence, while allowing controlled exhaust venting as designed</li>
+				<li><strong>Thermal Tolerance Management:</strong> Rolling element design accommodates thermal expansion from combustion heat without loss of sealing effectiveness. Variable-clearance roller assemblies self-adjust to maintain near-constant contact force as temperatures fluctuate</li>
+				<li><strong>Manufacturing Simplification:</strong> Combustion-side components do not require the precision machining or hermetic sealing specifications of compression-side parts, reducing manufacturing cost and complexity</li>
+			</ul>
+			
+			<h3>System-Level Performance Impact</h3>
+			<p>This differentiated approach is a critical design insight: perfect sealing is only necessary where external high-pressure air is supplied to the system. The combustion side, where continuous ignition generates pressure internally, only requires narrow manufacturing tolerances to prevent unwanted cross-leakage and maintain chamber separation. This distinction dramatically simplifies the engine's design and reduces manufacturing requirements while maintaining full performance targets.</p>
 		</div>
 		<div class="thermal-management">
 			<h2>Critical Thermal Management Requirements: Advanced Cooling Systems</h2>
@@ -370,6 +398,23 @@
 				<li><strong>No Compression Stroke Limitations:</strong> Traditional piston engines are limited to ~14:1 compression ratios due to the explosive nature of internal compression. This system compresses air externally in a controlled, continuous process, then introduces fuel only in the high-pressure ignition chamber, eliminating pre-ignition and detonation problems</li>
 				<li><strong>Customizable Pressure Profiles:</strong> The compressor can deliver varying pressure levels for different operating conditions (low RPM requiring higher pressure for ignition assist, high RPM requiring optimized pressure for efficiency)</li>
 			</ul>
+			
+			<h3>Compartmentalization Enables Superior Debugging and Optimization</h3>
+			<p>The architectural separation of compression, combustion, and expansion into distinct, independently-operable subsystems provides extraordinary advantages for engine development, optimization, and troubleshooting:</p>
+			<ul>
+				<li><strong>Independent Subsystem Debugging:</strong> Each process (compression, combustion, expansion) can be diagnosed and optimized independently without affecting the others. A problem in combustion efficiency does not require redesigning the compressor or expansion mechanism</li>
+				<li><strong>Isolated Performance Analysis:</strong> Test engineers can isolate specific issues to individual components. Is power output low? Test the compressor efficiency separately, then test combustion ignitability independently, then test expansion stage energy conversion separately. Each reveals its own bottleneck</li>
+				<li><strong>Compression Optimization Independent of Combustion:</strong> Compressor design can be optimized for efficiency, pressure profile, and response characteristics without considering combustion chamber geometry or expansion port alignment</li>
+				<li><strong>Combustion Optimization Independent of Expansion:</strong> Fuel injection timing, ignition parameters, and chamber pressure can be optimized for complete combustion without redesigning expansion stages. Changes to combustion do not affect rotor mechanical design</li>
+				<li><strong>Expansion Optimization Independent of Combustion:</strong> Expansion port timing, chamber alignment sequences, and staged energy conversion can be optimized for maximum pressure-to-motion efficiency without altering combustion parameters</li>
+				<li><strong>Modular Testing and Prototyping:</strong> Each subsystem can be tested in isolation with standard test fixtures. Compression can be tested with pressure gauges and flow meters. Combustion can be tested with ignition timing analysis and thermal cameras. Expansion can be tested with load cells and torque measurement—all independently</li>
+				<li><strong>Parallel Development Paths:</strong> Separate engineering teams can optimize each subsystem simultaneously. Compression engineers focus on compressor efficiency, combustion engineers focus on ignition and fuel-air mixing, and mechanical engineers focus on rotor dynamics and expansion port design—with minimal interdependencies</li>
+				<li><strong>Incremental Improvement Cycles:</strong> Once any subsystem is optimized, it becomes a fixed baseline for optimizing the next subsystem. There is no need to re-tune the entire engine during each development cycle. Optimize compression first, lock it in, then optimize combustion, then optimize expansion</li>
+				<li><strong>Root Cause Identification:</strong> Performance losses can be definitively traced to their source. Low power output can be immediately attributed to inadequate compression, poor combustion efficiency, or weak expansion—not to some mysterious interaction between three integrated processes</li>
+				<li><strong>Upgrade Paths and Modularity:</strong> Future improvements to any single subsystem (better compressor technology, improved fuel injectors, advanced bearing materials) can be integrated without redesigning the entire engine. Upgrade the compression system, the combustion system, or the expansion mechanism independently</li>
+				<li><strong>Comparative Testing:</strong> Engineers can test alternative compressor designs, combustion chamber geometries, or expansion port configurations by swapping components while keeping the rest of the engine constant. This reveals exactly how each design variable impacts overall performance</li>
+			</ul>
+			<p>This compartmentalization represents a fundamental advantage over conventional integrated engines, where optimization of one process inherently affects others, creating complex feedback loops that slow development and obscure root causes of performance issues.</p>
 			
 			<h3>Critical Importance of Fuel-Air Mixing in the Ignition Chamber</h3>
 			<p>The quality and uniformity of fuel-air mixing directly determines combustion efficiency and ignition reliability in this system:</p>
