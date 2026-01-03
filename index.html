@@ -2,725 +2,918 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Defensive Publication: The Turbine-Gatling Engine</title>
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-	<style>
-		body {
-			font-family: 'Roboto', Arial, sans-serif;
-			background: #f7f9fa;
-			color: #222;
-			margin: 0;
-			padding: 0;
-		}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Defensive Publication: Compartmentalized Rotary-Turbine Engine System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background: #f7f9fa;
+            color: #222;
+            margin: 0;
+            padding: 0;
+        }
 
-		.container {
-			max-width: 800px;
-			margin: 40px auto;
-			background: #fff;
-			border-radius: 12px;
-			box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
-			padding: 40px 32px 32px 32px;
-		}
+        /* Remove custom .container to avoid Bootstrap conflict */
+        h1 {
+            font-size: 2.2em;
+            font-weight: 700;
+            color: #1a4d7a;
+            margin-bottom: 0.2em;
+        }
 
-		h1 {
-			font-size: 2.2em;
-			font-weight: 700;
-			color: #1a4d7a;
-			margin-bottom: 0.2em;
-		}
+        h2 {
+            color: #2a7ca3;
+            margin-top: 2em;
+            margin-bottom: 0.5em;
+        }
 
-		h2 {
-			color: #2a7ca3;
-			margin-top: 2em;
-			margin-bottom: 0.5em;
-		}
+        h3 {
+            color: #3a3a3a;
+            margin-top: 1.5em;
+        }
 
-		h3 {
-			color: #3a3a3a;
-			margin-top: 1.5em;
-		}
+        ul,
+        li {
+            background: #e3f2fd;
+            border-left: 5px solid #2196f3;
+            padding: 1em 1.5em;
+            margin-bottom: 2em;
+            border-radius: 6px;
+        }
 
-		ul,
-		ol {
-			margin-left: 1.5em;
-		}
+        .section {
+            margin-bottom: 2em;
+        }
 
-		.abstract {
-			background: #e3f2fd;
-			border-left: 5px solid #2196f3;
-			padding: 1em 1.5em;
-			margin-bottom: 2em;
-			border-radius: 6px;
-		}
+        .features-list li {
+            margin-bottom: 0.7em;
+        }
 
-		.section {
-			margin-bottom: 2em;
-		}
+        .advantages-list li {
+            margin-bottom: 0.5em;
+        }
 
-		.features-list li {
-			margin-bottom: 0.7em;
-		}
+        .conclusion {
+            background: #f1f8e9;
+            border-left: 5px solid #8bc34a;
+            padding: 1em 1.5em;
+            border-radius: 6px;
+        }
 
-		.advantages-list li {
-			margin-bottom: 0.5em;
-		}
-
-		.conclusion {
-			background: #f1f8e9;
-			border-left: 5px solid #8bc34a;
-			padding: 1em 1.5em;
-			border-radius: 6px;
-		}
-
-		@media (max-width: 600px) {
-			.container {
-				padding: 16px;
-			}
-		}
-	</style>
+        @media (max-width: 600px) {
+            .container {
+                padding: 16px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-	<div class="container">
-		<h1>Defensive Publication: The Turbine-Gatling Engine System</h1>
-		<div class="abstract">
-			<strong>Abstract:</strong> This disclosure describes an innovative power generation system that fundamentally separates the compression stage from the combustion and expansion stages. An external air compression system (using any compression technology such as rotary screw, reciprocating piston, centrifugal, or variable displacement compressor) supplies high-pressure air at a target compression ratio (e.g., 25:1) to a turbine-based combustion engine. The combustion engine operates with a gatling-gun architecture featuring multiple fuel-air injection points distributed around the rotating rotor, enabling rapid sequential combustion events across multiple cylinder-spans per rotation. The expansion stage uses a staged mechanism where cylinders align sequentially with expansion ports, converting pressure differentials into mechanical energy with minimal air movement and parasitic losses. This architectural separation eliminates parasitic compression losses inherent to conventional internal combustion engines and enables optimal independent design of each subsystem. This document is intended to place the described concepts into the public domain as prior art, preventing future patent claims on these innovations.
-		</div>
-		<div class="section">
-			<h2>Technical Field</h2>
-			<p>This disclosure relates to power generation systems that achieve fundamental separation of compression from combustion and expansion. Specifically, it covers turbine-based combustion engines with gatling-gun fuel-air injection architectures, external air compression systems capable of achieving high compression ratios (e.g., 25:1), and staged expansion mechanisms designed to minimize parasitic losses and maximize energy extraction from pressure differentials.</p>
-		</div>
-		<div class="section">
-			<h2>Background</h2>
-			<p>Conventional internal combustion engines—both reciprocating piston and rotary designs—inherently waste energy by performing compression, combustion, and expansion within the same chamber or sequential chambers. During the compression stroke, energy is consumed to pressurize the air-fuel mixture. This represents a fundamental thermodynamic inefficiency that cannot be eliminated within traditional engine architectures. Additionally, the air movement required during compression and expansion in conventional designs creates parasitic losses due to fluid dynamics and turbulence.<br>
-			Rotary engines have attempted to mitigate some of these issues but suffer from chronic sealing problems, variable pressure distribution, and inefficient combustion chamber geometry. External compression systems (compressors, air tanks) have existed for industrial applications, but have not been integrated with high-performance combustion engines in the optimal architectural arrangement.<br>
-			This disclosure presents a fundamentally different approach: completely separate the compression function from the combustion engine. By utilizing an external compression system to supply air at the target compression ratio, the combustion and expansion engine can operate exclusively on pressure differential conversion. The combustion stage operates as a turbine system with multiple sequential injection points (gatling-gun design), enabling rapid, high-frequency burns. The expansion stage uses staged cylinder alignment to convert pressure into motion with minimal air movement. This separation enables each subsystem to be independently optimized for its specific function, eliminating parasitic compression losses and dramatically improving overall system efficiency.</p>
-      <div style="background:#fff3cd;border-left:5px solid #ffc107;padding:1em 1.5em;margin:1em 0 2em 0;border-radius:6px;">
-        <strong>Key Innovation:</strong> By separating compression from combustion, the combustion engine operates exclusively as a pressure-to-motion converter with high-frequency fuel injection and staged expansion. The external compressor can be of any type and operated at any efficiency level independently. This architectural innovation eliminates the thermodynamic penalty of internal compression and enables optimal design of each stage.
-      </div>
-		</div>
-		<div class="section">
-			<h2>Key Terminology and Innovations</h2>
-			
-			<h3>Pneumatic Autoignition™ - Coined Term</h3>
-			<p><strong>Definition:</strong> Pneumatic autoignition is the spontaneous ignition of a fuel-air mixture triggered by rapid pneumatic compression (not spark-initiated combustion) using externally-supplied, pre-compressed air. The term describes a specific ignition mechanism where the physical compression of a low-pressure homogeneous fuel-air mixture by high-pressure compressed air (supplied from an external compressor system) causes the fuel to auto-ignite without requiring spark plugs, glow plugs, or other electrical ignition aids.</p>
-			
-			<h3>Technical Characteristics of Pneumatic Autoignition:</h3>
-			<ul>
-				<li><strong>Compression Source:</strong> High-pressure air originates externally (from a separate compressor) rather than from internal engine compression strokes</li>
-				<li><strong>Ignition Trigger:</strong> The rapid pneumatic compression of the fuel-air mixture in the combustion chamber initiates spontaneous combustion, similar to diesel engine auto-ignition but triggered by external air pressure rather than internal cylinder compression</li>
-				<li><strong>Fuel-Air Preparation:</strong> Fuel is first premixed at low pressure with ambient or slightly pressurized air, creating a homogeneous mixture before introduction to the high-pressure combustion chamber</li>
-				<li><strong>No Electrical Requirement:</strong> Pneumatic autoignition does not depend on electrical spark generation, though spark plugs may optionally assist ignition at specific operating conditions (low RPM, small chamber orientations)</li>
-				<li><strong>Thermodynamic Advantage:</strong> External compression eliminates the parasitic losses of internal compression strokes, enabling higher compression ratios (25:1 to 50:1+) without detonation risk</li>
-				<li><strong>Continuous Operation:</strong> Multiple pneumatic autoignition events occur per engine rotation due to the sequential fuel-air injection design, enabling high-frequency combustion at 20,000+ events per minute</li>
-			</ul>
-			
-			<p><strong>Prior Art Claim:</strong> This disclosure establishes "pneumatic autoignition" as a coined technical term describing this specific combustion mechanism, placing the concept and terminology into the public domain. Any future use of this term or substantially similar descriptions of externally-compressed air triggering fuel auto-ignition should be considered derivative of this prior art disclosure.</p>
-		</div>
-		<div class="slideshow-container" style="max-width:1400px;margin:40px auto;background:#fff;border-radius:12px;box-shadow:0 4px 24px rgba(0, 0, 0, 0.08);padding:40px 32px 32px 32px;">
-			<h2 style="color:#2a7ca3;text-align:center;margin-bottom:24px;">Combustion Animation - The Turbine-Gatling Engine in Action</h2>
-			<div id="svg-slideshow" style="background:#f7f9fa;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.06);padding:20px;height:80vh;max-height:900px;display:flex;align-items:center;justify-content:center;overflow:auto;">
-				<svg id="animation-svg" style="width:100%;height:100%;display:block;" preserveAspectRatio="xMidYMid meet"></svg>
-			</div>
-			<div style="margin-top:20px;text-align:center;">
-				<button onclick="prevFrame()" style="padding:10px 20px;font-size:1em;margin-right:10px;border-radius:6px;border:none;background:#2196f3;color:#fff;cursor:pointer;">◄ Previous</button>
-				<button id="play-btn" onclick="togglePlay()" style="padding:10px 20px;font-size:1em;margin-right:10px;border-radius:6px;border:none;background:#43a047;color:#fff;cursor:pointer;">Play</button>
-				<button onclick="nextFrame()" style="padding:10px 20px;font-size:1em;border-radius:6px;border:none;background:#2196f3;color:#fff;cursor:pointer;">Next ►</button>
-				<div style="margin-top:15px;font-size:0.95em;color:#666;">
-					Frame: <span id="frame-counter">1</span> / <span id="frame-total">0</span>
-				</div>
-			</div>
-		</div>
-		<div class="section">
-			<h2>Summary of the Design</h2>
-			<h3>System Architecture Overview</h3>
-			<p>The system consists of three independently optimized subsystems:</p>
-			
-			<h3>1. External Compression Subsystem</h3>
-			<p>A separate air compression system (independent of the combustion engine) provides steady, high-pressure air at a target compression ratio. The compression system may be:</p>
-			<ul>
-				<li><strong>Two-Stage Reciprocating Piston Compressor</strong> - Highest power density for throughput, 4000-5000 RPM operation, achieving 25:1 compression (5:1 × 5:1)</li>
-				<li><strong>Two-Stage Rotary Screw Compressor</strong> - Smooth operation, 85-88% efficiency, 16:1 to 25:1 compression range</li>
-				<li><strong>Centrifugal Compressor</strong> - High efficiency (88-92%), suitable for high flow applications</li>
-				<li><strong>Axial Piston Variable Displacement Compressor</strong> - Maximum power density, variable displacement for load matching</li>
-				<li><strong>Any other compression technology</strong> - The system is technology-agnostic regarding the external compressor</li>
-			</ul>
-			<p>Compressed air is stored in a pressure tank or vat and supplied on-demand to the combustion engine via a regulated injection system. The target compression ratio for example is 25:1, though any ratio is possible.</p>
-			
-			<h3>2. Combustion Subsystem (Turbine-Gatling Design)</h3>
-			<p>The combustion chamber operates as a rotating turbine, not a reciprocating piston engine. The architecture features:</p>
-			<ul>
-				<li>A rotating rotor with multiple chambers or cylinder-like sections</li>
-				<li>Multiple fuel-air injection points distributed around the rotor circumference</li>
-				<li>As the rotor rotates, each injection point sequentially aligns with combustion chamber sections</li>
-				<li>High-pressure air (from the external compressor) and fuel are injected simultaneously into each chamber</li>
-				<li>Fuel ignites in the high-pressure air environment, creating rapid, complete combustion</li>
-				<li>Multiple combustion events occur per rotation, e.g., combustion spans across 3 or more cylinder-sections in a single rotation</li>
-				<li>The rapid sequential burns drive the rotor forward in a turbine-like manner</li>
-			</ul>
-			
-			<h3>3. Expansion Subsystem (Staged Expansion)</h3>
-			<p>Instead of a single expansion chamber, the design uses sequential, aligned cylinders or ports:</p>
-			<ul>
-				<li>As the rotor rotates, cylinder sections line up with expansion ports in sequence</li>
-				<li>High-pressure combustion gases flow into these cylinders progressively</li>
-				<li>Pressure differentials are converted into mechanical energy through sequential alignment</li>
-				<li>Staged expansion minimizes air movement and turbulent flow, reducing parasitic energy losses</li>
-				<li>Maximum energy is extracted from the pressure differential with minimal wasted motion</li>
-			</ul>
-		</div>
-		<div class="section">
-			<h2>Key Features</h2>
-			<ol class="features-list">
-				<li><strong>Complete Architectural Separation of Compression and Combustion</strong><br>
-					<ul>
-						<li>Compression is performed by an external, independent system—not within the combustion engine</li>
-						<li>The combustion engine operates solely as a pressure-to-motion converter</li>
-						<li>This eliminates the thermodynamic penalty of internal compression and enables each subsystem to be independently optimized</li>
-					</ul>
-				</li>
-				<li><strong>External Compression System with Multiple Technology Options</strong><br>
-					<ul>
-						<li>Any compression technology is acceptable: reciprocating piston, rotary screw, centrifugal, axial piston, or other</li>
-						<li>Target compression ratio of 25:1 achievable with two-stage reciprocating piston or rotary screw compressor</li>
-						<li>High throughput (power density) for rapid pressure buildup using simple reciprocating piston compressor at 4000-5000 RPM</li>
-						<li>Compressed air stored in pressure tank or vat for on-demand supply to combustion chamber</li>
-					</ul>
-				</li>
-				<li><strong>Gatling-Gun Combustion Architecture (Turbine-Based)</strong><br>
-					<ul>
-						<li>Combustion system is fundamentally a turbine, not a piston engine</li>
-						<li>Multiple fuel-air injection points distributed around rotor circumference</li>
-						<li>Sequential fuel-air injection as rotor rotates, with each injection point aligning with chamber sections</li>
-						<li>Rapid ignition and complete combustion in high-pressure air environment (no internal compression needed)</li>
-						<li>High-frequency combustion events: multiple burns per single rotation, spanning 3+ cylinder-sections</li>
-						<li>Dramatic increase in power output frequency compared to conventional 4-stroke or 2-stroke engines</li>
-					</ul>
-				</li>
-				<li><strong>Staged Expansion Mechanism with Minimal Air Movement</strong><br>
-					<ul>
-						<li>Sequential cylinder alignment with expansion ports minimizes turbulent gas flow</li>
-						<li>Pressure differentials converted into mechanical energy through progressive, staged expansion</li>
-						<li>Low air movement reduces parasitic losses from fluid dynamics</li>
-						<li>Maximum energy extraction from combustion gases with minimal wasted motion</li>
-					</ul>
-				</li>
-				<li><strong>High-Pressure Fuel-Air Injection System</strong><br>
-					<ul>
-						<li>Fuel injected into chambers pre-filled with high-pressure air from external compressor</li>
-						<li>Rapid, complete combustion without reliance on engine-internal compression</li>
-						<li>Precise injection timing and duration control for optimized energy extraction</li>
-						<li>No compression stroke losses—combustion occurs in already-compressed environment</li>
-					</ul>
-				</li>
-				<li><strong>Elimination of Parasitic Compression Losses</strong><br>
-					<ul>
-						<li>Conventional engines waste energy during the compression stroke of the combustion chamber</li>
-						<li>This system eliminates that loss entirely by using external compression</li>
-						<li>The combustion engine operates exclusively in "power stroke" mode with high-frequency sequential burns</li>
-					</ul>
-				</li>
-				<li><strong>Scalability and Flexibility</strong><br>
-					<ul>
-						<li>Number of injection points can be adjusted for different power outputs</li>
-						<li>Number of expansion stages can be optimized for efficiency targets</li>
-						<li>External compressor can be sized and designed independently from combustion engine</li>
-						<li>System can operate with any fuel type compatible with compression ratio and injection system</li>
-					</ul>
-				</li>
-			</ol>
-		</div>
-		<div class="section">
-			<h2>Performance Specifications and Optimization Potential</h2>
-			
-			<h3>Baseline Performance Estimates (Sample Configuration)</h3>
-			<p><strong>Configuration:</strong> 4-chamber combustion rotor with 4 fuel injection points, 25:1 compression ratio, 6-stage expansion mechanism, diesel fuel, conventional speed range:</p>
-			<ul>
-				<li><strong>Operating RPM Range:</strong> 500-5000 RPM (conventional), with theoretical capability to 30,000+ RPM in optimized high-speed variants</li>
-				<li><strong>Compression Ratio:</strong> 25:1 (baseline) to 30:1 or higher with optimized chamber geometry and compressor design</li>
-				<li><strong>Simultaneous Combustion Events:</strong> 4 injection points operating at 5000 RPM = 20,000 combustion events per minute (333+ per second)</li>
-				<li><strong>Power Output Estimate:</strong> Approximately 300-400+ horsepower at 5000 RPM (depending on chamber volume, fuel injection rate, and expansion stage efficiency). This exceeds typical 4-cylinder piston engines of equivalent displacement due to elimination of compression stroke losses and continuous energy addition</li>
-				<li><strong>Torque Delivery:</strong> Superior low-end torque (usable from 500 RPM) with linear power delivery across RPM range, eliminating the RPM-dependent power curve limitations of reciprocating engines</li>
-			</ul>
-			
-			<h3>Optimization and Scalability Potential</h3>
-			<p>Unlike reciprocating engines constrained by mechanical limits, this architecture enables continuous optimization across multiple parameters:</p>
-			<ul>
-				<li><strong>Compression Ratio Optimization:</strong> By varying the external compressor output, compression ratios can be adjusted from 15:1 (for gasoline operation) to 40:1+ (for diesel or hydrogen operation). Each fuel type can operate at its optimal compression ratio without mechanical compromise</li>
-				<li><strong>Ignition Process Customization:</strong> The ignition timing, fuel-air mixing ratio, and spark assist (if employed) can be independently optimized for each operating point. Lean-burn operation is possible at compression ratios where traditional engines would detonate</li>
-				<li><strong>Constant Chamber Pressure Operation:</strong> By modulating compressor output and fuel injection timing, the system can maintain near-constant pressure within combustion chambers across varying load conditions, maximizing energy extraction efficiency</li>
-				<li><strong>Lean Fuel Ignition:</strong> The high-pressure homogeneous fuel-air mixture ignites reliably even at lean equivalence ratios (fuel-air ratios far below stoichiometric). This enables operation on minimal fuel with maximum air, reducing fuel consumption and emissions</li>
-				<li><strong>Injection Point Scalability:</strong> Additional fuel injection points (5, 6, 8, or more) can be added around the rotor for linear increases in power output and combustion frequency, reaching 40,000+ combustion events per minute with 8 injection points at 5000 RPM</li>
-				<li><strong>RPM Scalability:</strong> The non-oscillating geometry permits continuous operation at 30,000+ RPM with appropriate bearing technology, producing 120,000-240,000+ combustion events per minute with multi-point injection</li>
-			</ul>
-			
-			<h3>Lubrication System Separation: Combustion vs. Mechanical Lubrication</h3>
-			<p>A critical design advantage is the complete separation of combustion-exposed parts from oil-lubricated bearing and mechanical surfaces:</p>
-			<ul>
-				<li><strong>Combustion Chamber Isolation:</strong> The rotor's combustion-facing surfaces (chamber walls, injection points) are not exposed to engine oil. They remain clean and uncontaminated by lubrication residue, preventing oil-fuel interaction, sludge formation, and combustion efficiency loss</li>
-				<li><strong>Narrow Tolerance Sealing:</strong> Precision roller seals and narrow clearances (micrometers to sub-millimeters) on the combustion side maintain adequate separation between the combustion space and the rotor's bearing and mechanical systems underneath. Oil never contacts hot combustion surfaces. Note: perfect sealing is not required on the combustion side; narrow tolerances and controlled leakage are sufficient</li>
-				<li><strong>Bearing Lubrication Only:</strong> Oil circulates only through the rotor's bearing journals, mechanical linkages, and support structures—never entering the combustion chambers or contacting high-temperature combustion products</li>
-				<li><strong>Extended Oil Life:</strong> Without combustion contamination, engine oil lasts significantly longer. Oil degradation from heat, soot, and acidic combustion products is eliminated, reducing oil change frequency and maintenance costs</li>
-				<li><strong>Improved Combustion Efficiency:</strong> Combustion chamber walls remain clean and uncoated by oil residue, preventing fouling and maintaining optimal heat transfer and fuel-air mixing throughout the engine's service life</li>
-				<li><strong>Simplified Cooling and Oil Management:</strong> The combustion space can be separately cooled without overheating engine oil, and bearing lubrication can be optimized independently of combustion thermal requirements</li>
-			</ul>
-		</div>
-		<div class="section">
-			<h2>Operation Overview</h2>
-			<h3>External Compression Subsystem Operation</h3>
-			<ol>
-				<li><strong>Compression Cycle:</strong> The external compressor (e.g., two-stage reciprocating piston or rotary screw) compresses intake air to the target compression ratio (e.g., 25:1)</li>
-				<li><strong>Storage:</strong> Compressed air is delivered to and stored in a pressure tank or vat</li>
-				<li><strong>Pressure Regulation:</strong> A regulator or pressure control valve maintains the correct pressure and flow rate to the combustion chamber injection points</li>
-				<li><strong>Continuous Supply:</strong> The compressor operates continuously or on-demand to maintain pressure in the storage tank</li>
-			</ol>
-			
-			<h3>Combustion Subsystem Operation (Turbine-Gatling)</h3>
-			<ol>
-				<li><strong>Low-Pressure Fuel-Air Premixing:</strong> Fuel is first mixed with low-pressure ambient or slightly pressurized air to create a homogeneous fuel-air mixture</li>
-				<li><strong>Sequential Fuel-Air Injection:</strong> As the rotor rotates, each fuel injection point sequentially aligns with a combustion chamber section</li>
-				<li><strong>High-Pressure Air Supply:</strong> High-pressure air from the external compressor (at target compression ratio of 25:1 or 30:1) flows into the chamber</li>
-				<li><strong>Pneumatic Compression Ignition:</strong> The high-pressure air from the compressor pneumatically compresses the low-pressure fuel-air mixture, triggering auto-ignition without requiring spark plugs. The sudden compression of the fuel-air mixture in the high-pressure chamber initiates spontaneous combustion</li>
-				<li><strong>Spark-Assisted Ignition (Optional):</strong> For enhanced ignition reliability at smaller chamber orientations or at lower rotor speeds, a spark plug can be employed to ensure complete and rapid combustion initiation</li>
-				<li><strong>Rapid Ignition and Combustion:</strong> The fuel ignites in the high-pressure air environment, creating a rapid, complete burn with no compression stroke losses</li>
-				<li><strong>Rotor Advancement:</strong> The expanding combustion gases drive the rotor forward in a turbine-like fashion</li>
-				<li><strong>Multiple Sequential Events:</strong> Multiple fuel injection and combustion events occur per single rotation, spanning 3+ cylinder-sections, dramatically increasing power output frequency</li>
-			</ol>
-			
-			<h3>Expansion Subsystem Operation (Staged)</h3>
-			<ol>
-				<li><strong>Cylinder-Port Alignment:</strong> As the rotor continues rotating, combustion chamber sections (cylinders) sequentially align with expansion ports</li>
-				<li><strong>Progressive Gas Expansion:</strong> High-pressure combustion gases flow from the combustion chamber into aligned expansion cylinders or ports</li>
-				<li><strong>Staged Energy Conversion:</strong> Pressure differentials are progressively converted into rotational mechanical energy as cylinders align in sequence</li>
-				<li><strong>Minimal Air Movement:</strong> Sequential alignment ensures gradual, efficient expansion with minimal turbulent gas flow or wasted motion</li>
-				<li><strong>Exhaust Vent System:</strong> When a combustion chamber is not aligned with an expansion port, residual combustion gases and pressure must be safely vented. A series of exhaust vents positioned around the casing wall allow combustion products to exit as the rotor rotates into non-aligned positions. This prevents back-pressure accumulation, maintains chamber clearance, and ensures the next combustion cycle can proceed without residual gas interference. These vents are precisely timed and positioned to activate only when chambers are misaligned, preventing premature exhaust loss during active expansion</li>
-				<li><strong>Exhaust:</strong> Combustion products exit through the final expansion port as the rotor completes its cycle</li>
-				<li><strong>Cycle Continuation:</strong> The rotor, driven by accumulated energy from multiple combustion events, continues rotating and aligns with the next fuel injection point</li>
-			</ol>
-		</div>
-		<div class="mechanical-systems">
-			<h2>Mechanical Sealing System: Differentiated Sealing Strategy</h2>
-			<p>The turbine-gatling system employs a differentiated sealing approach: <strong>perfect sealing is required only on the compression (air supply) side</strong>, while <strong>narrow tolerances are sufficient on the combustion/expansion side</strong>. This optimization reduces manufacturing complexity while maintaining system performance:</p>
-			
-			<h3>Compression-Side Sealing: Perfect Air Seal Requirements</h3>
-			<ul>
-				<li><strong>Perfect Sealing Mandate:</strong> The high-pressure compressed air supply passages from the external compressor to the combustion chamber injection points must maintain perfect, zero-leakage seals. Any loss of compressed air represents a direct loss of compression efficiency and combustion pressure</li>
-				<li><strong>Dynamic Face Seals or O-Ring Assemblies:</strong> Compression-side connections use precision dynamic face seals (labyrinth or mechanical seals) or redundant O-ring assemblies to achieve hermetic sealing</li>
-				<li><strong>Pressure Retention:</strong> The pressure tank, regulator valve, injection manifold, and all high-pressure air passages must be engineered for zero-loss operation. Any leakage directly reduces available combustion pressure and power output</li>
-				<li><strong>Testing and Quality Assurance:</strong> Compression-side components require pressure testing and leak detection before assembly to ensure perfect sealing integrity</li>
-			</ul>
-			
-			<h3>Combustion-Side Sealing: Narrow Tolerance Rolling Contact</h3>
-			<ul>
-				<li><strong>Narrow Tolerance Design:</strong> Rather than requiring hermetic sealing, the combustion chamber walls, rotor sealing surfaces, and expansion ports use narrow clearance tolerances (micrometers to sub-millimeters) maintained by rolling contact elements</li>
-				<li><strong>Rolling Contact Rollers:</strong> Multiple precision rollers are positioned along the casing walls, precisely sized and aligned to contact the rotor's outer edges. Unlike sliding friction seals, the rollers rotate/roll with the rotor motion, minimizing friction, heat, and wear</li>
-				<li><strong>Controlled Gas Leakage:</strong> Small, predictable leakage between combustion chambers and expansion ports is acceptable and managed through design. The combustion pressure itself is generated continuously by sequential ignition events, so minor leakage does not compromise system performance</li>
-				<li><strong>Combustion Chamber Isolation:</strong> The narrow tolerances maintain adequate separation between adjacent combustion chambers, preventing cross-leakage that would degrade combustion event independence, while allowing controlled exhaust venting as designed</li>
-				<li><strong>Thermal Tolerance Management:</strong> Rolling element design accommodates thermal expansion from combustion heat without loss of sealing effectiveness. Variable-clearance roller assemblies self-adjust to maintain near-constant contact force as temperatures fluctuate</li>
-				<li><strong>Manufacturing Simplification:</strong> Combustion-side components do not require the precision machining or hermetic sealing specifications of compression-side parts, reducing manufacturing cost and complexity</li>
-			</ul>
-			
-			<h3>System-Level Performance Impact</h3>
-			<p>This differentiated approach is a critical design insight: perfect sealing is only necessary where external high-pressure air is supplied to the system. The combustion side, where continuous ignition generates pressure internally, only requires narrow manufacturing tolerances to prevent unwanted cross-leakage and maintain chamber separation. This distinction dramatically simplifies the engine's design and reduces manufacturing requirements while maintaining full performance targets.</p>
-		</div>
-		<div class="thermal-management">
-			<h2>Critical Thermal Management Requirements</h2>
-			<p>The high compression ratios (25:1 to 40:1+) and rapid sequential combustion (20,000+ events per minute) of the turbine-gatling engine generate substantial thermal energy. <strong>Advanced cooling is necessary</strong> to maintain safe operating temperatures and component integrity.</p>
-			<p>Any effective cooling system can be employed—liquid cooling loops, air cooling, evaporative cooling, thermoelectric cooling, or hybrid approaches. The specific cooling technology is flexible and can be optimized for the application and environment. The critical requirement is that the cooling system be adequate for the engine's heat generation rate, with appropriate sensors and controls to maintain safe operating temperatures.</p>
-		</div>
-		<div class="section">
-			<h2>Power Generation Superiority of the Turbine-Gatling Architecture</h2>
-			<p>The turbine-based gatling-gun combustion system represents a fundamental paradigm shift in internal combustion engine design, delivering superior power generation compared to traditional reciprocating piston engines:</p>
-			
-			<h3>Continuous Rotation vs. Piston Dead Zones</h3>
-			<p>Reciprocating piston engines inherently contain dead zones—points in the cycle where the piston momentarily stops (top and bottom dead center), producing zero power. The rotor then must accelerate the piston again, wasting energy. The turbine-gatling system rotates continuously without dead zones. Every degree of rotation is driven by active pressure conversion, eliminating this fundamental inefficiency.</p>
-			
-			<h3>High-Frequency Combustion Events</h3>
-			<p><strong>Piston Engine (4-cylinder, 4-stroke at 5000 RPM):</strong> Each cylinder fires once every 2 rotations. Total power events per minute = 4 cylinders × (5000 RPM ÷ 2) = 10,000 power strokes per minute.</p>
-			<p><strong>Turbine-Gatling Engine (3 injection points per rotation at 5000 RPM):</strong> Combustion occurs 3 times per single rotation. Total power events per minute = 5000 RPM × 3 = 15,000+ power events per minute. With 4 injection points, this increases to 20,000+ events per minute.</p>
-			<p>The turbine-gatling system produces <strong>50-100% more combustion events per unit time</strong>, translating directly to higher power output and smoother torque delivery across the entire rotation.</p>
-			
-			<h3>Simultaneous Multiple Combustion Events</h3>
-			<p>The distributed injection points around the rotor enable multiple combustion chambers to be firing simultaneously. For example, with 3 injection points spaced 120° apart:</p>
-			<ul>
-				<li>Injection point 1 ignites at 0°</li>
-				<li>Injection point 2 ignites at 120°</li>
-				<li>Injection point 3 ignites at 240°</li>
-				<li>Injection point 1 fires again at 360°</li>
-			</ul>
-			<p>This means the rotor is continuously driven by expanding combustion gases from multiple chambers, creating constant, overlapping pressure forces. In contrast, a 4-cylinder piston engine has only one cylinder producing power at any given moment, with three cylinders in non-productive strokes.</p>
-			
-			<h3>Elimination of Compression Stroke Losses</h3>
-			<p>A reciprocating piston wastes enormous energy during the compression stroke, fighting against the air-fuel mixture being pressurized. This represents 20-30% of the engine's total energy output. The turbine-gatling system eliminates this entirely:</p>
-			<ul>
-				<li>Pre-compressed air is supplied externally at the optimal ratio</li>
-				<li>The combustion engine operates exclusively in "power mode"</li>
-				<li>Every stroke produces power rather than wasting energy on internal compression</li>
-			</ul>
-			<p>This fundamental architectural advantage translates to 20-30% higher power output for the same fuel consumption.</p>
-			
-			<h3>Continuous Energy Addition</h3>
-			<p>In a piston engine, energy is added only during the combustion stroke. The remaining strokes (intake, compression, exhaust) actually consume energy stored as rotational kinetic energy in the flywheel. The turbine-gatling system has energy added continuously through sequential combustion events, requiring no flywheel energy storage to maintain rotation between power events.</p>
-			
-			<h3>Pressure Conversion Efficiency</h3>
-			<p>The turbine design is inherently optimized for converting pressure differentials into rotational motion. The staged expansion mechanism allows pressure to expand progressively into sequential chambers, extracting maximum energy with minimal turbulence. The rotor's rotation directly converts this expanding pressure into torque without the mechanical losses of piston-to-crankshaft conversion.</p>
-			
-			<h3>Scalability for Power Output</h3>
-			<p>The number of fuel injection points is not limited to 3. A design could incorporate 4, 5, 6, or more injection points around the rotor:</p>
-			<ul>
-				<li>3 injection points: 15,000+ combustion events/minute at 5000 RPM</li>
-				<li>4 injection points: 20,000+ combustion events/minute at 5000 RPM</li>
-				<li>6 injection points: 30,000+ combustion events/minute at 5000 RPM</li>
-			</ul>
-			<p>Each additional injection point linearly increases power output and smoothness. This is impossible in reciprocating engines, which are limited by mechanical constraints of crankshaft design and cylinder count.</p>
-			
-			<h3>Separate Ignition System Enabling Extreme Compression Optimization</h3>
-			<p>The decoupling of air compression from the combustion/expansion subsystem is fundamentally transformative. This allows independent optimization of each subsystem:</p>
-			<ul>
-				<li><strong>Optimized Compression Stage:</strong> The external compressor can be designed and tuned solely for efficient air delivery at target pressure ratios (25:1, 30:1, or beyond) without compromise</li>
-				<li><strong>Extreme Compression Ratios Achievable:</strong> Freed from the mechanical constraints of reciprocating engines, the ignition chamber can operate at compression ratios far exceeding conventional limits—potentially 40:1, 50:1, or higher without detonation risk, since the air is pre-compressed externally before fuel injection</li>
-				<li><strong>No Compression Stroke Limitations:</strong> Traditional piston engines are limited to ~14:1 compression ratios due to the explosive nature of internal compression. This system compresses air externally in a controlled, continuous process, then introduces fuel only in the high-pressure ignition chamber, eliminating pre-ignition and detonation problems</li>
-				<li><strong>Customizable Pressure Profiles:</strong> The compressor can deliver varying pressure levels for different operating conditions (low RPM requiring higher pressure for ignition assist, high RPM requiring optimized pressure for efficiency)</li>
-			</ul>
-			
-			<h3>Compartmentalization Enables Superior Debugging and Optimization</h3>
-			<p>The architectural separation of compression, combustion, and expansion into distinct, independently-operable subsystems provides extraordinary advantages for engine development, optimization, and troubleshooting:</p>
-			<ul>
-				<li><strong>Independent Subsystem Debugging:</strong> Each process (compression, combustion, expansion) can be diagnosed and optimized independently without affecting the others. A problem in combustion efficiency does not require redesigning the compressor or expansion mechanism</li>
-				<li><strong>Isolated Performance Analysis:</strong> Test engineers can isolate specific issues to individual components. Is power output low? Test the compressor efficiency separately, then test combustion ignitability independently, then test expansion stage energy conversion separately. Each reveals its own bottleneck</li>
-				<li><strong>Compression Optimization Independent of Combustion:</strong> Compressor design can be optimized for efficiency, pressure profile, and response characteristics without considering combustion chamber geometry or expansion port alignment</li>
-				<li><strong>Combustion Optimization Independent of Expansion:</strong> Fuel injection timing, ignition parameters, and chamber pressure can be optimized for complete combustion without redesigning expansion stages. Changes to combustion do not affect rotor mechanical design</li>
-				<li><strong>Expansion Optimization Independent of Combustion:</strong> Expansion port timing, chamber alignment sequences, and staged energy conversion can be optimized for maximum pressure-to-motion efficiency without altering combustion parameters</li>
-				<li><strong>Modular Testing and Prototyping:</strong> Each subsystem can be tested in isolation with standard test fixtures. Compression can be tested with pressure gauges and flow meters. Combustion can be tested with ignition timing analysis and thermal cameras. Expansion can be tested with load cells and torque measurement—all independently</li>
-				<li><strong>Parallel Development Paths:</strong> Separate engineering teams can optimize each subsystem simultaneously. Compression engineers focus on compressor efficiency, combustion engineers focus on ignition and fuel-air mixing, and mechanical engineers focus on rotor dynamics and expansion port design—with minimal interdependencies</li>
-				<li><strong>Incremental Improvement Cycles:</strong> Once any subsystem is optimized, it becomes a fixed baseline for optimizing the next subsystem. There is no need to re-tune the entire engine during each development cycle. Optimize compression first, lock it in, then optimize combustion, then optimize expansion</li>
-				<li><strong>Root Cause Identification:</strong> Performance losses can be definitively traced to their source. Low power output can be immediately attributed to inadequate compression, poor combustion efficiency, or weak expansion—not to some mysterious interaction between three integrated processes</li>
-				<li><strong>Upgrade Paths and Modularity:</strong> Future improvements to any single subsystem (better compressor technology, improved fuel injectors, advanced bearing materials) can be integrated without redesigning the entire engine. Upgrade the compression system, the combustion system, or the expansion mechanism independently</li>
-				<li><strong>Comparative Testing:</strong> Engineers can test alternative compressor designs, combustion chamber geometries, or expansion port configurations by swapping components while keeping the rest of the engine constant. This reveals exactly how each design variable impacts overall performance</li>
-			</ul>
-			<p>This compartmentalization represents a fundamental advantage over conventional integrated engines, where optimization of one process inherently affects others, creating complex feedback loops that slow development and obscure root causes of performance issues.</p>
-			
-			<h3>Critical Importance of Fuel-Air Mixing in the Ignition Chamber</h3>
-			<p>The quality and uniformity of fuel-air mixing directly determines combustion efficiency and ignition reliability in this system:</p>
-			<ul>
-				<li><strong>Low-Pressure Pre-Mixed Fuel-Air:</strong> Fuel is first blended with low-pressure ambient or slightly pressurized air, creating a homogeneous fuel-air mixture before introduction to the high-pressure ignition chamber</li>
-				<li><strong>Homogeneous Mixture Distribution:</strong> This pre-mixed approach ensures uniform fuel distribution throughout the combustion chamber, eliminating rich and lean zones that plague direct-injection systems</li>
-				<li><strong>Rapid, Complete Combustion:</strong> A homogeneous mixture combusts completely and uniformly when exposed to the pneumatic compression trigger, burning all fuel with maximum efficiency and minimal exhaust emissions</li>
-				<li><strong>Controlled Pressure Rise:</strong> Uniform mixing ensures controlled, predictable pressure rise within the chamber, eliminating the shock waves and detonation issues that plague conventional high-compression engines</li>
-				<li><strong>Repeatability Across Cycles:</strong> Consistent fuel-air mixing ensures identical combustion events across all sequential cycles, maximizing power output and torque smoothness</li>
-			</ul>
-			
-			<h3>Ultra-High RPM Capability (30,000+ RPM) via Non-Oscillating Geometry</h3>
-			<p>The rotary design enables theoretical operating speeds that are impossible for reciprocating engines:</p>
-			<ul>
-				<li><strong>No Piston Acceleration Limits:</strong> Reciprocating engines face mechanical limits as pistons must accelerate/decelerate at each end of stroke. At extreme RPMs, piston inertia creates forces that exceed material limits. The turbine rotor eliminates this problem through continuous rotation without acceleration/deceleration cycles</li>
-				<li><strong>Continuous Geometric Motion:</strong> The rotor rotates smoothly at constant angular velocity, distributing forces evenly across the rotation. There is no equivalent of piston "mass" that must be repeatedly stopped and reversed</li>
-				<li><strong>30,000 RPM Theoretical Capability:</strong> With 6-8 injection points operating at 30,000 RPM, the engine produces 180,000-240,000 combustion events per minute—far exceeding any reciprocating engine's capability</li>
-				<li><strong>Bearing and Stress Distribution:</strong> The continuous rotation allows use of rolling element bearings (rather than reciprocating bearings) that handle extreme speeds with minimal friction and wear</li>
-				<li><strong>Scalable to Higher Speeds:</strong> Material science is the only limiting factor—there is no fundamental mechanical barrier preventing 40,000, 50,000 RPM or beyond with appropriate rotor design and bearing technology</li>
-			</ul>
-			
-			<h3>Ultra-Low RPM Torque Delivery (Opposite of Reciprocating Engines)</h3>
-			<p>This architecture uniquely provides maximum force at extremely low RPM, inverting the traditional piston engine performance curve:</p>
-			<ul>
-				<li><strong>Piston Engine Constraint:</strong> Reciprocating engines must overcome piston inertia during startup and low-speed operation. They produce minimal torque at idle and low RPM, requiring throttle buildup to reach useful power. This is why manual transmissions need gear selection and clutch management to move heavy loads from standstill</li>
-				<li><strong>Turbine-Gatling Advantage:</strong> The sequential fuel-air injection mechanism ignites combustion regardless of rotor speed. At 100 RPM, with 4 injection points, the engine still produces 400 combustion events per minute, each delivering power directly to the rotor</li>
-				<li><strong>Constant Force per Rotation:</strong> The rotor experiences a continuous pushing force from expanding combustion gases in the expansion chambers, regardless of RPM. As RPM increases, force frequency increases proportionally—there is no low-RPM "dead zone"</li>
-				<li><strong>Instant Torque at Idle:</strong> The engine can produce substantial torque immediately upon ignition, even at 100-200 RPM, enabling direct-drive operation of pumps, compressors, or generators without transmission complexity</li>
-				<li><strong>Superior Load-Starting Capability:</strong> Heavy loads (like a fully-loaded compressor) can be cranked directly from standstill without stalling, as the turbine-gatling engine does not require acceleration through a low-torque regime like piston engines</li>
-				<li><strong>Implications for Vehicle Dynamics:</strong> Electric motor-like torque delivery at all speeds eliminates the need for complex multi-speed transmissions, reducing drivetrain losses and improving efficiency</li>
-			</ul>
-			
-			<h3>Power-to-Weight Ratio and Cost Efficiency</h3>
-			<p>By eliminating the need for a complex reciprocating mechanism (pistons, connecting rods, crankshaft, valve train), the turbine-gatling engine reduces structural complexity and weight. The same power output can be achieved with a significantly lighter engine, improving power-to-weight ratio—critical for mobile applications.</p>
-			<ul>
-				<li><strong>Smaller Engine = Lower Cost:</strong> The turbine-gatling architecture's exceptional power density enables smaller engines to deliver the same horsepower as conventional engines. A smaller engine requires less material, less machining, less assembly labor, and simplified manufacturing—directly reducing manufacturing cost by 20-30% compared to equivalent-power piston engines</li>
-				<li><strong>Compressor Size Integration:</strong> The external compressor's size varies by compression ratio and flow requirements, and must be included in the total engine system weight. However, modern compressor technology has achieved high efficiency and compact designs. More importantly, the ability to decouple compressor design from combustion engine design allows optimization of the compressor for efficiency, potentially using different compression technologies (rotary screw, centrifugal) that achieve better weight-to-pressure ratios than reciprocating designs</li>
-				<li><strong>Transmission Elimination Reduces Total System Weight Dramatically:</strong> Conventional engines require heavy multi-speed transmissions (100-250 kg for automotive, 500-1500 kg for heavy trucks and locomotives). The turbine-gatling engine's direct-drive capability eliminates the transmission entirely:
-					<ul>
-						<li>Automotive: Removing a 150 kg transmission saves significant weight</li>
-						<li>Trucks: Eliminating a 1000 kg transmission is a massive weight reduction, improving payload capacity and fuel efficiency</li>
-						<li>Locomotives: Removing diesel-electric hybrid systems (generator + traction motor + electrical controls = 2000-3000 kg) is transformative for rail vehicle weight</li>
-						<li>Aircraft: Direct-drive propellers with no transmission gearbox saves hundreds of kilograms</li>
-					</ul>
-				</li>
-				<li><strong>Overall Weight Advantage:</strong> When accounting for the smaller combustion engine, variable-size compressor, and eliminated transmission, the total turbine-gatling propulsion system weighs 30-40% less than equivalent-power reciprocating engine systems, resulting in exceptional power-to-weight ratios and reduced operating costs</li>
-			</ul>
-			
-			<h3>Conclusion on Power Superiority</h3>
-			<p>The turbine-gatling architecture delivers superior power through a combination of:</p>
-			<ul>
-				<li>Continuous rotation without dead zones</li>
-				<li>High-frequency combustion events (50-100% higher than piston engines)</li>
-				<li>Simultaneous multiple combustion events</li>
-				<li>Elimination of compression stroke losses (20-30% energy gain)</li>
-				<li>Continuous energy addition rather than cyclical energy waste</li>
-				<li>Optimized pressure-to-motion conversion</li>
-				<li>Unlimited scalability in injection points</li>
-				<li>Reduced engine weight for equivalent power</li>
-			</ul>
-			<p>These factors combine to deliver significantly higher power output and efficiency than traditional reciprocating engines operating at equivalent fuel consumption rates and speeds.</p>
-		</div>
-		<div class="section">
-			<h2>Comparison with Electric Engines and Superior Use Cases</h2>
-			<p>While the turbine-gatling engine shares several performance characteristics with electric motors (instant torque at low RPM, smooth power delivery), it offers unique advantages for specific applications where electric engines are limited:</p>
-			
-			<h3>Similarities to Electric Motors</h3>
-			<ul>
-				<li><strong>Instant Torque Delivery:</strong> Like electric motors, the turbine-gatling engine produces maximum torque immediately upon startup, requiring no acceleration phase or transmission shifting</li>
-				<li><strong>Smooth Power Curve:</strong> The continuous rotation and high-frequency combustion events create smooth, linear power delivery across the entire RPM range, eliminating the jerky power spikes of reciprocating engines</li>
-				<li><strong>Direct-Drive Capability:</strong> Both electric motors and the turbine-gatling engine can drive loads directly without complex multi-speed transmissions</li>
-				<li><strong>Efficiency:</strong> Both achieve superior energy conversion efficiency compared to traditional reciprocating engines</li>
-			</ul>
-			
-			<h3>Sequential Engine Placement for Increased Power Output</h3>
-			<p>A critical advantage unique to the turbine-gatling architecture is the ability to stack multiple engines in series or parallel arrangements to increase total power output:</p>
-			<ul>
-				<li><strong>Modular Scaling:</strong> Two, three, or more turbine-gatling engines can be mechanically coupled to a common load shaft, with each engine adding its full torque output. A train locomotive could employ 4-6 turbine-gatling engines on a single axle, dramatically increasing power density</li>
-				<li><strong>Independent Optimization:</strong> Each engine can be optimized and tuned independently, then synchronized for combined operation</li>
-				<li><strong>Redundancy and Reliability:</strong> If one engine is damaged, the others continue operating, reducing catastrophic failure risk (unlike a single large diesel engine)</li>
-				<li><strong>Load Sharing:</strong> Multiple engines automatically share the load through mechanical coupling, improving durability and reducing stress on any single unit</li>
-				<li><strong>Scalable Power Density:</strong> Electric engines cannot be practically stacked; turbine-gatling engines can be replicated as needed for arbitrarily high power outputs</li>
-			</ul>
-			
-			<h3>Elimination of Transmission Requirements and Maintenance Benefits</h3>
-			<p>Like electric motors, the turbine-gatling engine's instant low-RPM torque completely eliminates the need for complex multi-speed transmissions:</p>
-			<ul>
-				<li><strong>No Transmission Required:</strong> Unlike piston engines (which require gear selection to match torque to load), both electric motors and the turbine-gatling engine deliver full torque at any speed, enabling direct mechanical coupling to the load. The turbine-gatling offers an additional advantage over batteries: fuel's superior energy density enables extended range and continuous operation</li>
-				<li><strong>Reduced Maintenance:</strong> Eliminating transmission systems removes a major source of maintenance costs and failures:
-					<ul>
-						<li>No transmission fluid changes or repairs</li>
-						<li>No clutch wear or replacement cycles</li>
-						<li>No shift mechanism maintenance or hydraulic issues</li>
-						<li>No torque converter complexity</li>
-						<li>Simplified drivetrain reduces overall system complexity</li>
-					</ul>
-				</li>
-				<li><strong>Improved Reliability:</strong> Transmissions are responsible for significant mechanical failures in vehicles. Direct mechanical coupling to the load via the turbine-gatling engine dramatically improves drivetrain reliability</li>
-				<li><strong>Cost Reduction:</strong> A transmission system in a heavy vehicle costs $5,000-$15,000+. Eliminating it represents substantial savings in manufacturing, installation, and lifetime maintenance</li>
-				<li><strong>Efficiency Gains:</strong> Transmission losses (typically 10-15% of engine output) are completely eliminated with direct drive, improving overall system efficiency</li>
-			</ul>
-			
-			<h3>Revolutionary Solution for Diesel-Electric Trains and Heavy Transport</h3>
-			<p>Modern trains and heavy vehicles currently use diesel-electric powertrains specifically because reciprocating diesel engines cannot deliver torque at low speeds. The turbine-gatling engine solves this fundamental problem:</p>
-			<ul>
-				<li><strong>Current State of Art - Diesel-Electric Trains:</strong> Locomotives use large diesel piston engines coupled to electrical generators (producing 50-60% electrical losses), which power electric traction motors. This hybrid approach adds enormous cost, weight, and complexity solely to work around the low-RPM torque limitations of reciprocating engines</li>
-				<li><strong>Turbine-Gatling Alternative:</strong> A single turbine-gatling engine (or multiple units stacked for higher power) can directly drive train wheels or propellers with full torque from standstill, eliminating the need for:
-					<ul>
-						<li>Electrical generator (eliminates 50-60% electrical losses)</li>
-						<li>Electrical distribution system</li>
-						<li>Traction motor system</li>
-						<li>Battery or energy storage system</li>
-						<li>Complex control electronics</li>
-					</ul>
-				</li>
-				<li><strong>Weight Reduction:</strong> Eliminating diesel-electric hybrid systems reduces total locomotive weight by 20-30%, improving acceleration and reducing rail stress</li>
-				<li><strong>Cost Reduction:</strong> Diesel-electric locomotives cost $2-5 million. A turbine-gatling direct-drive locomotive would cost 30-40% less to manufacture and maintain</li>
-				<li><strong>Efficiency Superior to Diesel-Electric:</strong> By eliminating electrical conversion losses (50-60% loss in generator/motor conversion), the turbine-gatling engine delivers 20-30% more net power to the rails with the same fuel consumption</li>
-				<li><strong>Immediate Commercialization Opportunity:</strong> Freight railways operating thousands of locomotives represent an immediate multi-billion-dollar market for turbine-gatling propulsion</li>
-			</ul>
-			
-			<h3>Multi-Fuel Flexibility and Optimization</h3>
-			<p>Unlike electric engines (which are fuel-agnostic but require energy source infrastructure), the turbine-gatling engine operates with any combustible fuel, enabling unprecedented optimization:</p>
-			<ul>
-				<li><strong>Compression Ratio Tuning by Fuel Type:</strong> The external compression system can be tuned to the optimal compression ratio for each fuel:
-					<ul>
-						<li>Gasoline: 12:1-15:1 compression</li>
-						<li>Diesel: 25:1-30:1 compression</li>
-						<li>Jet fuel/Kerosene: 18:1-22:1 compression</li>
-						<li>Hydrogen: 40:1-50:1 compression (safe from detonation due to external compression)</li>
-						<li>Biofuels: Optimized for specific fuel composition</li>
-						<li>Synthetic fuels: Custom compression profiles</li>
-					</ul>
-				</li>
-				<li><strong>Fuel Selection by Application:</strong>
-					<ul>
-					<li>Aircraft use jet fuel tuned for high-altitude performance and compete directly with turboprop and jet engines</li>
-						<li>Trains use diesel optimized for cost-effectiveness</li>
-						<li>Portable generators use gasoline or propane for availability</li>
-						<li>Hydrogen-powered applications can operate at extreme compression ratios impossible with piston engines</li>
-					</ul>
-				</li>
-				<li><strong>Future Fuel Adaptation:</strong> As new fuels (synthetic, algae-derived, carbon-neutral) become available, the turbine-gatling engine can be optimized for each through simple compressor adjustment—no fundamental engine redesign required</li>
-				<li><strong>Regional Fuel Availability:</strong> Vehicles can be optimized for locally available fuels, reducing supply chain complexity and enabling operation in remote regions</li>
-			</ul>
-			
-			<h3>Jet Engine Market Competition: Power Density and Continuous Operation</h3>
-			<p>The turbine-gatling engine delivers performance and power density superior to both electric engines and traditional jet engines, positioning it as direct competition in the aviation market:</p>
-			<ul>
-				<li><strong>Power Density Comparison:</strong>
-					<ul>
-						<li>Electric motors: ~2-3 kW per kilogram (continuous duty)</li>
-						<li>Turbine-gatling engine: ~10-15 kW per kilogram (at 5000 RPM with 4 injection points)</li>
-						<li>The turbine-gatling achieves 4-5× the power density of electric motors</li>
-					</ul>
-				</li>
-				<li><strong>Aircraft Application Advantages:</strong>
-					<ul>
-						<li>A 300 hp turbine-gatling engine weighs ~25-35 kg; equivalent electric motor weighs ~100-150 kg</li>
-						<li>Battery energy density (0.5-1 kWh/kg) is far below hydrocarbon fuel (12 kWh/kg). A 300 hp turbine-gatling engine with 2 hours of fuel weighs ~60 kg total; equivalent electric aircraft would require ~500+ kg of batteries for the same mission duration</li>
-						<li>Range: Turbine-gatling aircraft can achieve 10-15 hour flights with fuel; electric aircraft limited to 1-3 hours even with massive battery packs</li>
-						<li>Rapid Refueling: Fuel refill takes 5 minutes; battery recharge takes 1-4 hours</li>
-					</ul>
-				</li>
-				<li><strong>Specific Aircraft Use Cases:</strong>
-					<ul>
-						<li>High-altitude reconnaissance: Turbine-gatling provides extended loiter time and range impossible for electric aircraft</li>
-						<li>Regional transport: 4-8 seat turbine-gatling aircraft could operate 500+ km ranges; equivalent electric aircraft limited to ~100 km</li>
-						<li>Urban air mobility (eVTOL): Multiple turbine-gatling engines on vertical-takeoff aircraft could provide 500+ km range vs. 50-100 km for electric</li>
-						<li>Cargo delivery: Heavy-lift drones powered by turbine-gatling engines could carry payloads over long distances at efficiency impossible with current electric technology</li>
-						<li>Long-endurance surveillance: Military and commercial surveillance aircraft could operate 24+ hours continuously—far exceeding electric aircraft capabilities</li>
-					</ul>
-				</li>
-				<li><strong>Hydrogen Aircraft Integration:</strong> The turbine-gatling engine's ability to safely operate at 40:1+ compression ratios makes it ideal for hydrogen-powered aviation, enabling zero-carbon flights with exceptional range and power density</li>
-			</ul>
-			
-			<h3>Market Applications and Commercial Opportunities</h3>
-			<ul>
-				<li><strong>Freight Locomotives:</strong> Replace 3,000+ active diesel-electric locomotives globally; $50-100 billion market opportunity</li>
-				<li><strong>Maritime Vessels:</strong> Large cargo ships, tankers, and ferries could reduce fuel consumption and emissions; $20-30 billion market</li>
-				<li><strong>Regional Aircraft:</strong> 4-20 seat turbine-gatling aircraft could replace regional turboprops with better efficiency and lower operating costs; $10-15 billion market</li>
-				<li><strong>Heavy Industrial Equipment:</strong> Mining equipment, construction machinery, and industrial generators; $15-20 billion market</li>
-				<li><strong>Portable and Backup Power:</strong> Generators and emergency power systems for remote locations; $5-10 billion market</li>
-				<li><strong>Automotive (Heavy Duty):</strong> Class 8 trucks and buses where electric cannot yet match range/payload; $30-50 billion market</li>
-			</ul>
-		</div>
-		<div class="conclusion">
-			<strong>Conclusion & Comprehensive Prior Art Claim:</strong> This disclosure places the following innovative concepts and system architectures into the public domain as prior art, establishing a comprehensive defensive publication against future patent claims:
-			
-			<h3>Architectural Innovations (Prior Art)</h3>
-			<ul>
-				<li>The fundamental concept of separating air compression from combustion and expansion by using an external, independent compression system</li>
-				<li>The application of any compression technology (reciprocating piston, rotary screw, centrifugal, axial piston, variable displacement, or other) to supply pre-compressed air to a combustion engine at a target compression ratio</li>
-				<li>The use of a pressure tank or vat to store and regulate high-pressure air for on-demand supply to a combustion chamber</li>
-			</ul>
-			
-			<h3>Combustion System Innovations (Prior Art)</h3>
-			<ul>
-				<li>A turbine-based (not piston-based) combustion engine architecture</li>
-				<li>The gatling-gun combustion design featuring multiple fuel-air injection points distributed around a rotating rotor</li>
-				<li>Sequential fuel-air injection where each injection point aligns with combustion chamber sections as the rotor rotates</li>
-				<li>Multiple sequential combustion events per single rotation, spanning multiple cylinder-sections (e.g., 3 or more), creating high-frequency power output</li>
-				<li>Fuel injection into pre-compressed air chambers without internal compression stroke losses</li>
-				<li>Rapid, complete combustion enabled by high-pressure air environment from external compressor</li>
-			</ul>
-			
-			<h3>Expansion System Innovations (Prior Art)</h3>
-			<ul>
-				<li>Staged expansion mechanism with sequential cylinder-to-expansion-port alignment</li>
-				<li>Progressive conversion of pressure differentials into mechanical energy through sequential chamber alignment</li>
-				<li>Minimization of air movement and parasitic losses through staged, low-turbulence expansion design</li>
-			</ul>
-			
-			<h3>System Performance Innovations (Prior Art)</h3>
-			<ul>
-				<li>Target compression ratios of 25:1 or higher achieved through two-stage external compression</li>
-				<li>High power density through rapid pressure buildup using high-throughput compressors (e.g., two-stage reciprocating piston at 4000-5000 RPM)</li>
-				<li>Elimination of parasitic compression stroke losses inherent to conventional internal combustion engines</li>
-				<li>Independent optimization of compression, combustion, and expansion subsystems</li>
-			</ul>
-			
-			<h3>Patent Protection Impact</h3>
-			<p>Any future patent applications attempting to claim these concepts, or substantial variations thereof (including but not limited to: separated compression architectures, gatling-gun fuel injection, turbine-based combustion with external compression, staged expansion mechanisms, or any combination of these elements) should be considered non‑novel in light of this publication and the prior art it establishes. This disclosure is intended to place these innovations into the public domain in perpetuity, preventing monopolistic control through patent claims.</p>
-		</div>
-	</div>
-	<script>
-		const GITHUB_BASE_URL = 'https://esanfgit.github.io/';
-		let svgFrames = [];
-		let currentFrame = 0;
-		let isPlaying = false;
-		let animationInterval = null;
-
-		// Generate SVG file names - IMG1.svg through IMG112.svg
-		const svgFileNames = Array.from({length: 11}, (_, i) => `IMG${i + 1}.svg`);
-
-		// Load SVG files from GitHub Pages
-		async function loadSVGs() {
-			try {
-				for (const fileName of svgFileNames) {
-					const url = GITHUB_BASE_URL + fileName;
-					const response = await fetch(url);
-					if (response.ok) {
-						const svgContent = await response.text();
-						svgFrames.push(svgContent);
-					} else {
-						console.warn(`Could not load ${fileName}`);
-					}
-				}
-				
-				if (svgFrames.length > 0) {
-					document.getElementById('frame-total').textContent = svgFrames.length;
-					displayFrame(0);
-					// Auto-play after SVGs are loaded
-					setTimeout(() => {
-						document.getElementById('play-btn').click();
-					}, 500);
-				} else {
-					document.getElementById('svg-slideshow').innerHTML = '<p style="color:#666;">No SVG files found. Check file names and GitHub Pages URL.</p>';
-				}
-			} catch (error) {
-				console.error('Error loading SVGs:', error);
-				document.getElementById('svg-slideshow').innerHTML = '<p style="color:#d32f2f;">Error loading animation. Check console for details.</p>';
-			}
-		}
-
-		function displayFrame(index) {
-			if (svgFrames.length === 0) return;
-			if (index < 0) index = svgFrames.length - 1;
-			if (index >= svgFrames.length) index = 0;
-			
-			currentFrame = index;
-			document.getElementById('frame-counter').textContent = currentFrame + 1;
-			
-			// Get the SVG element and insert content
-			const svgEl = document.getElementById('animation-svg');
-			svgEl.innerHTML = svgFrames[currentFrame];
-			
-			// Ensure nested SVG preserves aspect ratio and fills parent
-			const nestedSvg = svgEl.querySelector('svg');
-			if (nestedSvg) {
-				nestedSvg.setAttribute('width', '100%');
-				nestedSvg.setAttribute('height', '100%');
-				nestedSvg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
-				nestedSvg.setAttribute('style', 'width:100%;height:100%;');
-				// Keep viewBox to maintain aspect ratio
-				if (!nestedSvg.hasAttribute('viewBox')) {
-					nestedSvg.setAttribute('viewBox', '0 0 210 297');
-				}
-			}
-		}
-
-		function nextFrame() {
-			displayFrame(currentFrame + 1);
-		}
-
-		function prevFrame() {
-			displayFrame(currentFrame - 1);
-		}
-
-		function togglePlay() {
-			const btn = document.getElementById('play-btn');
-			if (!isPlaying) {
-				isPlaying = true;
-				btn.textContent = 'Pause';
-				btn.style.background = '#b71c1c';
-				animationInterval = setInterval(() => {
-					nextFrame();
-				}, 300); // 300ms per frame for smooth animation
-			} else {
-				isPlaying = false;
-				btn.textContent = 'Play';
-				btn.style.background = '#43a047';
-				clearInterval(animationInterval);
-			}
-		}
-
-		// Load SVGs when page loads
-		window.addEventListener('DOMContentLoaded', loadSVGs);
-	</script>
+    <div class="container my-5 p-4 bg-white rounded-4 shadow-lg">
+        <!-- All main content is now inside the Bootstrap container -->
+        <h1>Defensive Publication: Compartmentalized Rotary-Turbine Engine System</h1>
+        <div class="abstract">
+            <strong>Abstract:</strong> This disclosure describes an innovative power generation system that
+            fundamentally separates the compression stage from the combustion and expansion stages. An external air
+            compression system (using any compression technology such as rotary screw, reciprocating piston,
+            centrifugal, or variable displacement compressor) supplies high-pressure air at a target compression ratio
+            (e.g., 25:1) to a turbine-based combustion engine. The combustion engine operates with a distributed
+            injection architecture supporting continuous combustion within the chamber. The expansion stage uses a
+            staged mechanism where cylinders align sequentially, converting pressure differentials into mechanical
+            energy with minimal air movement and parasitic losses. This architectural separation eliminates parasitic
+            compression losses inherent to conventional internal combustion engines and enables optimal independent
+            design of each subsystem. This document is intended to place the described concepts into the public domain
+            as prior art, preventing future patent claims on these innovations.
+        </div>
+        <!-- Migrated content from index.html lines 600-700 -->
+        <h3>Combustion Subsystem Operation (Turbine-Gatling)</h3>
+        <ol>
+            <li><strong>Low-Pressure Fuel-Air Premixing:</strong> Fuel is first mixed with low-pressure ambient or
+                slightly pressurized air to create a homogeneous fuel-air mixture</li>
+            <li><strong>Sequential Fuel-Air Injection:</strong> As the rotor rotates, each fuel injection point
+                sequentially aligns with a combustion chamber section</li>
+            <li><strong>High-Pressure Air Supply:</strong> High-pressure air from the external compressor (at target
+                compression ratio of 25:1 or 30:1) flows into the chamber</li>
+            <li><strong>Pneumatic Compression Ignition:</strong> The high-pressure air from the compressor pneumatically
+                compresses the low-pressure fuel-air mixture, triggering auto-ignition without requiring spark plugs.
+                The sudden compression of the fuel-air mixture in the high-pressure chamber initiates spontaneous
+                combustion</li>
+            <li><strong>Spark-Assisted Ignition (Optional):</strong> For enhanced ignition reliability at smaller
+                chamber orientations or at lower rotor speeds, a spark plug can be employed to ensure complete and rapid
+                combustion initiation</li>
+            <li><strong>Rapid Ignition and Combustion:</strong> The fuel ignites in the high-pressure air environment,
+                creating a rapid, complete burn with no compression stroke losses</li>
+            <li><strong>Rotor Advancement:</strong> The expanding combustion gases drive the rotor forward in a
+                turbine-like fashion</li>
+            <li><strong>Multiple Sequential Events:</strong> Multiple fuel injection and combustion events occur per
+                single rotation, spanning 3+ cylinder-sections, dramatically increasing power output frequency</li>
+        </ol>
+        <p><strong>Startup Note:</strong> During initial startup, the engine may rely heavily on externally supplied
+            compressed air to ensure safe ignition and operation. This avoids the risk of insufficient heat or
+            incomplete combustion at low rotor speeds, providing reliable and efficient startup performance.</p>
+        </ol>
+        <h3>Expansion Subsystem Operation (Staged)</h3>
+        <ol>
+            <li><strong>Cylinder-Port Alignment:</strong> As the rotor continues rotating, combustion chamber sections
+                (cylinders) sequentially align with expansion ports</li>
+            <li><strong>Progressive Gas Expansion:</strong> High-pressure combustion gases flow from the combustion
+                chamber into aligned expansion cylinders or ports</li>
+            <li><strong>Staged Energy Conversion:</strong> Pressure differentials are progressively converted into
+                rotational mechanical energy as cylinders align in sequence</li>
+            <li><strong>Minimal Air Movement:</strong> Sequential alignment ensures gradual, efficient expansion with
+                minimal turbulent gas flow or wasted motion</li>
+            <li><strong>Exhaust Vent System:</strong> When a combustion chamber is not aligned with an expansion port,
+                residual combustion gases and pressure must be safely vented. A series of exhaust vents positioned
+                around the casing wall allow combustion products to exit as the rotor rotates into non-aligned
+                positions. This prevents back-pressure accumulation, maintains chamber clearance, and ensures the next
+                combustion cycle can proceed without residual gas interference. These vents are precisely timed and
+                positioned to activate only when chambers are misaligned, preventing premature exhaust loss during
+                active expansion</li>
+            <li><strong>Exhaust:</strong> Combustion products exit through the final expansion port as the rotor
+                completes its cycle</li>
+            <li><strong>Cycle Continuation:</strong> The rotor, driven by accumulated energy from multiple combustion
+                events, continues rotating and aligns with the next fuel injection point</li>
+        </ol>
+        <div class="mechanical-systems">
+            <h2>Mechanical Sealing System: Differentiated Sealing Strategy</h2>
+            <p>The turbine-gatling system employs a differentiated sealing approach: <strong>perfect sealing is required
+                    only on the compression (air supply) side</strong>, while <strong>narrow tolerances are sufficient
+                    on the combustion/expansion side</strong>. This optimization reduces manufacturing complexity while
+                maintaining system performance:</p>
+            <h3>Compression-Side Sealing: Perfect Air Seal Requirements</h3>
+            <ul>
+                <li><strong>Perfect Sealing Mandate:</strong> The high-pressure compressed air supply passages from the
+                    external compressor to the combustion chamber injection points must maintain perfect, zero-leakage
+                    seals. Any loss of compressed air represents a direct loss of compression efficiency and combustion
+                    pressure</li>
+                <li><strong>Dynamic Face Seals or O-Ring Assemblies:</strong> Compression-side connections use precision
+                    dynamic face seals (labyrinth or mechanical seals) or redundant O-ring assemblies to achieve
+                    hermetic sealing</li>
+                <li><strong>Pressure Retention:</strong> The pressure tank, regulator valve, injection manifold, and all
+                    high-pressure air passages must be engineered for zero-loss operation. Any leakage directly reduces
+                    available combustion pressure and power output</li>
+                <li><strong>Testing and Quality Assurance:</strong> Compression-side components require pressure testing
+                    and leak detection before assembly to ensure perfect sealing integrity</li>
+            </ul>
+            <h3>Combustion-Side Sealing: Narrow Tolerance Rolling Contact</h3>
+            <ul>
+                <li><strong>Narrow Tolerance Design:</strong> Rather than requiring hermetic sealing, the combustion
+                    chamber walls, rotor sealing surfaces, and expansion ports use narrow clearance tolerances
+                    (micrometers to sub-millimeters) maintained by rolling contact elements</li>
+                <li><strong>Rolling Contact Rollers:</strong> Multiple precision rollers are positioned along the casing
+                    walls, precisely sized and aligned to contact the rotor's outer edges. Unlike sliding friction
+                    seals, the rollers rotate/roll with the rotor motion, minimizing friction, heat, and wear</li>
+                <li><strong>Controlled Gas Leakage:</strong> Small, predictable leakage between combustion chambers and
+                    expansion ports is acceptable and managed through design. The combustion pressure itself is
+                    generated continuously by sequential ignition events, so minor leakage does not compromise system
+                    performance</li>
+                <li><strong>Combustion Chamber Isolation:</strong> The narrow tolerances maintain adequate separation
+                    between adjacent combustion chambers, preventing cross-leakage that would degrade combustion event
+                    independence, while allowing controlled exhaust venting as designed</li>
+                <li><strong>Thermal Tolerance Management:</strong> Rolling element design accommodates thermal expansion
+                    from combustion heat without loss of sealing effectiveness. Variable-clearance roller assemblies
+                    self-adjust to maintain near-constant contact force as temperatures fluctuate</li>
+                <li><strong>Manufacturing Simplification:</strong> Combustion-side components do not require the
+                    precision machining or hermetic sealing specifications of compression-side parts, reducing
+                    manufacturing cost and complexity</li>
+            </ul>
+            <h3>System-Level Performance Impact</h3>
+            <p>This differentiated approach is a critical design insight: perfect sealing is only necessary where
+                external high-pressure air is supplied to the system. The combustion side, where continuous ignition
+                generates pressure internally, only requires narrow manufacturing tolerances to prevent unwanted
+                cross-leakage and maintain chamber separation. The turbine operates as a closed system, and in the
+                expansion chamber, a near-fit is sufficient because high-pressure exhaust is fed directly into the next
+                turbine stage. This eliminates the need for perfect seals within the expansion chamber, further
+                simplifying the design and manufacturing process while maintaining full performance targets.</p>
+            <p><strong>Final Point:</strong> Many technical challenges associated with turbine systems—such as
+                lubrication, high-speed bearings, and thermal management—have already been largely perfected through
+                decades of jet engine development. This means that proven solutions and mature technologies are readily
+                available for use in this engine architecture.</p>
+        </div>
+        <div class="thermal-management">
+            <h2>Critical Thermal Management Requirements</h2>
+            <p>The high compression ratios (25:1 to 40:1+) and rapid sequential combustion (20,000+ events per minute)
+                of the turbine-gatling engine generate substantial thermal energy. <strong>Advanced cooling is
+                    necessary</strong> to maintain safe operating temperatures and component integrity.</p>
+            <p>Any effective cooling system can be employed—liquid cooling loops, air cooling, evaporative cooling,
+                thermoelectric cooling, or hybrid approaches. The specific cooling technology is flexible and can be
+                optimized for the application and environment. The critical requirement is that the cooling system be
+                adequate for the engine's heat generation rate, with appropriate sensors and controls to maintain safe
+                operating temperatures.</p>
+        </div>
+        <div class="section">
+            <div class="section">
+                <h2>Sequential Engine Coupling for Power Scaling</h2>
+                <p>
+                    Another key advantage of this engine architecture is the ability to couple multiple engines in
+                    sequence on the same drive shaft. This means that two 240 horsepower engines can be combined to
+                    deliver a total of 480 horsepower, and additional engines can be added as needed for even greater
+                    power output. This modular approach to power scaling is far simpler and more efficient than
+                    attempting to synchronize multiple reciprocating engines, and it allows for flexible,
+                    application-specific system design.
+                </p>
+            </div>
+            <div class="section">
+                <h2>Efficiency, Transmission Losses, and Cost Reduction</h2>
+                <p>
+                    The compartmentalized rotary-turbine engine achieves a much higher percent efficiency than
+                    conventional reciprocating engines, largely due to its direct-drive capability. By delivering high
+                    torque at low RPM, it eliminates the need for complex multi-speed transmissions, which are a major
+                    source of energy loss and maintenance cost in traditional powertrains. Every gear, clutch, and shaft
+                    in a transmission system introduces frictional losses, reducing the net power delivered to the
+                    wheels or driven equipment.
+                </p>
+                <p>
+                    In applications like trains, the inefficiency of diesel-electric conversion is well known: a diesel
+                    engine drives a generator, which then powers electric traction motors. Each conversion
+                    step—mechanical to electrical and back—incurs significant energy losses, often resulting in overall
+                    system efficiencies below 35%. In contrast, a direct-drive rotary-turbine engine can transmit power
+                    mechanically with far fewer losses, increasing the effective efficiency and reducing both
+                    operational and capital costs.
+                </p>
+                <p>
+                    The simplified architecture of this engine—minimal moving parts, no complex transmission, and
+                    modular subsystems—translates directly to lower manufacturing and maintenance costs. Fewer parts
+                    mean fewer failure points, less downtime, and easier service. This cost advantage is especially
+                    important for large-scale or heavy-duty applications such as locomotives, ships, and industrial
+                    equipment, where reliability and total cost of ownership are critical.
+                </p>
+            </div>
+            <div class="section">
+                <h2>Minimal Moving Parts, Pneumatic Operation, and Repairability</h2>
+                <p>
+                    A major advantage of this engine system is its extremely limited number of moving parts. The design
+                    relies primarily on pneumatic forces rather than mechanical movement. The compressor system, while
+                    requiring movement, is a modular, plug-and-play component that can be easily replaced or upgraded as
+                    needed.
+                </p>
+                <p>
+                    The combustion system is stationary, operating as a constant flame that generates continuous
+                    pressure without any moving components. The expansion system is simplified to a single moving rotor
+                    shaft, further reducing mechanical complexity. This architecture not only enhances reliability but
+                    also makes the engine highly repairable and easy to maintain.
+                </p>
+                <p>
+                    In this respect, the engine shares key benefits with electric motors: minimal moving parts,
+                    straightforward maintenance, and robust operation. The focus on pneumatic operation and modularity
+                    sets a new standard for simplicity and serviceability in combustion engine design.
+                </p>
+            </div>
+            <h2>Limitations of Traditional Rotary Engines</h2>
+            <p>While rotary (Wankel) engines offer a superior power-to-weight ratio compared to reciprocating engines,
+                they suffer from several fundamental drawbacks. In traditional rotary designs, compression, combustion,
+                and expansion all occur within the same chamber. This leads to several issues:</p>
+            <ul>
+                <li><strong>Lubricant Burn:</strong> Oil is injected into the chamber to lubricate the apex seals,
+                    resulting in oil consumption and increased emissions due to lubricant burn.</li>
+                <li><strong>Sealing Issues:</strong> Maintaining a perfect seal between the rotor and the chamber walls
+                    is challenging, leading to loss of compression, reduced efficiency, and increased wear.</li>
+                <li><strong>Poor Combustion Geometry:</strong> The elongated, moving combustion chamber shape leads to
+                    incomplete combustion, higher emissions, and lower thermal efficiency compared to optimized
+                    fixed-chamber designs.</li>
+            </ul>
+            <h2>Power Generation Superiority of the Turbine-Gatling Architecture</h2>
+            <p>The turbine-based gatling-gun combustion system represents a fundamental paradigm shift in internal
+                combustion engine design, delivering superior power generation compared to traditional reciprocating
+                piston engines:</p>
+            <!-- Migrated content from index.html lines 500-600 -->
+            <h3>Optimization and Scalability Potential</h3>
+            <p>Unlike reciprocating engines constrained by mechanical limits, this architecture enables continuous
+                optimization across multiple parameters:</p>
+            <ul>
+                <li><strong>Compression Ratio Optimization:</strong> By varying the external compressor output,
+                    compression ratios can be adjusted from 15:1 (for gasoline operation) to 40:1+ (for diesel or
+                    hydrogen operation). Each fuel type can operate at its optimal compression ratio without mechanical
+                    compromise</li>
+                <li><strong>Ignition Process Customization:</strong> The ignition timing, fuel-air mixing ratio, and
+                    spark assist (if employed) can be independently optimized for each operating point. Lean-burn
+                    operation is possible at compression ratios where traditional engines would detonate</li>
+                <li><strong>Constant Chamber Pressure Operation:</strong> By modulating compressor output and fuel
+                    injection timing, the system can maintain near-constant pressure within combustion chambers across
+                    varying load conditions, maximizing energy extraction efficiency</li>
+                <li><strong>Lean Fuel Ignition:</strong> The high-pressure homogeneous fuel-air mixture ignites reliably
+                    even at lean equivalence ratios (fuel-air ratios far below stoichiometric). This enables operation
+                    on minimal fuel with maximum air, reducing fuel consumption and emissions</li>
+                <li><strong>Injection Point Scalability:</strong> Additional fuel injection points (5, 6, 8, or more)
+                    can be added around the rotor for linear increases in power output and combustion frequency,
+                    reaching 40,000+ combustion events per minute with 8 injection points at 5000 RPM</li>
+                <li><strong>RPM Scalability:</strong> The non-oscillating geometry permits continuous operation at
+                    30,000+ RPM with appropriate bearing technology, producing 120,000-240,000+ combustion events per
+                    minute with multi-point injection</li>
+            </ul>
+            <h3>Lubrication System Separation: Combustion vs. Mechanical Lubrication</h3>
+            <p>A critical design advantage is the complete separation of combustion-exposed parts from oil-lubricated
+                bearing and mechanical surfaces:</p>
+            <ul>
+                <li><strong>Combustion Chamber Isolation:</strong> The rotor's combustion-facing surfaces (chamber
+                    walls, injection points) are not exposed to engine oil. They remain clean and uncontaminated by
+                    lubrication residue, preventing oil-fuel interaction, sludge formation, and combustion efficiency
+                    loss</li>
+                <li><strong>Narrow Tolerance Sealing:</strong> Precision roller seals and narrow clearances (micrometers
+                    to sub-millimeters) on the combustion side maintain adequate separation between the combustion space
+                    and the rotor's bearing and mechanical systems underneath. Oil never contacts hot combustion
+                    surfaces. Note: perfect sealing is not required on the combustion side; narrow tolerances and
+                    controlled leakage are sufficient</li>
+                <li><strong>Bearing Lubrication Only:</strong> Oil circulates only through the rotor's bearing journals,
+                    mechanical linkages, and support structures—never entering the combustion chambers or contacting
+                    high-temperature combustion products</li>
+                <li><strong>Extended Oil Life:</strong> Without combustion contamination, engine oil lasts significantly
+                    longer. Oil degradation from heat, soot, and acidic combustion products is eliminated, reducing oil
+                    change frequency and maintenance costs</li>
+                <li><strong>Improved Combustion Efficiency:</strong> Combustion chamber walls remain clean and uncoated
+                    by oil residue, preventing fouling and maintaining optimal heat transfer and fuel-air mixing
+                    throughout the engine's service life</li>
+                <li><strong>Simplified Cooling and Oil Management:</strong> The combustion space can be separately
+                    cooled without overheating engine oil, and bearing lubrication can be optimized independently of
+                    combustion thermal requirements</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Operation Overview</h2>
+            <h3>External Compression Subsystem Operation</h3>
+            <ol>
+                <li><strong>Compression Cycle:</strong> The external compressor (e.g., two-stage reciprocating piston or
+                    rotary screw) compresses intake air to the target compression ratio (e.g., 25:1)</li>
+                <li><strong>Storage:</strong> Compressed air is delivered to and stored in a pressure tank or vat</li>
+                <li><strong>Pressure Regulation:</strong> A regulator or pressure control valve maintains the correct
+                    pressure and flow rate to the combustion chamber injection points</li>
+                <li><strong>Continuous Supply:</strong> The compressor operates continuously or on-demand to maintain
+                    pressure in the storage tank</li>
+            </ol>
+            <!-- Migrated content from index.html lines 400-500 -->
+            <div class="section">
+                <h2>Key Features</h2>
+                <ol class="features-list">
+                    <li><strong>Complete Architectural Separation of Compression and Combustion</strong><br>
+                        <!-- Details omitted for brevity -->
+                    </li>
+                    <li><strong>External Compression System with Multiple Technology Options</strong><br>
+                        <!-- Details omitted for brevity -->
+                    </li>
+                    <li><strong>Compartmentalized Combustion Architecture (Rotary-Turbine-Based)</strong><br>
+                        <!-- Details omitted for brevity -->
+                    </li>
+                    <li><strong>Staged Expansion Mechanism with Minimal Air Movement</strong><br>
+                        <!-- Details omitted for brevity -->
+                    </li>
+                    <li><strong>High-Pressure Fuel-Air Injection System</strong><br>
+                        <!-- Details omitted for brevity -->
+                    </li>
+                    <li><strong>Elimination of Parasitic Compression Losses</strong><br>
+                        <!-- Details omitted for brevity -->
+                    </li>
+                    <li><strong>Scalability and Flexibility</strong><br>
+                        <!-- Details omitted for brevity -->
+                    </li>
+                </ol>
+            </div>
+            <div class="section">
+                <h2>Performance Specifications and Optimization Potential</h2>
+                <h3>Baseline Performance Estimates (Sample Configuration)</h3>
+                <p><strong>Configuration:</strong> Single combustion chamber, 25:1 compression ratio, diesel fuel,
+                    conventional speed range:</p>
+                <ul>
+                    <li><strong>Operating RPM Range:</strong> 500-5000 RPM (conventional), with theoretical capability
+                        to 30,000+ RPM in optimized high-speed variants. For reference, standard jet engines typically
+                        operate in the range of 10,000 to 25,000 RPM.</li>
+                    <li><strong>Compression Ratio:</strong> 25:1 (baseline) to 30:1 or higher with optimized chamber
+                        geometry and compressor design</li>
+                    <li><strong>Simultaneous Combustion Events:</strong> 4 injection points operating at 5000 RPM =
+                        20,000 combustion events per minute (333+ per second)</li>
+                    <li><strong>Continuous Combustion:</strong> The system uses a single injection point in the
+                        combustion chamber, maintaining a continuous combustion process rather than discrete combustion
+                        events per minute.</li>
+                    <li><strong>Power Output Potential:</strong> A continuous burn system can produce significant power
+                        compared to cyclical ignition engines, with the possibility of achieving jet engine levels of
+                        RPM and output depending on design and optimization.</li>
+                    <li><strong>Torque Delivery:</strong> Superior low-end torque (usable from 500 RPM) with linear
+                        power delivery across RPM range, eliminating the RPM-dependent power curve limitations of
+                        reciprocating engines</li>
+                </ul>
+            </div>
+            <!-- Migrated content from index.html lines 300-400 -->
+            <div class="slideshow-container"
+                style="max-width:1400px;margin:40px auto;background:#fff;border-radius:12px;box-shadow:0 4px 24px rgba(0, 0, 0, 0.08);padding:40px 32px 32px 32px;">
+                <h2 style="color:#2a7ca3;text-align:center;margin-bottom:24px;">Combustion Animation - Continuous Burn Turbine Engine</h2>
+                <div style="background:#f7f9fa;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.06);padding:20px;height:80vh;max-height:900px;display:flex;align-items:center;justify-content:center;overflow:auto;">
+                    <object type="image/svg+xml" data="https://esanfGit.github.io/Continuous%20Burn%20Turbine%20Engine.svg" style="width:100%;height:100%;display:block;" aria-label="Continuous Burn Turbine Engine Animation"></object>
+                </div>
+            </div>
+            <div class="section">
+                <h2>Summary of the Design</h2>
+                <h3>System Architecture Overview</h3>
+                <p>The system consists of three independently optimized subsystems:</p>
+                <h3>1. External Compression Subsystem</h3>
+                <p>A separate air compression system (independent of the combustion engine) provides steady,
+                    high-pressure air at a target compression ratio. The compression system may be:</p>
+                <ul>
+                    <li><strong>Two-Stage Reciprocating Piston Compressor</strong> - Highest power density for
+                        throughput, 4000-5000 RPM operation, achieving 25:1 compression (5:1 × 5:1)</li>
+                    <li><strong>Two-Stage Rotary Screw Compressor</strong> - Smooth operation, 85-88% efficiency, 16:1
+                        to 25:1 compression range</li>
+                    <li><strong>Centrifugal Compressor</strong> - High efficiency (88-92%), suitable for high flow
+                        applications</li>
+                    <li><strong>Axial Piston Variable Displacement Compressor</strong> - Maximum power density, variable
+                        displacement for load matching</li>
+                    <li><strong>Any other compression technology</strong> - The system is technology-agnostic regarding
+                        the external compressor</li>
+                </ul>
+                <p>Compressed air is stored in a pressure tank or vat and supplied on-demand to the combustion engine
+                    via a regulated injection system. The target compression ratio for example is 25:1, though any ratio
+                    is possible.</p>
+                <h3>2. Combustion Subsystem (Rotary-Turbine Design)</h3>
+                <p>The engine features a single combustion chamber operating as a rotary turbine, not a reciprocating
+                    piston engine. High-pressure air (from the external compressor) and fuel are injected into this
+                    chamber, where fuel ignites in the high-pressure air environment, creating rapid, complete
+                    combustion. The continuous burn drives the rotor forward in a turbine-like manner. While this design
+                    uses a single combustion chamber, multiple combustion chambers and exhaust ports are possible as
+                    design options for increased power or efficiency.</p>
+                <h3>3. Expansion Subsystem (Staged Expansion)</h3>
+                <p>Instead of a single expansion chamber, the design uses sequential, aligned cylinders:</p>
+                <ul>
+                    <li>As the rotor rotates, cylinder sections align in sequence</li>
+                    <li>High-pressure combustion gases flow into these cylinders progressively</li>
+                    <li>Pressure differentials are converted into mechanical energy through sequential alignment</li>
+                    <li>Staged expansion minimizes air movement and turbulent flow, reducing parasitic energy losses
+                    </li>
+                    <li>Maximum energy is extracted from the pressure differential with minimal wasted motion</li>
+                </ul>
+            </div>
+            <div class="section">
+                <h2>Key Innovations</h2>
+                <ul>
+                    <li><strong>Compartmentalization:</strong> Compression, combustion, and expansion are physically and
+                        functionally separated, allowing independent optimization and modular upgrades.</li>
+                    <li><strong>Rotary-Turbine Hybrid:</strong> The engine integrates rotary pressure retention and
+                        turbine-like continuous flow for efficient energy conversion.</li>
+                    <li><strong>Continuous Combustion:</strong> A single combustion chamber maintains a stable,
+                        uninterrupted burn, maximizing power output and efficiency.</li>
+                    <li><strong>Pneumatic Autoignition:</strong> Fuel-air mixture is ignited by externally supplied,
+                        high-pressure air, eliminating the need for spark plugs and enabling high compression ratios
+                        without detonation risk.</li>
+                    <li><strong>Staged Expansion:</strong> Sequentially aligned expansion cylinders extract energy
+                        progressively, minimizing turbulence and parasitic losses.</li>
+                    <li><strong>Technology Agnosticism:</strong> Compatible with any compression, combustion, or
+                        expansion technology, and adaptable to various fuels.</li>
+                    <li><strong>Minimal Moving Parts:</strong> Only the expansion rotor moves, reducing mechanical
+                        complexity and improving reliability.</li>
+                </ul>
+            </div>
+            <div class="section">
+                <h2>System Architecture Overview</h2>
+                <ol>
+                    <li><strong>External Compression Subsystem:</strong> Independent compressor supplies high-pressure
+                        air at target ratios (e.g., 25:1), stored in a pressure tank and regulated for on-demand
+                        delivery.</li>
+                    <li><strong>Combustion Subsystem:</strong> Single stationary combustion chamber receives
+                        high-pressure air and fuel, supporting continuous combustion. Multiple combustion chambers are
+                        not necessary; hot combustion gases or air can be routed to different intake ports to serve
+                        multiple expansion stages or outputs as needed.</li>
+                    <li><strong>Expansion Subsystem:</strong> Staged expansion cylinders convert pressure into
+                        mechanical energy, with sequential alignment for maximum energy extraction.</li>
+                </ol>
+            </div>
+            <div class="section">
+                <h2>Performance and Scalability</h2>
+                <ul>
+                    <li><strong>Operating RPM:</strong> Capable of conventional speeds (500-5000 RPM) and jet engine
+                        levels (10,000-30,000+ RPM) with appropriate design.</li>
+                    <li><strong>Compression Ratio:</strong> Adjustable from 15:1 to 40:1+ depending on fuel and
+                        compressor technology.</li>
+                    <li><strong>Power Output:</strong> Continuous combustion enables significant power compared to
+                        cyclical ignition engines.</li>
+                    <li><strong>Torque Delivery:</strong> Superior low-end torque and linear power across RPM range,
+                        eliminating the limitations of reciprocating engines.</li>
+                    <li><strong>Scalability:</strong> Scalability is achieved by routing hot gases or air from the
+                        single combustion chamber to multiple intake ports or expansion stages, rather than adding
+                        additional combustion chambers.</li>
+                </ul>
+                <p><strong>Additional Advantages:</strong> The rotary chamber design provides constant force output,
+                    unlike conventional turbines that generate little force until reaching high speed. This enables
+                    immediate and consistent torque delivery. Furthermore, routing combustion chamber exhaust into the
+                    rotor at multiple locations around the perimeter can significantly increase power output. Multiple
+                    exhaust ports can also be used to feed high-pressure gases from the primary turbine to one or more
+                    lower-pressure turbines, enhancing overall energy extraction and system scalability.</p>
+            </div>
+            <div class="section">
+                <h2>Technical Features</h2>
+                <ul>
+                    <li><strong>Compression:</strong> External, independent, and technology-agnostic.</li>
+                    <li><strong>Combustion:</strong> Stationary chamber, continuous burn, pneumatic autoignition, lean
+                        operation for low emissions.</li>
+                    <li><strong>Expansion:</strong> Staged, sequential cylinders for progressive energy extraction.</li>
+                    <li><strong>Lubrication:</strong> Complete separation of combustion-exposed parts from
+                        oil-lubricated mechanical surfaces.</li>
+                    <li><strong>Cooling:</strong> Flexible cooling system options to manage high thermal loads.</li>
+                    <li><strong>Direct-Drive Capability:</strong> High torque at low RPM enables direct coupling to
+                        loads without complex transmissions.</li>
+                    <li><strong>Multi-Fuel Flexibility:</strong> Adaptable to gasoline, diesel, jet fuel, hydrogen, and
+                        future synthetic fuels.</li>
+                </ul>
+            </div>
+            <div class="section">
+                <h2>Applications</h2>
+                <p><strong>Electric Motor Analogy and Train Use Case:</strong> The compartmentalized rotary-turbine
+                    engine shares key operational characteristics with electric motors, most notably its ability to
+                    deliver high torque at low RPM. This makes it especially well-suited for applications like trains,
+                    which traditionally use diesel-electric systems because conventional diesel engines cannot provide
+                    sufficient torque at low speeds for direct drive. With this engine's direct-drive capability and
+                    immediate torque delivery, it could replace diesel-electric systems, simplifying drivetrain
+                    architecture, improving efficiency, and reducing maintenance. The result is a powerplant that
+                    combines the efficiency and torque profile of electric motors with the energy density and refueling
+                    speed of combustion systems.</p>
+                <ul>
+                    <li>Freight locomotives</li>
+                    <li>Maritime vessels</li>
+                    <li>Regional and commercial aircraft</li>
+                    <li>Heavy industrial equipment</li>
+                    <li>Portable and backup power systems</li>
+                    <li>Heavy-duty automotive</li>
+                    <li><strong>Direct-drive power systems:</strong> The engine's ability to deliver high torque at low
+                        RPM enables direct coupling to wheels, propellers, or generators without the need for complex
+                        transmissions, improving overall system efficiency.</li>
+                </ul>
+                <p><strong>Efficiency Comparison:</strong> Unlike reciprocating engines, which require multiple moving
+                    parts and complex crankshaft mechanisms to convert linear motion into rotation, the rotary-turbine
+                    engine provides smooth, continuous rotational force directly. This direct-drive capability reduces
+                    mechanical losses, increases efficiency, and simplifies drivetrain design. As a result, systems
+                    using this engine can achieve higher overall efficiency and reliability compared to traditional
+                    reciprocating internal combustion engines.</p>
+                <p><strong>Weight-to-Power Output Comparison:</strong> Rotary engine designs, such as the
+                    compartmentalized rotary-turbine system, typically offer a much higher power-to-weight ratio than
+                    reciprocating engines. The rotary design eliminates heavy components like pistons, connecting rods,
+                    and crankshafts, resulting in a lighter engine for the same power output. In practical terms, for a
+                    given unit weight, a rotary-turbine engine can deliver significantly more power than a reciprocating
+                    engine, making it especially advantageous for applications where weight is critical, such as
+                    aviation, portable power, and high-performance vehicles.</p>
+                <p><strong>Example: Mazda R9 Rotary vs. Reciprocating Engine:</strong> The Mazda R9 is a rotary (Wankel)
+                    engine, producing approximately 300 horsepower (224 kW) at a weight of about 143 kg (315 lbs), for a
+                    power-to-weight ratio of roughly 2.1 kW/kg. In comparison, a typical reciprocating (piston) engine
+                    of similar output, such as a 4-cylinder 2.0L turbocharged engine, often weighs 180–200 kg (400–440
+                    lbs) for the same 220–250 kW output, yielding a power-to-weight ratio closer to 1.2–1.4 kW/kg. This
+                    demonstrates that rotary engines like the R9 already offer a significant weight advantage over
+                    conventional reciprocating engines for the same power output.</p>
+            </div>
+            <div class="conclusion">
+                <h2>Conclusion & Prior Art Claim</h2>
+                <p>This compartmentalized rotary-turbine engine system, with continuous combustion and pneumatic
+                    autoignition, is placed into the public domain as prior art. The architecture's modularity,
+                    technology agnosticism, and hybrid rotary-turbine features represent a significant advancement over
+                    conventional engine designs. Any future patent claims on these concepts or substantial variations
+                    should be considered non-novel in light of this publication.</p>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Preliminary Nature, Technology Agnosticism, and Engineering Rationale</h2>
+            <p>
+                It is important to emphasize that this engine design is preliminary, and the advantages identified at
+                each stage
+                are based on current engineering insights. The core concept—dividing the internal combustion engine into
+                manageable, compartmentalized parts—is rooted in common sense and should be standard engineering
+                practice.
+                Traditional engines, with their interdependent compression, combustion, and expansion processes within a
+                single
+                cylinder, inherently limit the potential for optimization.
+            </p>
+            <p>
+                This engine represents a significant architectural advancement by enabling each subsystem—compression,
+                combustion, and expansion—to be independently optimized for any given application or environment. The
+                design is
+                intentionally technology agnostic: it does not matter which specific compression, combustion, or
+                expansion
+                technology is chosen. For example, a two-stage compressor may be ideal for a large vehicle like a train,
+                while a
+                single-stage, compact compressor might be preferable for a lightweight model airplane. The choice of
+                subsystem
+                technology can be tailored to the needs of the application without altering the fundamental
+                architecture.
+            </p>
+            <p>
+                The true innovation lies in the separation and independent optimization of each stage, not in the
+                specific
+                technologies selected. Replacing a two-stage compressor with a single-stage unit, or using different
+                combustion
+                or expansion methods, does not change the nature of the advancement. This modular, compartmentalized
+                approach
+                should be recognized as a best practice in engine design, and it is surprising that such basic
+                engineering
+                principles have not been widely applied to internal combustion engines until now.
+            </p>
+        </div>
+        <div class="section">
+            <h2>Innovations in the Expansion System and Staged Energy Recovery</h2>
+            <p>
+                The expansion system introduces a key innovation: an expansion chamber design that, unlike traditional
+                turbines,
+                retains pressure even at low RPM. This approach combines the pressure-holding characteristics of a
+                rotary engine
+                with the continuous flow and efficiency of a turbine. The number and size of expansion chambers can be
+                independently customized to optimize for continuous power output and specific application requirements.
+            </p>
+            <p>
+                <strong>Note:</strong> Depending on weight or packaging requirements, certain efficiency features and
+                energy recycling systems (such as staged turbines, heat recovery, or steam generation) may be omitted to
+                reduce mass and complexity. This allows the engine to be tailored for lightweight or compact
+                applications where maximum efficiency is not the primary goal.
+            </p>
+            <p>
+                A critical feature of this design is that the exhaust from the expansion stage still contains
+                significant
+                pressure. Rather than wasting this energy by venting pressurized exhaust, the system routes it into a
+                secondary
+                turbine or rotary stage, specifically optimized for lower pressure intake. Multiple turbines can be
+                placed in
+                series, each tailored to a different pressure range, allowing staged and incremental energy extraction
+                from the
+                pressure differential. This staged approach maximizes energy recovery and minimizes waste.
+            </p>
+            <p>
+                Because each turbine or expansion stage is independent, it can be customized for its specific role. For
+                example,
+                after the combustion and primary expansion stages, residual heat in the exhaust can be used to generate
+                steam,
+                which then drives a steam turbine. This is a proven strategy in power plants, where waste heat is
+                recycled to
+                maximize overall efficiency. By integrating steam turbines or other heat recovery systems, the engine
+                can
+                capture and utilize energy that would otherwise be lost, further advancing the efficiency and
+                sustainability of
+                the design.
+            </p>
+            <p>
+                This modular, staged expansion and energy recovery system represents a significant advancement over
+                conventional
+                engine architectures, enabling near-complete utilization of both pressure and thermal energy from the
+                combustion
+                process.
+            </p>
+        </div>
+        <div class="section">
+            <h2>Compartmentalized Engine Design and Optimization Advantages</h2>
+            <p>
+                A key innovation of this engine is the complete compartmentalization of its core functions: compression,
+                combustion, and expansion. Unlike classic internal combustion engines, which combine these processes
+                within a
+                single chamber and suffer from interdependence that limits optimization, this design isolates each stage
+                so it
+                can be independently refined for maximum efficiency.
+            </p>
+            <p>
+                <strong>External Compression System:</strong> Compression is performed outside the combustion chamber,
+                allowing
+                the use of highly efficient multi-stage compressors. These can be optimized for volume, pressure, and
+                lubrication without concern for combustion-related issues such as heat or seal degradation. This
+                separation
+                enables the use of advanced compression technologies and lubrication strategies that would be impossible
+                inside
+                a combustion chamber.
+            </p>
+            <p>
+                <strong>Specialized Combustion Chamber:</strong> The combustion chamber is a stationary, independent
+                unit that
+                can be tailored for complete, lean, and low-temperature combustion. Any combustion technology may be
+                used,
+                including continuous burners, premixed or direct injection, microwave-assisted, or catalytic systems.
+                The
+                chamber can feature multiple temperature zones and injection ports, and is optimized for minimal NOx and
+                maximum
+                burn efficiency. Continuous combustion under constant pressure is preferred over cyclical,
+                high-temperature
+                spikes typical of piston engines.
+            </p>
+            <p>
+                <strong>Additional Fact:</strong> The specialized combustion chamber design also enables the use of
+                specific fuel types, including unconventional options such as coal or wood. The continuous burn cycle,
+                rather than the intermittent explosion cycle of standard engines, results in less wear and tear on
+                engine components. While solid fuels like coal and wood are possible, they are generally less optimized
+                than liquid fuels, which allow for finer control and tuning of combustion. Nevertheless, this
+                flexibility opens up new possibilities for fuel choice in applications where liquid fuels may not be
+                available or desirable.
+            </p>
+            <p>
+                <strong>Independent Expansion Turbine Rotor:</strong> Only the expansion stage rotor moves, extracting
+                energy
+                from the combustion gases. This rotor does not require perfect airtight sealing or lubrication, as it is
+                isolated from the combustion and compression systems. The lack of moving parts in the compression and
+                combustion
+                stages, and the elimination of crankshafts and transmissions, results in a simpler, more reliable engine
+                with a
+                consistent torque profile and direct-drive capability. The expansion system can be further optimized for
+                efficiency and durability without the constraints of traditional engine designs.
+            </p>
+            <p>
+                By dividing the engine into these manageable, optimizable parts, each subsystem can be engineered for
+                peak
+                performance without compromise. This modular approach overcomes the limitations of classic engines and
+                enables a
+                new level of efficiency, reliability, and design flexibility.
+            </p>
+        </div>
+        <div class="section">
+            <h2>Combustion Chamber Optimization and Flexible Technology</h2>
+            <p>
+                The combustion chamber, being a separate and independent component of the engine, can be optimized for
+                maximum
+                burn efficiency. Cool air-fuel mixture is injected into the hot combustion chamber through multiple
+                ports,
+                ensuring thorough mixing and complete combustion. This multi-port injection strategy allows for precise
+                control
+                of combustion dynamics and temperature distribution.
+            </p>
+            <p>
+                Because the combustion chamber is architecturally independent, it can be refined and adapted for any
+                combustion
+                technology—whether spark ignition, compression ignition, catalytic, or other advanced methods. This
+                flexibility
+                enables the use of the most efficient and suitable combustion process for the application, further
+                enhancing
+                engine performance and emissions control.
+            </p>
+        </div>
+        <div class="section">
+            <h2>Stationary Combustion Chamber with Thermal Zones</h2>
+            <p>
+                For optimal combustion efficiency, the combustion chamber is designed with distinct hot and cool zones.
+                The hot
+                portion ensures complete combustion of the fuel-air mixture, while the cool portion helps control
+                overall
+                chamber temperature, limiting thermal losses and reducing unwanted emissions.
+            </p>
+            <p>
+                Importantly, the combustion chamber itself is stationary—affixed directly to the engine casing. Only the
+                expansion stage rotor moves, passing by or interacting with the stationary chamber. This configuration
+                allows
+                precise control of combustion conditions and chamber geometry, while the moving rotor extracts energy
+                from the
+                expanding gases during the expansion phase.
+            </p>
+            <p>
+                By separating the stationary combustion chamber from the moving expansion rotor, the system achieves
+                complete
+                combustion and efficient energy transfer, with the added benefit of simplified sealing and thermal
+                management.
+            </p>
+        </div>
+        <div class="section">
+            <div class="section">
+                <h2>Continuous Combustion Chamber and Turbine Rotary Engine Concept</h2>
+                <p>
+                    A large combustion chamber, operating under high pressure and very lean fuel conditions, is ideal
+                    for
+                    minimizing combustion temperature and suppressing NOx formation. Unlike traditional piston-based
+                    engines,
+                    the combustion chamber in this design is not a reciprocating piston but a continuous, rotary
+                    chamber. This
+                    allows for a continuous burn process, which is far more efficient than the cyclical start-stop
+                    combustion of
+                    conventional engines.
+                </p>
+                <p>
+                    The chamber is maintained at a temperature just sufficient for autoignition, enabling continuous
+                    pressure
+                    generation under extra-lean conditions. By keeping the temperature as low as possible, heat losses
+                    are
+                    minimized, further improving efficiency. Fuel and high-pressure air are injected continuously or in
+                    rapid
+                    sequence, supporting a stable, lean combustion process.
+                </p>
+                <p>
+                    The engine itself is a rotary design, with the combustion chamber acting as a continuous pressure
+                    source. As
+                    the chamber rotates, it maintains pressure until the exhaust phase, at which point the pressurized
+                    exhaust
+                    gases are expelled. This pressurized exhaust is then routed to a secondary turbine or rotary chamber
+                    stage,
+                    which is specifically optimized to extract additional power at the lower pressure of the exhaust
+                    stream,
+                    compared to the initial high-pressure combustion chamber.
+                </p>
+                <p>
+                    Unlike a true turbine, this rotary engine maintains pressure within the chamber until the exhaust
+                    event,
+                    generating constant pressure and enabling efficient energy extraction. The staged design allows the
+                    pressurized exhaust to drive subsequent rotors, each optimized for the pressure at their stage,
+                    further
+                    increasing overall efficiency and power output.
+                </p>
+                <p>
+                    This architecture may be referred to as a "turbine rotary engine," combining the continuous
+                    combustion and
+                    pressure management of a turbine with the pressure-retaining, staged expansion of a rotary engine.
+                    The
+                    result is a highly efficient, low-emission powerplant capable of continuous, lean-burn operation
+                    with
+                    minimal thermal losses and superior energy recovery from staged exhaust expansion.
+                </p>
+            </div>
+            <h2>Technical Field</h2>
+            <p>This disclosure relates to power generation systems that achieve fundamental separation of compression
+                from
+                combustion and expansion. Specifically, it covers turbine-based combustion engines with distributed or
+                continuous fuel-air injection architectures, external air compression systems capable of achieving high
+                compression ratios (e.g., 25:1), and staged expansion mechanisms designed to minimize parasitic losses
+                and
+                maximize energy extraction from pressure differentials.</p>
+        </div>
+        <div class="section">
+            <h2>Background</h2>
+            <p>Conventional internal combustion engines—both reciprocating piston and rotary designs—inherently waste
+                energy by
+                performing compression, combustion, and expansion within the same chamber or sequential chambers. During
+                the
+                compression stroke, energy is consumed to pressurize the air-fuel mixture. This represents a fundamental
+                thermodynamic inefficiency that cannot be eliminated within traditional engine architectures.
+                Additionally, the
+                air movement required during compression and expansion in conventional designs creates parasitic losses
+                due to
+                fluid dynamics and turbulence.<br>
+                Rotary engines have attempted to mitigate some of these issues but suffer from chronic sealing problems,
+                variable pressure distribution, and inefficient combustion chamber geometry. External compression
+                systems
+                (compressors, air tanks) have existed for industrial applications, but have not been integrated with
+                high-performance combustion engines in the optimal architectural arrangement.<br>
+                This disclosure presents a fundamentally different approach: completely separate the compression
+                function from
+                the combustion engine. By utilizing an external compression system to supply air at the target
+                compression
+                ratio, the combustion and expansion engine can operate exclusively on pressure differential conversion.
+                The
+                combustion stage operates as a turbine system with distributed or continuous injection points, enabling
+                stable,
+                high-frequency, or continuous burns. The expansion stage uses staged cylinder alignment to convert
+                pressure into
+                motion with minimal air movement. This separation enables each subsystem to be independently optimized
+                for its
+                specific function, eliminating parasitic compression losses and dramatically improving overall system
+                efficiency.</p>
+            <div
+                style="background:#fff3cd;border-left:5px solid #ffc107;padding:1em 1.5em;margin:1em 0 2em 0;border-radius:6px;">
+                <strong>Key Innovation:</strong> By separating compression from combustion, the combustion engine
+                operates
+                exclusively as a pressure-to-motion converter with high-frequency fuel injection and staged expansion.
+                The
+                external compressor can be of any type and operated at any efficiency level independently. This
+                architectural
+                innovation eliminates the thermodynamic penalty of internal compression and enables optimal design of
+                each
+                stage.
+            </div>
+        </div>
+        <div class="section">
+            <h2>Key Terminology and Innovations</h2>
+            <h3>Pneumatic Autoignition™ - Coined Term</h3>
+            <p><strong>Definition:</strong> Pneumatic autoignition is the spontaneous ignition of a fuel-air mixture
+                triggered
+                by rapid pneumatic compression (not spark-initiated combustion) using externally-supplied,
+                pre-compressed air.
+                The term describes a specific ignition mechanism where the physical compression of a low-pressure
+                homogeneous
+                fuel-air mixture by high-pressure compressed air (supplied from an external compressor system) causes
+                the fuel
+                to auto-ignite without requiring spark plugs, glow plugs, or other electrical ignition aids.</p>
+            <h3>Technical Characteristics of Pneumatic Autoignition:</h3>
+            <ul>
+                <li><strong>Compression Source:</strong> High-pressure air originates externally (from a separate
+                    compressor)
+                    rather than from internal engine compression strokes</li>
+                <li><strong>Ignition Trigger:</strong> The rapid pneumatic compression of the fuel-air mixture in the
+                    combustion
+                    chamber initiates spontaneous combustion, similar to diesel engine auto-ignition but triggered by
+                    external
+                    air pressure rather than internal cylinder compression</li>
+                <li><strong>Fuel-Air Preparation:</strong> Fuel is first premixed at low pressure with ambient or
+                    slightly
+                    pressurized air, creating a homogeneous mixture before introduction to the high-pressure combustion
+                    chamber
+                </li>
+                <li><strong>No Electrical Requirement:</strong> Pneumatic autoignition does not depend on electrical
+                    spark
+                    generation, though spark plugs may optionally assist ignition at specific operating conditions (low
+                    RPM,
+                    small chamber orientations)</li>
+                <li><strong>Thermodynamic Advantage:</strong> External compression eliminates the parasitic losses of
+                    internal
+                    compression strokes, enabling higher compression ratios (25:1 to 50:1+) without detonation risk</li>
+            </ul>
+            <li><strong>Injection Point Scalability:</strong> Additional fuel injection points and combustion chambers
+                are
+                possible for increased power output, but the system is designed for continuous combustion rather than
+                discrete
+                events per minute.</li>
+            <li><strong>RPM Scalability:</strong> The non-oscillating geometry permits continuous operation at 30,000+
+                RPM with
+                appropriate bearing technology, supporting uninterrupted combustion at high speeds.</li>
+            <p><strong>Prior Art Claim:</strong> This disclosure establishes "pneumatic autoignition" as a coined
+                technical term
+                describing this specific combustion mechanism, placing the concept and terminology into the public
+                domain. Any
+                future use of this term or substantially similar descriptions of externally-compressed air triggering
+                fuel
+                auto-ignition should be considered derivative of this prior art disclosure.</p>
+        </div>
+    </div>
 </body>
-
-</html>
-		
