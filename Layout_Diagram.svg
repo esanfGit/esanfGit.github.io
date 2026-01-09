@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="540" viewBox="0 0 980 440">
+
+  <!-- Background -->
+      <rect x="0" y="0" width="980" height="440" fill="#111822"/>
+
+  <!-- Ducts moved to back (behind all components) -->
+  <!-- Left duct: high-pressure air duct -->
+  <rect x="300" y="60" width="20" height="100"
+        fill="#1b242c" stroke="#cfd8dc" stroke-width="2"/>
+  <rect x="320" y="60" width="160" height="40"
+        fill="#1b242c" stroke="#cfd8dc" stroke-width="2"/>
+
+  <!-- Right duct: hot gas duct to turbine -->
+  <rect x="620" y="60" width="160" height="40"
+        fill="#1b242c" stroke="#cfd8dc" stroke-width="2"/>
+  <rect x="780" y="60" width="20" height="100"
+        fill="#1b242c" stroke="#cfd8dc" stroke-width="2"/>
+
+  <!-- Main outer duct -->
+  <rect x="40" y="150" width="900" height="140" rx="30" ry="30"
+      fill="#ff7043" stroke="#cfd8dc" stroke-width="3"/>
+
+  <!-- Flow direction arrow -->
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+      <polygon points="0 0, 8 4, 0 8" fill="#cfd8dc"/>
+    </marker>
+  </defs>
+      <line x1="70" y1="310" x2="910" y2="310" stroke="#cfd8dc" stroke-width="2" marker-end="url(#arrowhead)"/>
+                  <g>
+                        <rect x="170" y="316" width="640" height="28" fill="#fff"/>
+                        <text x="490" y="330" fill="#000" font-size="14" text-anchor="middle" dominant-baseline="middle">
+                              Main ducted flow (multi-stage rotary compression → side combustor → multi-stage rotary expansion)
+                        </text>
+                  </g>
+
+  <!-- Multi-stage rotary compressor housing -->
+  <rect x="60" y="170" width="260" height="100" rx="20" ry="20"
+        fill="#263238" stroke="#90caf9" stroke-width="3"/>
+      <g>
+            <rect x="60" y="151" width="260" height="28" fill="#fff"/>
+            <text x="190" y="165" fill="#000" font-size="14" text-anchor="middle" dominant-baseline="middle">
+                  Multi-stage rotary compressor
+            </text>
+      </g>
+
+  <!-- Compressor stages (three rotors) -->
+  <!-- Stage 1 -->
+      <circle cx="120" cy="220" r="28" fill="#1e272f" stroke="#90caf9" stroke-width="2"/>
+      <polygon points="120,195 138,220 120,245 102,220"
+                               fill="#37474f" stroke="#90caf9" stroke-width="1.5"/>
+  <!-- Stage 2 -->
+      <circle cx="190" cy="220" r="28" fill="#1e272f" stroke="#90caf9" stroke-width="2"/>
+      <polygon points="190,195 208,220 190,245 172,220"
+                               fill="#37474f" stroke="#90caf9" stroke-width="1.5"/>
+  <!-- Stage 3 -->
+      <circle cx="260" cy="220" r="28" fill="#1e272f" stroke="#90caf9" stroke-width="2"/>
+      <polygon points="260,195 278,220 260,245 242,220"
+                               fill="#37474f" stroke="#90caf9" stroke-width="1.5"/>
+
+  <!-- Common compressor shaft -->
+      <line x1="80" y1="220" x2="300" y2="220" stroke="#90caf9" stroke-width="3"/>
+
+
+  <!-- Stationary side combustion chamber (pressurized can) - moved up for separation -->
+      <rect x="460" y="20" width="220" height="120" rx="20" ry="20"
+                        fill="#3e2723" stroke="#ffcc80" stroke-width="3"/>
+      <!-- Label with white background for combustion chamber -->
+      <g>
+            <rect x="400" y="0" width="340" height="28" fill="#fff"/>
+            <text x="570" y="15" fill="#000" font-size="14" text-anchor="middle" dominant-baseline="middle">
+                  Stationary pressurized combustion chamber
+            </text>
+      </g>
+
+      <!-- Combustion flame stylization (moved down) -->
+      <path d="M520 110
+                               C530 85, 545 90, 550 70
+                               C555 90, 570 85, 580 110
+                               C570 115, 555 120, 540 120
+                               Z"
+                        fill="#ffb300" stroke="#ffcc80" stroke-width="1.5"/>
+
+  <!-- ...existing code... -->
+
+  <!-- Turbine background for visual separation -->
+  <rect x="655" y="165" width="270" height="110" rx="24" ry="24" fill="#181c22" stroke="none"/>
+  <!-- Multi-stage rotary turbine expansion housing -->
+  <rect x="660" y="170" width="260" height="100" rx="20" ry="20"
+        fill="#263238" stroke="#ffab91" stroke-width="3"/>
+      <g>
+            <rect x="660" y="151" width="260" height="28" fill="#fff"/>
+            <text x="790" y="165" fill="#000" font-size="14" text-anchor="middle" dominant-baseline="middle">
+                  Multi-stage rotary turbine
+            </text>
+      </g>
+
+  <!-- Turbine stages (three rotors) -->
+  <!-- Stage 1 -->
+  <circle cx="700" cy="220" r="28" fill="#1e272f" stroke="#ffab91" stroke-width="2"/>
+  <path d="M700 192 L716 210 L708 220 L716 230 L700 248 L684 230 L692 220 L684 210 Z"
+        fill="#37474f" stroke="#ffab91" stroke-width="1.5"/>
+  <!-- Stage 2 -->
+  <circle cx="770" cy="220" r="28" fill="#1e272f" stroke="#ffab91" stroke-width="2"/>
+  <path d="M770 192 L786 210 L778 220 L786 230 L770 248 L754 230 L762 220 L754 210 Z"
+        fill="#37474f" stroke="#ffab91" stroke-width="1.5"/>
+  <!-- Stage 3 -->
+  <circle cx="840" cy="220" r="28" fill="#1e272f" stroke="#ffab91" stroke-width="2"/>
+  <path d="M840 192 L856 210 L848 220 L856 230 L840 248 L824 230 L832 220 L824 210 Z"
+        fill="#37474f" stroke="#ffab91" stroke-width="1.5"/>
+
+  <!-- Common turbine shaft (direct drive to compressor) -->
+      <line x1="320" y1="220" x2="880" y2="220" stroke="#b0bec5" stroke-width="4" stroke-dasharray="6 4"/>
+                  <g>
+                        <rect x="480" y="233" width="240" height="24" fill="#fff"/>
+                        <text x="600" y="245" fill="#000" font-size="12" text-anchor="middle" dominant-baseline="middle">
+                              Direct drive shaft (shared rotary train)
+                        </text>
+                  </g>
+
+  <!-- Inlet and exhaust labels -->
+                  <g>
+                        <rect x="0" y="208" width="80" height="24" fill="#fff"/>
+                        <text x="50" y="220" fill="#000" font-size="12" text-anchor="end" dominant-baseline="middle">Inlet</text>
+                  </g>
+                  <g>
+                        <rect x="900" y="208" width="80" height="24" fill="#fff"/>
+                        <text x="930" y="220" fill="#000" font-size="12" text-anchor="start" dominant-baseline="middle">Exhaust</text>
+                  </g>
+
+</svg>
