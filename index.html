@@ -52,7 +52,8 @@
             line-height: 1.8;
         }
 
-        ul, ol {
+        ul,
+        ol {
             margin: 1em 0;
         }
 
@@ -95,77 +96,117 @@
 
 <body>
     <div class="container my-5 p-5 bg-white rounded-4 shadow-lg">
-        
+
         <h1>DEFENSIVE PUBLICATION</h1>
         <h1>Compartmentalized Rotary-Turbine Engine System with Modular Combustion Architecture</h1>
-        
+
         <div class="abstract">
-            <strong>ABSTRACT:</strong> This disclosure describes an innovative power generation system that fundamentally 
-            separates the compression stage from the combustion and expansion stages. An external air compression system 
-            (using any compression technology such as rotary screw, reciprocating piston, centrifugal, or variable displacement 
-            compressor) supplies high-pressure air at a target compression ratio (e.g., 25:1) to a turbine-based engine with a 
-            modular, compartmentalized architecture. The compartmentalized design enables any combustion chamber type to be integrated 
-            with the expansion system, permitting flexible substitution of combustion implementations without redesigning compression or 
-            expansion subsystems. One exemplary implementation uses a furnace-based combustion chamber supporting continuous burn and 
-            diverse fuel types including solid fuels. The expansion stage uses a staged rotor mechanism where chambers align sequentially, 
-            converting pressure differentials into mechanical energy with minimal air movement and parasitic losses. This architectural 
-            separation and modularity eliminate parasitic compression losses inherent to conventional internal combustion engines and enable
-            optimal independent design and substitution of each subsystem. This document is intended to place the described concepts into 
+            <strong>ABSTRACT:</strong> This disclosure describes an innovative power generation system that
+            fundamentally
+            separates the compression stage from the combustion and expansion stages. An external air compression system
+            (using any compression technology such as rotary screw, reciprocating piston, centrifugal, or variable
+            displacement
+            compressor) supplies high-pressure air at a target compression ratio (e.g., 25:1) to a turbine-based engine
+            with a
+            modular, compartmentalized architecture. The compartmentalized design enables any combustion chamber type to
+            be integrated
+            with the expansion system, permitting flexible substitution of combustion implementations without
+            redesigning compression or
+            expansion subsystems. One exemplary implementation uses a furnace-based combustion chamber supporting
+            continuous burn and
+            diverse fuel types including solid fuels. The expansion stage uses a staged rotor mechanism where chambers
+            align sequentially,
+            converting pressure differentials into mechanical energy with minimal air movement and parasitic losses.
+            This architectural
+            separation and modularity eliminate parasitic compression losses inherent to conventional internal
+            combustion engines and enable
+            optimal independent design and substitution of each subsystem. This document is intended to place the
+            described concepts into
             the public domain as prior art, preventing future patent claims on these innovations.
         </div>
 
         <div class="section">
-            <img src="https://esanfgit.github.io/Continuous Burn Turbine Engine.svg" alt="Continuous Burn Turbine Engine Diagram" style="max-width: 100%; height: auto; margin: 2em 0; display: block;">
+            <object type="image/svg+xml" data="https://esanfgit.github.io/ContinuousBurnTurbineEngine.svg"
+                style="max-width: 100%; height: auto; margin: 2em 0; display: block;">
+                Continuous Burn Turbine Engine Diagram
+            </object>
         </div>
+        <div class="section">
+            <object data="https://esanfgit.github.io/LayoutDiagram.svg" type="image/svg+xml"
+                style="max-width: 100%; height: auto; margin: 2em 0; display: block;">
+            </object>
+        </div>
+
 
         <div class="section">
             <h2>1. TECHNICAL FIELD</h2>
-            <p>This disclosure relates to power generation systems that achieve fundamental separation of air compression from 
-            combustion and expansion functions. Specifically, it covers:</p>
+            <p>This disclosure relates to power generation systems that achieve fundamental separation of air
+                compression from
+                combustion and expansion functions. Specifically, it covers:</p>
             <ul>
                 <li>Turbine-based combustion engines with modular, interchangeable combustion chamber architectures</li>
-                <li>External air compression systems capable of achieving high compression ratios (e.g., 25:1 to 50:1+)</li>
-                <li>Staged expansion mechanisms designed to minimize parasitic losses and maximize energy extraction from pressure differentials</li>
-                <li>Direct-drive rotary engines capable of delivering torque at low RPM without transmission systems</li>
-                <li>Optional combustion triggering mechanisms including (but not limited to) pneumatic autoignition using externally-supplied, pre-compressed air</li>
+                <li>External air compression systems capable of achieving high compression ratios (e.g., 25:1 to 50:1+)
+                </li>
+                <li>Staged expansion mechanisms designed to minimize parasitic losses and maximize energy extraction
+                    from pressure differentials</li>
+                <li>Direct-drive rotary engines capable of delivering torque at low RPM without transmission systems
+                </li>
+                <li>Optional combustion triggering mechanisms including (but not limited to) pneumatic autoignition
+                    using externally-supplied, pre-compressed air</li>
             </ul>
         </div>
 
         <div class="section">
             <h2>2. BACKGROUND AND PROBLEM STATEMENT</h2>
-            <p>Conventional internal combustion engines—both reciprocating piston and rotary designs—inherently waste energy by 
-            performing compression, combustion, and expansion within the same chamber or sequential chambers. During the compression 
-            stroke, the piston or rotor must consume significant energy to pressurize the air-fuel mixture. This represents a fundamental 
-            thermodynamic inefficiency that cannot be eliminated within traditional engine architectures.</p>
-            
-            <p>Additionally, the air movement required during compression and expansion in conventional designs creates parasitic losses 
-            due to fluid dynamics and turbulence. Rotary (Wankel) engines have attempted to mitigate some of these issues but suffer from:</p>
+            <p>Conventional internal combustion engines—both reciprocating piston and rotary designs—inherently waste
+                energy by
+                performing compression, combustion, and expansion within the same chamber or sequential chambers. During
+                the compression
+                stroke, the piston or rotor must consume significant energy to pressurize the air-fuel mixture. This
+                represents a fundamental
+                thermodynamic inefficiency that cannot be eliminated within traditional engine architectures.</p>
+
+            <p>Additionally, the air movement required during compression and expansion in conventional designs creates
+                parasitic losses
+                due to fluid dynamics and turbulence. Rotary (Wankel) engines have attempted to mitigate some of these
+                issues but suffer from:</p>
             <ul>
-                <li><strong>Chronic sealing problems:</strong> Maintaining perfect seals between rotor and chamber walls is difficult, 
-                leading to compression loss and reduced efficiency</li>
-                <li><strong>Variable pressure distribution:</strong> The changing combustion chamber geometry during rotation creates 
-                inconsistent pressure zones</li>
-                <li><strong>Inefficient combustion chamber geometry:</strong> The elongated, moving combustion chamber leads to 
-                incomplete combustion and higher emissions</li>
-                <li><strong>Oil injection and lubricant burn:</strong> Oil required for apex seal lubrication contaminates combustion, 
-                increasing emissions</li>
+                <li><strong>Chronic sealing problems:</strong> Maintaining perfect seals between rotor and chamber walls
+                    is difficult,
+                    leading to compression loss and reduced efficiency</li>
+                <li><strong>Variable pressure distribution:</strong> The changing combustion chamber geometry during
+                    rotation creates
+                    inconsistent pressure zones</li>
+                <li><strong>Inefficient combustion chamber geometry:</strong> The elongated, moving combustion chamber
+                    leads to
+                    incomplete combustion and higher emissions</li>
+                <li><strong>Oil injection and lubricant burn:</strong> Oil required for apex seal lubrication
+                    contaminates combustion,
+                    increasing emissions</li>
             </ul>
-            
-            <p>External compression systems (compressors, air tanks) have existed for industrial applications, but have not been integrated 
-            with high-performance combustion engines in an optimal architectural arrangement until now.</p>
+
+            <p>External compression systems (compressors, air tanks) have existed for industrial applications, but have
+                not been integrated
+                with high-performance combustion engines in an optimal architectural arrangement until now.</p>
         </div>
 
         <div class="section">
             <h2>3. CORE INNOVATION: ARCHITECTURAL SEPARATION</h2>
-            <p>This disclosure presents a fundamentally different approach: <strong>completely separate the compression function from 
-            the combustion engine</strong>. By utilizing an external compression system to supply air at the target compression ratio, 
-            the combustion and expansion engine can operate exclusively as a pressure-to-motion converter without the penalty of internal 
-            compression losses.</p>
-            
+            <p>This disclosure presents a fundamentally different approach: <strong>completely separate the compression
+                    function from
+                    the combustion engine</strong>. By utilizing an external compression system to supply air at the
+                target compression ratio,
+                the combustion and expansion engine can operate exclusively as a pressure-to-motion converter without
+                the penalty of internal
+                compression losses.</p>
+
             <div class="highlight-box">
-                <strong>KEY INNOVATION:</strong> By separating compression from combustion, the combustion engine operates exclusively 
-                as a pressure-to-motion converter with multi-point fuel injection and staged expansion. The external compressor can be 
-                of any type and operated at any efficiency level independently. This architectural innovation eliminates the thermodynamic 
+                <strong>KEY INNOVATION:</strong> By separating compression from combustion, the combustion engine
+                operates exclusively
+                as a pressure-to-motion converter with multi-point fuel injection and staged expansion. The external
+                compressor can be
+                of any type and operated at any efficiency level independently. This architectural innovation eliminates
+                the thermodynamic
                 penalty of internal compression and enables optimal design of each stage.
             </div>
         </div>
@@ -175,100 +216,213 @@
             <p>The complete system consists of three independently optimized subsystems:</p>
 
             <h3>4.1 External Compression Subsystem (Two-Stage Architecture)</h3>
-            <p><strong>CRITICAL DESIGN ELEMENT: Two-Stage Compression for Maximum Efficiency</strong> The external compression system utilizes a two-stage architecture for optimal efficiency and performance. This approach separates the compression process into two sequential stages, each optimized for its specific pressure range, dramatically improving overall compression efficiency compared to single-stage systems while maintaining high throughput.</p>
-            <p>A separate air compression system (independent of the combustion engine) provides steady, high-pressure air at a target 
-            compression ratio. The compression system may employ:</p>
+            <p><strong>CRITICAL DESIGN ELEMENT: Two-Stage Compression for Maximum Efficiency</strong> The external
+                compression system utilizes a two-stage architecture for optimal efficiency and performance. This
+                approach separates the compression process into two sequential stages, each optimized for its specific
+                pressure range, dramatically improving overall compression efficiency compared to single-stage systems
+                while maintaining high throughput.</p>
+            <p>A separate air compression system (independent of the combustion engine) provides steady, high-pressure
+                air at a target
+                compression ratio. The compression system may employ:</p>
             <ul>
-                <li><strong>Two-Stage Reciprocating Piston Compressor (RECOMMENDED):</strong> Highest power density for throughput, 4000-5000 RPM 
-                operation, achieving 25:1 compression (5:1 × 5:1 or similar two-stage arrangement). Two-stage design ensures superior efficiency and rapid pressure buildup without the limitations of single-stage compression</li>
-                <li><strong>Two-Stage Rotary Screw Compressor:</strong> Smooth operation with dual-stage configuration for superior efficiency, 85-88% efficiency, 16:1 to 25:1 compression range</li>
-                <li><strong>Centrifugal Compressor:</strong> High efficiency (88-92%), suitable for high flow applications</li>
-                <li><strong>Axial Piston Variable Displacement Compressor:</strong> Maximum power density, variable displacement for 
-                load matching</li>
-                <li><strong>Any other compression technology:</strong> The system is intentionally technology-agnostic regarding the 
-                external compressor</li>
+                <li><strong>Two-Stage Reciprocating Piston Compressor (RECOMMENDED):</strong> Highest power density for
+                    throughput, 4000-5000 RPM
+                    operation, achieving 25:1 compression (5:1 × 5:1 or similar two-stage arrangement). Two-stage design
+                    ensures superior efficiency and rapid pressure buildup without the limitations of single-stage
+                    compression</li>
+                <li><strong>Two-Stage Rotary Screw Compressor:</strong> Smooth operation with dual-stage configuration
+                    for superior efficiency, 85-88% efficiency, 16:1 to 25:1 compression range</li>
+                <li><strong>Centrifugal Compressor:</strong> High efficiency (88-92%), suitable for high flow
+                    applications</li>
+                <li><strong>Axial Piston Variable Displacement Compressor:</strong> Maximum power density, variable
+                    displacement for
+                    load matching</li>
+                <li><strong>Any other compression technology:</strong> The system is intentionally technology-agnostic
+                    regarding the
+                    external compressor</li>
             </ul>
-            <p>Compressed air is stored in a pressure tank or vat and supplied on-demand to the combustion engine via a regulated 
-            injection system. The target compression ratio, for example, is 25:1, though any ratio is possible.</p>
+            <p>Compressed air is stored in a pressure tank or vat and supplied on-demand to the combustion engine via a
+                regulated
+                injection system. The target compression ratio, for example, is 25:1, though any ratio is possible.</p>
 
             <h3>4.2 Combustion Subsystem (Modular, Compartmentalized Architecture)</h3>
-            <p><strong>CRITICAL DESIGN ELEMENT: Modular Combustion Chamber Architecture</strong> The combustion subsystem employs a modular, compartmentalized design that permits substitution of any combustion chamber type without requiring redesign of the external compression or rotary turbine expansion systems. This architectural modularity is a fundamental innovation enabling diverse combustion approaches to be integrated with the same expansion mechanism.</p>
-            <p><strong>Exemplary Implementation: Furnace-Based Combustion Chamber</strong> One exemplary combustion chamber implementation is a literal furnace—a dedicated combustion space designed to maintain <strong>continuous burn</strong> operation with sustained flame and high-pressure, high-temperature environment. This furnace-based continuous combustion process is dramatically more complete and efficient than discrete combustion events in conventional engines, and uniquely enables reliable operation on diverse fuel types including solid fuels such as coal and biomass.</p>
-            <p>The furnace provides high-pressure, high-temperature combustion gases that drive the rotary turbine expansion system. Key characteristics of the furnace implementation:</p>
+            <p><strong>CRITICAL DESIGN ELEMENT: Modular Combustion Chamber Architecture</strong> The combustion
+                subsystem employs a modular, compartmentalized design that permits substitution of any combustion
+                chamber type without requiring redesign of the external compression or rotary turbine expansion systems.
+                This architectural modularity is a fundamental innovation enabling diverse combustion approaches to be
+                integrated with the same expansion mechanism.</p>
+            <p><strong>Exemplary Implementation: Furnace-Based Combustion Chamber</strong> One exemplary combustion
+                chamber implementation is a literal furnace—a dedicated combustion space designed to maintain
+                <strong>continuous burn</strong> operation with sustained flame and high-pressure, high-temperature
+                environment. This furnace-based continuous combustion process is dramatically more complete and
+                efficient than discrete combustion events in conventional engines, and uniquely enables reliable
+                operation on diverse fuel types including solid fuels such as coal and biomass.</p>
+            <p>The furnace provides high-pressure, high-temperature combustion gases that drive the rotary turbine
+                expansion system. Key characteristics of the furnace implementation:</p>
             <ul>
-                <li><strong>Furnace Combustion Chamber:</strong> A dedicated, stationary combustion space designed for direct burning of fuel (liquid, gaseous, or solid), fixed to the engine casing and optimized for flame propagation and complete fuel oxidation</li>
-                <li><strong>Continuous Burn Architecture:</strong> Maintains a stable, uninterrupted flame throughout engine operation, sustaining an ongoing combustion process rather than discrete explosion events. Fuel is continuously supplied and burned at controlled rates, ensuring maximum combustion completeness and steady pressure output to the turbine</li>
-                <li><strong>Solid Fuel Capability:</strong> Enables direct combustion of solid fuels (coal, biomass, wood) through controlled air supply and sustained high-temperature burn environment, providing complete fuel oxidation impossible in conventional engines</li>
-                <li><strong>Superior Combustion Completeness:</strong> The furnace environment—with sustained high temperature, sustained high pressure, and continuous controlled mixing—enables complete combustion of all fuel types (liquid, gaseous, solid), maximizing energy extraction and producing minimal unburned products</li>
-                <li><strong>Low Emissions:</strong> Continuous burn under controlled conditions enables lean operation that minimizes NOx formation while the sustained high-temperature environment ensures complete oxidation of fuel compounds</li>
+                <li><strong>Furnace Combustion Chamber:</strong> A dedicated, stationary combustion space designed for
+                    direct burning of fuel (liquid, gaseous, or solid), fixed to the engine casing and optimized for
+                    flame propagation and complete fuel oxidation</li>
+                <li><strong>Continuous Burn Architecture:</strong> Maintains a stable, uninterrupted flame throughout
+                    engine operation, sustaining an ongoing combustion process rather than discrete explosion events.
+                    Fuel is continuously supplied and burned at controlled rates, ensuring maximum combustion
+                    completeness and steady pressure output to the turbine</li>
+                <li><strong>Solid Fuel Capability:</strong> Enables direct combustion of solid fuels (coal, biomass,
+                    wood) through controlled air supply and sustained high-temperature burn environment, providing
+                    complete fuel oxidation impossible in conventional engines</li>
+                <li><strong>Superior Combustion Completeness:</strong> The furnace environment—with sustained high
+                    temperature, sustained high pressure, and continuous controlled mixing—enables complete combustion
+                    of all fuel types (liquid, gaseous, solid), maximizing energy extraction and producing minimal
+                    unburned products</li>
+                <li><strong>Low Emissions:</strong> Continuous burn under controlled conditions enables lean operation
+                    that minimizes NOx formation while the sustained high-temperature environment ensures complete
+                    oxidation of fuel compounds</li>
             </ul>
-            <p><strong>Modularity Advantage:</strong> Due to the compartmentalized architecture, alternative combustion chamber designs (including but not limited to: pneumatic autoignition chambers, traditional fuel-injection combustion, gas turbine combustion sections, or other novel designs) can be integrated with the external compression and rotary turbine expansion systems without fundamental redesign, enabling continuous innovation in combustion technology while preserving the core architectural advantages.</p>
+            <p><strong>Modularity Advantage:</strong> Due to the compartmentalized architecture, alternative combustion
+                chamber designs (including but not limited to: pneumatic autoignition chambers, traditional
+                fuel-injection combustion, gas turbine combustion sections, or other novel designs) can be integrated
+                with the external compression and rotary turbine expansion systems without fundamental redesign,
+                enabling continuous innovation in combustion technology while preserving the core architectural
+                advantages.</p>
 
             <h3>4.3 Expansion Subsystem (Rotary Turbine Architecture - Superior to Reciprocating)</h3>
-            <p><strong>CRITICAL DESIGN ELEMENT: Rotary Turbine Expansion for Maximum Efficiency</strong> The expansion subsystem employs a rotary turbine design rather than reciprocating expansion mechanisms. Rotary turbine architectures are fundamentally and demonstrably superior to reciprocating engines across multiple performance dimensions: they enable smooth continuous rotation without dead zones, deliver constant force output without acceleration/deceleration losses, operate safely at extreme RPM ranges (30,000+ RPM), produce superior torque smoothness, achieve significantly higher power density, and require fewer moving parts with greater reliability.</p>
-            <p>Instead of reciprocating cylinders or single expansion chambers, the design uses a rotary turbine with sequential, aligned expansion chambers:</p>
+            <p><strong>CRITICAL DESIGN ELEMENT: Rotary Turbine Expansion for Maximum Efficiency</strong> The expansion
+                subsystem employs a rotary turbine design rather than reciprocating expansion mechanisms. Rotary turbine
+                architectures are fundamentally and demonstrably superior to reciprocating engines across multiple
+                performance dimensions: they enable smooth continuous rotation without dead zones, deliver constant
+                force output without acceleration/deceleration losses, operate safely at extreme RPM ranges (30,000+
+                RPM), produce superior torque smoothness, achieve significantly higher power density, and require fewer
+                moving parts with greater reliability.</p>
+            <p>Instead of reciprocating cylinders or single expansion chambers, the design uses a rotary turbine with
+                sequential, aligned expansion chambers:</p>
             <ul>
-                <li><strong>Rotary Motion Superiority:</strong> The rotor rotates continuously in smooth, non-oscillating motion, fundamentally superior to reciprocating engines that must repeatedly accelerate and decelerate heavy pistons. This continuous motion eliminates mechanical stress, reduces wear, and enables safe operation at extreme RPM (30,000+ RPM) where reciprocating engines face mechanical failure</li>
-                <li><strong>No Dead Zones:</strong> Every degree of rotor rotation is driven by active pressure conversion. Reciprocating piston engines inherently have dead zones at top and bottom dead center where no power is produced; rotary turbine delivers power continuously</li>
-                <li><strong>Constant Force Output:</strong> Unlike reciprocating engines where power delivery is cyclical with peaks and valleys, rotary turbine provides relatively constant force output throughout rotation, enabling smoother, more consistent power delivery</li>
-                <li><strong>Sequential Expansion Ports:</strong> As the rotor rotates, chamber sections align sequentially with expansion ports, progressively releasing combustion gases in an orderly, efficient manner</li>
-                <li><strong>Progressive Pressure Utilization:</strong> High-pressure combustion gases flow into successive expansion chambers progressively as rotor rotates, optimizing pressure-to-motion efficiency at each stage</li>
-                <li><strong>Staged Energy Conversion:</strong> Pressure differentials are converted into mechanical energy through sequential alignment of rotary chambers, enabling near-complete energy extraction</li>
-                <li><strong>Superior Efficiency Over Reciprocating:</strong> Smooth rotary motion and progressive expansion minimize turbulent gas flow and mechanical losses compared to reciprocating piston motion with its inherent inefficiencies (dead zones, acceleration/deceleration energy waste)</li>
-                <li><strong>Maximum Energy Extraction:</strong> Rotary turbine design extracts maximum energy from pressure differential with minimal wasted motion, enabling superior efficiency compared to reciprocating designs</li>
-                <li><strong>Superior Power Density:</strong> Rotary turbine architectures deliver significantly more power per unit weight and volume compared to reciprocating engines, making them ideal for weight-critical applications</li>
+                <li><strong>Rotary Motion Superiority:</strong> The rotor rotates continuously in smooth,
+                    non-oscillating motion, fundamentally superior to reciprocating engines that must repeatedly
+                    accelerate and decelerate heavy pistons. This continuous motion eliminates mechanical stress,
+                    reduces wear, and enables safe operation at extreme RPM (30,000+ RPM) where reciprocating engines
+                    face mechanical failure</li>
+                <li><strong>No Dead Zones:</strong> Every degree of rotor rotation is driven by active pressure
+                    conversion. Reciprocating piston engines inherently have dead zones at top and bottom dead center
+                    where no power is produced; rotary turbine delivers power continuously</li>
+                <li><strong>Constant Force Output:</strong> Unlike reciprocating engines where power delivery is
+                    cyclical with peaks and valleys, rotary turbine provides relatively constant force output throughout
+                    rotation, enabling smoother, more consistent power delivery</li>
+                <li><strong>Sequential Expansion Ports:</strong> As the rotor rotates, chamber sections align
+                    sequentially with expansion ports, progressively releasing combustion gases in an orderly, efficient
+                    manner</li>
+                <li><strong>Progressive Pressure Utilization:</strong> High-pressure combustion gases flow into
+                    successive expansion chambers progressively as rotor rotates, optimizing pressure-to-motion
+                    efficiency at each stage</li>
+                <li><strong>Staged Energy Conversion:</strong> Pressure differentials are converted into mechanical
+                    energy through sequential alignment of rotary chambers, enabling near-complete energy extraction
+                </li>
+                <li><strong>Superior Efficiency Over Reciprocating:</strong> Smooth rotary motion and progressive
+                    expansion minimize turbulent gas flow and mechanical losses compared to reciprocating piston motion
+                    with its inherent inefficiencies (dead zones, acceleration/deceleration energy waste)</li>
+                <li><strong>Maximum Energy Extraction:</strong> Rotary turbine design extracts maximum energy from
+                    pressure differential with minimal wasted motion, enabling superior efficiency compared to
+                    reciprocating designs</li>
+                <li><strong>Superior Power Density:</strong> Rotary turbine architectures deliver significantly more
+                    power per unit weight and volume compared to reciprocating engines, making them ideal for
+                    weight-critical applications</li>
             </ul>
         </div>
 
         <div class="section">
-            <h2>5. FURNACE-BASED COMBUSTION CHAMBER: ONE EXEMPLARY IMPLEMENTATION OF MODULAR COMBUSTION ARCHITECTURE</h2>
-            <p>Due to the compartmentalized, modular nature of the engine architecture, any combustion chamber design can be integrated with the external compression and rotary turbine expansion systems. The furnace-based combustion chamber represents one exemplary implementation—specifically designed for versatile fuel operation including solid fuels such as coal and biomass.</p>
-            <p>The combustion chamber can be implemented as a literal furnace—a dedicated external combustion space designed to burn diverse fuel types. The furnace maintains continuous, high-temperature, high-pressure combustion that provides steady pressurized gas to drive the rotary turbine expansion system. This furnace-based approach uniquely enables reliable and efficient operation on fuel types far beyond conventional liquid hydrocarbons:</p>
+            <h2>5. FURNACE-BASED COMBUSTION CHAMBER: ONE EXEMPLARY IMPLEMENTATION OF MODULAR COMBUSTION ARCHITECTURE
+            </h2>
+            <p>Due to the compartmentalized, modular nature of the engine architecture, any combustion chamber design
+                can be integrated with the external compression and rotary turbine expansion systems. The furnace-based
+                combustion chamber represents one exemplary implementation—specifically designed for versatile fuel
+                operation including solid fuels such as coal and biomass.</p>
+            <p>The combustion chamber can be implemented as a literal furnace—a dedicated external combustion space
+                designed to burn diverse fuel types. The furnace maintains continuous, high-temperature, high-pressure
+                combustion that provides steady pressurized gas to drive the rotary turbine expansion system. This
+                furnace-based approach uniquely enables reliable and efficient operation on fuel types far beyond
+                conventional liquid hydrocarbons:</p>
             <ul>
-                <li><strong>Conventional Liquid Fuels:</strong> Gasoline, diesel, jet fuel, kerosene—burned continuously in the furnace chamber</li>
-                <li><strong>Alternative Fuels:</strong> Hydrogen, methane, propane, natural gas with precision combustion control</li>
-                <li><strong>Biofuels:</strong> Biodiesel, ethanol blends, algae-derived fuels with flexible injection parameters</li>
-                <li><strong>Synthetic Fuels:</strong> Carbon-neutral synthetic hydrocarbons, e-fuels optimized for specific combustion characteristics</li>
-                <li><strong>Solid Fuels (Revolutionary Capability):</strong> Coal, biomass, wood chips—burned directly in the furnace chamber, enabling operation on abundant solid fuel sources previously impossible with conventional engine architectures</li>
+                <li><strong>Conventional Liquid Fuels:</strong> Gasoline, diesel, jet fuel, kerosene—burned continuously
+                    in the furnace chamber</li>
+                <li><strong>Alternative Fuels:</strong> Hydrogen, methane, propane, natural gas with precision
+                    combustion control</li>
+                <li><strong>Biofuels:</strong> Biodiesel, ethanol blends, algae-derived fuels with flexible injection
+                    parameters</li>
+                <li><strong>Synthetic Fuels:</strong> Carbon-neutral synthetic hydrocarbons, e-fuels optimized for
+                    specific combustion characteristics</li>
+                <li><strong>Solid Fuels (Revolutionary Capability):</strong> Coal, biomass, wood chips—burned directly
+                    in the furnace chamber, enabling operation on abundant solid fuel sources previously impossible with
+                    conventional engine architectures</li>
             </ul>
-            <p><strong>Furnace-Based Continuous Burn Advantage for Solid and Unconventional Fuels:</strong> The furnace combustion chamber is designed specifically to burn solid fuels such as coal and biomass through direct combustion, maintaining a persistent high-temperature, high-pressure burn environment throughout engine operation. Unlike piston engines with discrete combustion events (lasting milliseconds), the furnace enables continuous, controlled burn conditions that:</p>
+            <p><strong>Furnace-Based Continuous Burn Advantage for Solid and Unconventional Fuels:</strong> The furnace
+                combustion chamber is designed specifically to burn solid fuels such as coal and biomass through direct
+                combustion, maintaining a persistent high-temperature, high-pressure burn environment throughout engine
+                operation. Unlike piston engines with discrete combustion events (lasting milliseconds), the furnace
+                enables continuous, controlled burn conditions that:</p>
             <ul>
-                <li>Provide reliable, sustained ignition of solid fuels (coal, wood, biomass) with complete combustion</li>
-                <li>Extract maximum energy from solid fuel feedstock by maintaining high-temperature oxidation environment</li>
+                <li>Provide reliable, sustained ignition of solid fuels (coal, wood, biomass) with complete combustion
+                </li>
+                <li>Extract maximum energy from solid fuel feedstock by maintaining high-temperature oxidation
+                    environment</li>
                 <li>Enable controlled, stable burn conditions with consistent pressure output to the turbine</li>
                 <li>Support superior emission control through complete oxidation of solid fuel combustion products</li>
-                <li>Revolutionary fuel flexibility, opening centuries of abundant coal and biomass reserves as viable engine fuel sources</li>
+                <li>Revolutionary fuel flexibility, opening centuries of abundant coal and biomass reserves as viable
+                    engine fuel sources</li>
             </ul>
-            <p>This furnace-based combustion chamber implementation—especially the capability to operate on solid fuels—demonstrates the versatility of the modular architecture. Due to the compartmentalized design, alternative combustion implementations (including traditional fuel-injection systems, gas turbine combustion sections, or novel designs) can be substituted without requiring fundamental redesign of the compression or expansion subsystems, enabling continuous innovation in combustion technology.</p>
+            <p>This furnace-based combustion chamber implementation—especially the capability to operate on solid
+                fuels—demonstrates the versatility of the modular architecture. Due to the compartmentalized design,
+                alternative combustion implementations (including traditional fuel-injection systems, gas turbine
+                combustion sections, or novel designs) can be substituted without requiring fundamental redesign of the
+                compression or expansion subsystems, enabling continuous innovation in combustion technology.</p>
         </div>
 
         <div class="section">
             <h2>6. PNEUMATIC AUTOIGNITION: THEORETICAL COMBUSTION TRIGGERING MECHANISM (OPTIONAL)</h2>
-            <p><strong>THEORETICAL MECHANISM - OPTIONAL IMPLEMENTATION:</strong> Pneumatic Autoignition™ represents one theoretical approach to fuel ignition that may optionally be used within the modular combustion architecture. It is not a required component of the system and may or may not be employed depending on combustion chamber design choices and fuel type selections.</p>
-            
-            <p><strong>Theoretical Definition:</strong> Pneumatic Autoignition™ describes the theoretical spontaneous ignition of a fuel-air mixture triggered by rapid pneumatic compression using externally-supplied, pre-compressed air. The theoretical mechanism involves the physical compression of a low-pressure homogeneous fuel-air mixture by high-pressure compressed air (supplied from an external compressor system) causing the fuel to theoretically auto-ignite without requiring spark plugs, glow plugs, or other electrical ignition aids.</p>
+            <p><strong>THEORETICAL MECHANISM - OPTIONAL IMPLEMENTATION:</strong> Pneumatic Autoignition™ represents one
+                theoretical approach to fuel ignition that may optionally be used within the modular combustion
+                architecture. It is not a required component of the system and may or may not be employed depending on
+                combustion chamber design choices and fuel type selections.</p>
+
+            <p><strong>Theoretical Definition:</strong> Pneumatic Autoignition™ describes the theoretical spontaneous
+                ignition of a fuel-air mixture triggered by rapid pneumatic compression using externally-supplied,
+                pre-compressed air. The theoretical mechanism involves the physical compression of a low-pressure
+                homogeneous fuel-air mixture by high-pressure compressed air (supplied from an external compressor
+                system) causing the fuel to theoretically auto-ignite without requiring spark plugs, glow plugs, or
+                other electrical ignition aids.</p>
 
             <h3>Theoretical Characteristics of Pneumatic Autoignition (If Implemented):</h3>
             <ul>
-                <li><strong>Compression Source:</strong> High-pressure air originates externally (from a separate compressor) rather 
-                than from internal engine compression strokes</li>
-                <li><strong>Theoretical Ignition Trigger:</strong> The rapid pneumatic compression of the fuel-air mixture in the combustion chamber would theoretically initiate spontaneous combustion, similar to diesel engine auto-ignition but triggered by external air pressure rather 
-                than internal cylinder compression</li>
-                <li><strong>Fuel-Air Preparation:</strong> Fuel would be premixed at low pressure with ambient or slightly pressurized 
-                air, creating a homogeneous mixture before introduction to the high-pressure combustion chamber</li>
-                <li><strong>Optional Electrical Requirement:</strong> While pneumatic autoignition theory suggests electrical ignition aids would not be necessary, electrical spark assistance or glow plug ignition could optionally be employed for enhanced reliability or under specific operating conditions</li>
-                <li><strong>Thermodynamic Advantage (Theoretical):</strong> External compression would theoretically eliminate the parasitic losses of internal compression 
-                strokes, enabling higher compression ratios (25:1 to 50:1+) without detonation risk</li>
-                <li><strong>RPM Scalability (Theoretical):</strong> The non-oscillating geometry would theoretically permit continuous operation at 30,000+ RPM with 
-                appropriate bearing technology, supporting uninterrupted combustion at high speeds</li>
+                <li><strong>Compression Source:</strong> High-pressure air originates externally (from a separate
+                    compressor) rather
+                    than from internal engine compression strokes</li>
+                <li><strong>Theoretical Ignition Trigger:</strong> The rapid pneumatic compression of the fuel-air
+                    mixture in the combustion chamber would theoretically initiate spontaneous combustion, similar to
+                    diesel engine auto-ignition but triggered by external air pressure rather
+                    than internal cylinder compression</li>
+                <li><strong>Fuel-Air Preparation:</strong> Fuel would be premixed at low pressure with ambient or
+                    slightly pressurized
+                    air, creating a homogeneous mixture before introduction to the high-pressure combustion chamber</li>
+                <li><strong>Optional Electrical Requirement:</strong> While pneumatic autoignition theory suggests
+                    electrical ignition aids would not be necessary, electrical spark assistance or glow plug ignition
+                    could optionally be employed for enhanced reliability or under specific operating conditions</li>
+                <li><strong>Thermodynamic Advantage (Theoretical):</strong> External compression would theoretically
+                    eliminate the parasitic losses of internal compression
+                    strokes, enabling higher compression ratios (25:1 to 50:1+) without detonation risk</li>
+                <li><strong>RPM Scalability (Theoretical):</strong> The non-oscillating geometry would theoretically
+                    permit continuous operation at 30,000+ RPM with
+                    appropriate bearing technology, supporting uninterrupted combustion at high speeds</li>
             </ul>
 
             <div class="highlight-box">
-                <strong>PRIOR ART CLAIM - THEORETICAL CONCEPT:</strong> This disclosure establishes "Pneumatic Autoignition™" as a coined technical term 
-                describing this theoretical combustion mechanism. The concept is placed into the public domain for academic and practical exploration. Any future 
-                use of this term or substantially similar descriptions of externally-compressed air triggering fuel auto-ignition should 
-                be considered derivative of this prior art disclosure. However, this disclosure makes no representation regarding whether pneumatic autoignition 
-                will function as theoretically described in practical engine implementations, or whether it will be employed in any given combustion chamber architecture.
+                <strong>PRIOR ART CLAIM - THEORETICAL CONCEPT:</strong> This disclosure establishes "Pneumatic
+                Autoignition™" as a coined technical term
+                describing this theoretical combustion mechanism. The concept is placed into the public domain for
+                academic and practical exploration. Any future
+                use of this term or substantially similar descriptions of externally-compressed air triggering fuel
+                auto-ignition should
+                be considered derivative of this prior art disclosure. However, this disclosure makes no representation
+                regarding whether pneumatic autoignition
+                will function as theoretically described in practical engine implementations, or whether it will be
+                employed in any given combustion chamber architecture.
             </div>
         </div>
 
@@ -277,42 +431,60 @@
 
             <h3>7.1 External Compression Subsystem Operation (Two-Stage System)</h3>
             <ol>
-                <li><strong>Compression Cycle:</strong> The external compressor (e.g., two-stage reciprocating piston or rotary screw) 
-                compresses intake air to the target compression ratio (e.g., 25:1)</li>
+                <li><strong>Compression Cycle:</strong> The external compressor (e.g., two-stage reciprocating piston or
+                    rotary screw)
+                    compresses intake air to the target compression ratio (e.g., 25:1)</li>
                 <li><strong>Storage:</strong> Compressed air is delivered to and stored in a pressure tank or vat</li>
-                <li><strong>Pressure Regulation:</strong> A regulator or pressure control valve maintains the correct pressure and flow 
-                rate to the combustion chamber injection points</li>
-                <li><strong>Continuous Supply:</strong> The compressor operates continuously or on-demand to maintain pressure in the 
-                storage tank</li>
+                <li><strong>Pressure Regulation:</strong> A regulator or pressure control valve maintains the correct
+                    pressure and flow
+                    rate to the combustion chamber injection points</li>
+                <li><strong>Continuous Supply:</strong> The compressor operates continuously or on-demand to maintain
+                    pressure in the
+                    storage tank</li>
             </ol>
 
             <h3>7.2 Combustion Subsystem Operation (Continuous Burn)</h3>
             <ol>
-                <li><strong>Furnace Combustion:</strong> The furnace combustion chamber maintains a continuous, sustained burn of fuel with high-pressure, high-temperature environment</li>
-                <li><strong>Steady Fuel Supply:</strong> Fuel is continuously supplied to the furnace at controlled rates optimized for complete combustion</li>
-                <li><strong>High-Pressure Air Supply:</strong> High-pressure air from the external compressor (at target compression ratio of 25:1 or 30:1) continuously feeds the furnace combustion process</li>
-                <li><strong>Continuous Ignition:</strong> The sustained high-temperature furnace environment maintains continuous combustion of supplied fuel without requiring discrete ignition events</li>
-                <li><strong>Sustained Flame:</strong> An uninterrupted, persistent flame is maintained throughout engine operation, ensuring complete fuel oxidation</li>
-                <li><strong>Consistent Pressure Output:</strong> High-pressure, high-temperature combustion gases are continuously produced and flow steadily into the rotary turbine expansion system</li>
-                <li><strong>Rotor Advancement:</strong> The continuous stream of expanding combustion gases drives the rotor forward in smooth, turbine-like motion without discrete power pulses</li>
+                <li><strong>Furnace Combustion:</strong> The furnace combustion chamber maintains a continuous,
+                    sustained burn of fuel with high-pressure, high-temperature environment</li>
+                <li><strong>Steady Fuel Supply:</strong> Fuel is continuously supplied to the furnace at controlled
+                    rates optimized for complete combustion</li>
+                <li><strong>High-Pressure Air Supply:</strong> High-pressure air from the external compressor (at target
+                    compression ratio of 25:1 or 30:1) continuously feeds the furnace combustion process</li>
+                <li><strong>Continuous Ignition:</strong> The sustained high-temperature furnace environment maintains
+                    continuous combustion of supplied fuel without requiring discrete ignition events</li>
+                <li><strong>Sustained Flame:</strong> An uninterrupted, persistent flame is maintained throughout engine
+                    operation, ensuring complete fuel oxidation</li>
+                <li><strong>Consistent Pressure Output:</strong> High-pressure, high-temperature combustion gases are
+                    continuously produced and flow steadily into the rotary turbine expansion system</li>
+                <li><strong>Rotor Advancement:</strong> The continuous stream of expanding combustion gases drives the
+                    rotor forward in smooth, turbine-like motion without discrete power pulses</li>
             </ol>
 
             <h3>7.3 Expansion Subsystem Operation (Rotary Turbine)</h3>
             <ol>
-                <li><strong>Cylinder-Port Alignment:</strong> As the rotor continues rotating, combustion chamber sections (cylinders) 
-                sequentially align with expansion ports</li>
-                <li><strong>Progressive Gas Expansion:</strong> High-pressure combustion gases flow from the combustion chamber into 
-                aligned expansion cylinders or ports</li>
-                <li><strong>Staged Energy Conversion:</strong> Pressure differentials are progressively converted into rotational 
-                mechanical energy as cylinders align in sequence</li>
-                <li><strong>Minimal Air Movement:</strong> Sequential alignment ensures gradual, efficient expansion with minimal 
-                turbulent gas flow or wasted motion</li>
-                <li><strong>Exhaust Vent System:</strong> When a combustion chamber is not aligned with an expansion port, residual 
-                combustion gases and pressure must be safely vented. A series of exhaust vents positioned around the casing wall allow 
-                combustion products to exit as the rotor rotates into non-aligned positions</li>
-                <li><strong>Exhaust:</strong> Combustion products exit through the final expansion port as the rotor completes its cycle</li>
-                <li><strong>Cycle Continuation:</strong> The rotor, driven by accumulated energy from multiple combustion events, continues 
-                rotating and aligns with the next fuel injection point</li>
+                <li><strong>Cylinder-Port Alignment:</strong> As the rotor continues rotating, combustion chamber
+                    sections (cylinders)
+                    sequentially align with expansion ports</li>
+                <li><strong>Progressive Gas Expansion:</strong> High-pressure combustion gases flow from the combustion
+                    chamber into
+                    aligned expansion cylinders or ports</li>
+                <li><strong>Staged Energy Conversion:</strong> Pressure differentials are progressively converted into
+                    rotational
+                    mechanical energy as cylinders align in sequence</li>
+                <li><strong>Minimal Air Movement:</strong> Sequential alignment ensures gradual, efficient expansion
+                    with minimal
+                    turbulent gas flow or wasted motion</li>
+                <li><strong>Exhaust Vent System:</strong> When a combustion chamber is not aligned with an expansion
+                    port, residual
+                    combustion gases and pressure must be safely vented. A series of exhaust vents positioned around the
+                    casing wall allow
+                    combustion products to exit as the rotor rotates into non-aligned positions</li>
+                <li><strong>Exhaust:</strong> Combustion products exit through the final expansion port as the rotor
+                    completes its cycle</li>
+                <li><strong>Cycle Continuation:</strong> The rotor, driven by accumulated energy from multiple
+                    combustion events, continues
+                    rotating and aligns with the next fuel injection point</li>
             </ol>
         </div>
 
@@ -320,31 +492,39 @@
             <h2>8. KEY PERFORMANCE CHARACTERISTICS</h2>
 
             <h3>8.1 Elimination of Parasitic Compression Losses</h3>
-            <p>Conventional reciprocating engines waste 20-30% of total engine output during the compression stroke. This system eliminates 
-            that loss entirely by using external compression:</p>
+            <p>Conventional reciprocating engines waste 20-30% of total engine output during the compression stroke.
+                This system eliminates
+                that loss entirely by using external compression:</p>
             <ul>
                 <li>Pre-compressed air is supplied externally at the optimal ratio</li>
                 <li>The combustion engine operates exclusively in "power mode"</li>
                 <li>Every cycle produces power rather than wasting energy on internal compression</li>
-                <li>This architectural advantage translates to 20-30% higher power output for the same fuel consumption</li>
+                <li>This architectural advantage translates to 20-30% higher power output for the same fuel consumption
+                </li>
             </ul>
 
             <h3>8.2 Continuous Energy Addition vs. Cyclical Power</h3>
-            <p>Traditional piston engines deliver power only during the combustion stroke. The remaining strokes (intake, compression, 
-            exhaust) consume energy stored in the flywheel. This system delivers continuous, uninterrupted energy through sustained furnace-based combustion:</p>
+            <p>Traditional piston engines deliver power only during the combustion stroke. The remaining strokes
+                (intake, compression,
+                exhaust) consume energy stored in the flywheel. This system delivers continuous, uninterrupted energy
+                through sustained furnace-based combustion:</p>
             <ul>
                 <li>Furnace maintains constant, uninterrupted burn throughout engine operation</li>
-                <li>Steady stream of high-pressure, high-temperature combustion gases drives the rotary turbine continuously</li>
+                <li>Steady stream of high-pressure, high-temperature combustion gases drives the rotary turbine
+                    continuously</li>
                 <li>Energy is added continuously without cyclical peaks and valleys</li>
                 <li>Torque delivery is smooth and consistent across the entire RPM range</li>
             </ul>
 
             <h3>8.3 Direct-Drive Capability and Low RPM Torque</h3>
-            <p>The continuous furnace-based combustion design delivers steady, consistent torque at extremely low RPM, a characteristic unique to this architecture:</p>
+            <p>The continuous furnace-based combustion design delivers steady, consistent torque at extremely low RPM, a
+                characteristic unique to this architecture:</p>
             <ul>
                 <li>Continuous furnace combustion provides steady pressure output even at low rotational speeds</li>
-                <li>Maximum torque is available at low speeds, eliminating the need for complex multi-speed transmissions</li>
-                <li>The engine can directly drive loads without transmission losses (estimated 10-15% efficiency gain)</li>
+                <li>Maximum torque is available at low speeds, eliminating the need for complex multi-speed
+                    transmissions</li>
+                <li>The engine can directly drive loads without transmission losses (estimated 10-15% efficiency gain)
+                </li>
                 <li>Heavy loads (pumps, compressors, propellers) can be cranked directly from standstill</li>
             </ul>
 
@@ -354,7 +534,8 @@
                 <li><strong>Gasoline:</strong> 12:1-15:1 compression ratio</li>
                 <li><strong>Diesel:</strong> 25:1-30:1 compression ratio</li>
                 <li><strong>Jet Fuel/Kerosene:</strong> 18:1-22:1 compression ratio</li>
-                <li><strong>Hydrogen:</strong> 40:1-50:1 compression ratio (safe from detonation due to external compression)</li>
+                <li><strong>Hydrogen:</strong> 40:1-50:1 compression ratio (safe from detonation due to external
+                    compression)</li>
                 <li>Each fuel type can operate at its optimal compression ratio without mechanical compromise</li>
             </ul>
         </div>
@@ -367,104 +548,171 @@
             <ul>
                 <li>High-pressure compressed air supply passages must maintain perfect, zero-leakage seals</li>
                 <li>Any loss of compressed air represents a direct loss of combustion pressure and power output</li>
-                <li>Uses precision dynamic face seals (labyrinth or mechanical seals) or redundant O-ring assemblies</li>
-                <li>Pressure tank, regulator valve, injection manifold, and all high-pressure air passages must be engineered for zero-loss 
-                operation</li>
+                <li>Uses precision dynamic face seals (labyrinth or mechanical seals) or redundant O-ring assemblies
+                </li>
+                <li>Pressure tank, regulator valve, injection manifold, and all high-pressure air passages must be
+                    engineered for zero-loss
+                    operation</li>
             </ul>
 
             <h3>9.2 Combustion-Side Sealing (Narrow Tolerance Sufficient)</h3>
             <ul>
-                <li>Combustion chamber walls, rotor sealing surfaces, and expansion ports use narrow clearance tolerances (micrometers to 
-                sub-millimeters)</li>
-                <li>Rolling contact elements (precision rollers) positioned along casing walls maintain sealing with minimal friction</li>
+                <li>Combustion chamber walls, rotor sealing surfaces, and expansion ports use narrow clearance
+                    tolerances (micrometers to
+                    sub-millimeters)</li>
+                <li>Rolling contact elements (precision rollers) positioned along casing walls maintain sealing with
+                    minimal friction</li>
                 <li>Small, predictable leakage between combustion chambers is acceptable and managed through design</li>
-                <li>The continuously-generated combustion pressure means minor leakage does not compromise performance</li>
-                <li>Manufacturing simplification: combustion-side components do not require hermetic sealing specifications</li>
+                <li>The continuously-generated combustion pressure means minor leakage does not compromise performance
+                </li>
+                <li>Manufacturing simplification: combustion-side components do not require hermetic sealing
+                    specifications</li>
             </ul>
 
             <h3>9.3 System Impact</h3>
-            <p><strong>Critical Design Insight:</strong> Perfect sealing is only necessary where external high-pressure air is supplied. 
-            The combustion side, where continuous ignition generates pressure internally, only requires narrow manufacturing tolerances. 
-            This distinction dramatically simplifies the engine's design and reduces manufacturing requirements while maintaining full 
-            performance targets.</p>
+            <p><strong>Critical Design Insight:</strong> Perfect sealing is only necessary where external high-pressure
+                air is supplied.
+                The combustion side, where continuous ignition generates pressure internally, only requires narrow
+                manufacturing tolerances.
+                This distinction dramatically simplifies the engine's design and reduces manufacturing requirements
+                while maintaining full
+                performance targets.</p>
         </div>
 
         <div class="section">
             <h2>10. THERMAL MANAGEMENT AND ENERGY RECOVERY</h2>
-            <p>The high compression ratios (25:1 to 40:1+) and sustained furnace combustion of this engine generate substantial thermal energy. Rather than viewing this heat as waste requiring dissipation, the compartmentalized architecture enables sophisticated thermal management and energy recovery systems that convert waste heat into additional useful power output.</p>
+            <p>The high compression ratios (25:1 to 40:1+) and sustained furnace combustion of this engine generate
+                substantial thermal energy. Rather than viewing this heat as waste requiring dissipation, the
+                compartmentalized architecture enables sophisticated thermal management and energy recovery systems that
+                convert waste heat into additional useful power output.</p>
 
             <h3>10.1 Waste Heat Recovery Through Steam Generation</h3>
-            <p><strong>Steam-Based Energy Recovery System:</strong> The compartmentalized design permits integration of a steam-based energy recovery cycle that captures exhaust and cooling system heat to generate high-pressure steam, which drives a secondary steam turbine for additional power generation. This represents a significant efficiency advantage unavailable in conventional engine architectures:</p>
+            <p><strong>Steam-Based Energy Recovery System:</strong> The compartmentalized design permits integration of
+                a steam-based energy recovery cycle that captures exhaust and cooling system heat to generate
+                high-pressure steam, which drives a secondary steam turbine for additional power generation. This
+                represents a significant efficiency advantage unavailable in conventional engine architectures:</p>
             <ul>
-                <li><strong>Exhaust Heat Recovery:</strong> High-temperature combustion exhaust gases (typically 400-600°C depending on combustion chamber design) pass through a heat exchanger where they transfer thermal energy to water, generating steam</li>
-                <li><strong>Cooling System Heat Integration:</strong> Engine cooling system heat (normally rejected to ambient through radiators) is recovered and fed into the steam generation process, recovering thermal energy that would otherwise be wasted</li>
-                <li><strong>Steam Generation:</strong> Recovered heat generates high-pressure, high-temperature steam that drives a dedicated steam turbine mechanically coupled to the output shaft or independently configured</li>
-                <li><strong>Combined Cycle Efficiency:</strong> The steam turbine extracts additional mechanical energy from waste heat, achieving combined-cycle efficiency characteristics similar to modern power plants (45-55% overall thermal efficiency vs. 30-35% for conventional engines)</li>
-                <li><strong>Modular Integration:</strong> Due to the compartmentalized architecture, steam recovery systems can be added, removed, or upgraded independently without requiring fundamental engine redesign</li>
+                <li><strong>Exhaust Heat Recovery:</strong> High-temperature combustion exhaust gases (typically
+                    400-600°C depending on combustion chamber design) pass through a heat exchanger where they transfer
+                    thermal energy to water, generating steam</li>
+                <li><strong>Cooling System Heat Integration:</strong> Engine cooling system heat (normally rejected to
+                    ambient through radiators) is recovered and fed into the steam generation process, recovering
+                    thermal energy that would otherwise be wasted</li>
+                <li><strong>Steam Generation:</strong> Recovered heat generates high-pressure, high-temperature steam
+                    that drives a dedicated steam turbine mechanically coupled to the output shaft or independently
+                    configured</li>
+                <li><strong>Combined Cycle Efficiency:</strong> The steam turbine extracts additional mechanical energy
+                    from waste heat, achieving combined-cycle efficiency characteristics similar to modern power plants
+                    (45-55% overall thermal efficiency vs. 30-35% for conventional engines)</li>
+                <li><strong>Modular Integration:</strong> Due to the compartmentalized architecture, steam recovery
+                    systems can be added, removed, or upgraded independently without requiring fundamental engine
+                    redesign</li>
             </ul>
 
             <h3>10.2 Steam Turbine Architecture Options</h3>
-            <p>The steam-based energy recovery system can be implemented in multiple configurations depending on application requirements:</p>
+            <p>The steam-based energy recovery system can be implemented in multiple configurations depending on
+                application requirements:</p>
             <ul>
-                <li><strong>Parallel Configuration:</strong> Steam turbine operates in parallel with the main rotary turbine, both driving the output shaft through a common coupling mechanism, doubling available power output from recovered heat</li>
-                <li><strong>Series Configuration:</strong> Exhaust gases from the main turbine expansion are directed through a steam generator before final exhaust venting, then steam drives a secondary turbine in series</li>
-                <li><strong>Independent Generator Configuration:</strong> Steam turbine drives a dedicated electrical generator for hybrid power output (mechanical + electrical), useful for transportation and portable power applications</li>
-                <li><strong>Variable Pressure Steam System:</strong> Steam pressure can be modulated based on operating conditions and heat availability, enabling optimal efficiency across varying load profiles</li>
+                <li><strong>Parallel Configuration:</strong> Steam turbine operates in parallel with the main rotary
+                    turbine, both driving the output shaft through a common coupling mechanism, doubling available power
+                    output from recovered heat</li>
+                <li><strong>Series Configuration:</strong> Exhaust gases from the main turbine expansion are directed
+                    through a steam generator before final exhaust venting, then steam drives a secondary turbine in
+                    series</li>
+                <li><strong>Independent Generator Configuration:</strong> Steam turbine drives a dedicated electrical
+                    generator for hybrid power output (mechanical + electrical), useful for transportation and portable
+                    power applications</li>
+                <li><strong>Variable Pressure Steam System:</strong> Steam pressure can be modulated based on operating
+                    conditions and heat availability, enabling optimal efficiency across varying load profiles</li>
             </ul>
 
             <h3>10.3 Cooling System Design with Thermal Recovery</h3>
-            <p>Advanced cooling systems maintain safe component temperatures while maximizing heat recovery for steam generation:</p>
+            <p>Advanced cooling systems maintain safe component temperatures while maximizing heat recovery for steam
+                generation:</p>
             <ul>
-                <li><strong>Primary Cooling Circuit:</strong> Liquid cooling loops circulate coolant through engine block, rotor bearings, and thermal management passages, maintaining component temperatures in safe ranges (typically 80-110°C for optimal operation)</li>
-                <li><strong>Secondary Heat Recovery Circuit:</strong> Primary cooling circuit heat is transferred to a secondary circuit that feeds into the steam generator, recovering thermal energy before final rejection to ambient</li>
-                <li><strong>Thermostat Control:</strong> Variable coolant flow thermostats maintain engine temperature setpoints while allowing maximum heat recovery when steam system is operational</li>
-                <li><strong>Redundant Cooling Paths:</strong> Multiple cooling system designs can be employed (liquid cooling, air cooling, evaporative cooling, or hybrid approaches) with steam recovery integrated into each approach</li>
+                <li><strong>Primary Cooling Circuit:</strong> Liquid cooling loops circulate coolant through engine
+                    block, rotor bearings, and thermal management passages, maintaining component temperatures in safe
+                    ranges (typically 80-110°C for optimal operation)</li>
+                <li><strong>Secondary Heat Recovery Circuit:</strong> Primary cooling circuit heat is transferred to a
+                    secondary circuit that feeds into the steam generator, recovering thermal energy before final
+                    rejection to ambient</li>
+                <li><strong>Thermostat Control:</strong> Variable coolant flow thermostats maintain engine temperature
+                    setpoints while allowing maximum heat recovery when steam system is operational</li>
+                <li><strong>Redundant Cooling Paths:</strong> Multiple cooling system designs can be employed (liquid
+                    cooling, air cooling, evaporative cooling, or hybrid approaches) with steam recovery integrated into
+                    each approach</li>
             </ul>
 
             <h3>10.4 Thermal Efficiency Enhancement</h3>
-            <p><strong>Overall System Efficiency:</strong> The integration of steam-based energy recovery fundamentally improves thermal efficiency:</p>
+            <p><strong>Overall System Efficiency:</strong> The integration of steam-based energy recovery fundamentally
+                improves thermal efficiency:</p>
             <ul>
-                <li><strong>Base Engine Efficiency:</strong> 35-40% thermal efficiency from compressed-air combustion without internal compression losses</li>
-                <li><strong>Waste Heat Recovery Addition:</strong> Steam turbine extracts additional 8-15% efficiency from exhaust and cooling system heat</li>
-                <li><strong>Combined Cycle Result:</strong> Overall thermal efficiency of 43-55%, comparable to advanced natural gas combined-cycle power plants and significantly superior to conventional piston engines (25-35%)</li>
-                <li><strong>Fuel Consumption Reduction:</strong> Same power output achievable with 20-35% less fuel consumption compared to conventional engines</li>
-                <li><strong>Operating Cost Reduction:</strong> Reduced fuel consumption directly translates to lower operating costs, particularly significant for continuous-duty applications (locomotives, ships, industrial generators)</li>
+                <li><strong>Base Engine Efficiency:</strong> 35-40% thermal efficiency from compressed-air combustion
+                    without internal compression losses</li>
+                <li><strong>Waste Heat Recovery Addition:</strong> Steam turbine extracts additional 8-15% efficiency
+                    from exhaust and cooling system heat</li>
+                <li><strong>Combined Cycle Result:</strong> Overall thermal efficiency of 43-55%, comparable to advanced
+                    natural gas combined-cycle power plants and significantly superior to conventional piston engines
+                    (25-35%)</li>
+                <li><strong>Fuel Consumption Reduction:</strong> Same power output achievable with 20-35% less fuel
+                    consumption compared to conventional engines</li>
+                <li><strong>Operating Cost Reduction:</strong> Reduced fuel consumption directly translates to lower
+                    operating costs, particularly significant for continuous-duty applications (locomotives, ships,
+                    industrial generators)</li>
             </ul>
 
             <h3>10.5 Auxiliary Cooling Systems</h3>
-            <p>In addition to primary thermal management and steam recovery, supplementary cooling technologies can be employed:</p>
+            <p>In addition to primary thermal management and steam recovery, supplementary cooling technologies can be
+                employed:</p>
             <ul>
-                <li><strong>Radiator Systems:</strong> Traditional or high-efficiency radiators reject excess heat to ambient when steam generation is insufficient or when operating below optimal steam generation temperature</li>
-                <li><strong>Fan-Assisted Cooling:</strong> Variable-speed cooling fans modulate airflow based on engine temperature, optimizing cooling efficiency and reducing parasitic losses</li>
-                <li><strong>Evaporative Cooling:</strong> Evaporative cooling systems can supplement liquid cooling in dry climates, reducing cooling system load and improving overall efficiency</li>
-                <li><strong>Thermoelectric Cooling (Optional):</strong> Advanced thermoelectric systems can selectively cool critical components while recovering electrical power from thermal gradients</li>
+                <li><strong>Radiator Systems:</strong> Traditional or high-efficiency radiators reject excess heat to
+                    ambient when steam generation is insufficient or when operating below optimal steam generation
+                    temperature</li>
+                <li><strong>Fan-Assisted Cooling:</strong> Variable-speed cooling fans modulate airflow based on engine
+                    temperature, optimizing cooling efficiency and reducing parasitic losses</li>
+                <li><strong>Evaporative Cooling:</strong> Evaporative cooling systems can supplement liquid cooling in
+                    dry climates, reducing cooling system load and improving overall efficiency</li>
+                <li><strong>Thermoelectric Cooling (Optional):</strong> Advanced thermoelectric systems can selectively
+                    cool critical components while recovering electrical power from thermal gradients</li>
             </ul>
 
             <h3>10.6 Temperature Monitoring and Control</h3>
             <p>Sophisticated thermal management requires robust monitoring and control systems:</p>
             <ul>
-                <li><strong>Real-Time Temperature Sensors:</strong> Multiple temperature sensors monitor combustion chamber, rotor bearings, steam generator inlet/outlet, and coolant temperatures throughout the system</li>
-                <li><strong>Adaptive Control Logic:</strong> Microprocessor-based control systems adjust fuel flow, coolant flow, steam pressure, and fan operation based on temperature feedback and operating conditions</li>
-                <li><strong>Safety Interlocks:</strong> Automatic shutdown or power reduction triggered if any component approaches unsafe temperature limits</li>
-                <li><strong>Predictive Thermal Management:</strong> Advanced controllers anticipate thermal changes based on load and operating history, optimizing efficiency across diverse operating profiles</li>
+                <li><strong>Real-Time Temperature Sensors:</strong> Multiple temperature sensors monitor combustion
+                    chamber, rotor bearings, steam generator inlet/outlet, and coolant temperatures throughout the
+                    system</li>
+                <li><strong>Adaptive Control Logic:</strong> Microprocessor-based control systems adjust fuel flow,
+                    coolant flow, steam pressure, and fan operation based on temperature feedback and operating
+                    conditions</li>
+                <li><strong>Safety Interlocks:</strong> Automatic shutdown or power reduction triggered if any component
+                    approaches unsafe temperature limits</li>
+                <li><strong>Predictive Thermal Management:</strong> Advanced controllers anticipate thermal changes
+                    based on load and operating history, optimizing efficiency across diverse operating profiles</li>
             </ul>
         </div>
 
         <div class="section">
             <h2>11. LUBRICATION SYSTEM SEPARATION</h2>
-            <p>A critical design advantage is the complete separation of combustion-exposed parts from oil-lubricated bearing and mechanical 
-            surfaces:</p>
+            <p>A critical design advantage is the complete separation of combustion-exposed parts from oil-lubricated
+                bearing and mechanical
+                surfaces:</p>
             <ul>
-                <li><strong>Combustion Chamber Isolation:</strong> Rotor combustion-facing surfaces remain clean and uncontaminated by 
-                lubrication residue, preventing oil-fuel interaction and sludge formation</li>
-                <li><strong>Bearing Lubrication Only:</strong> Oil circulates only through the rotor's bearing journals, mechanical linkages, 
-                and support structures—never entering the combustion chambers</li>
-                <li><strong>Extended Oil Life:</strong> Without combustion contamination, engine oil lasts significantly longer. Oil degradation 
-                from heat, soot, and acidic combustion products is eliminated</li>
-                <li><strong>Improved Combustion Efficiency:</strong> Combustion chamber walls remain clean and uncoated by oil residue, 
-                preventing fouling and maintaining optimal heat transfer</li>
-                <li><strong>Simplified Oil Management:</strong> Combustion space can be separately cooled without overheating engine oil, and 
-                bearing lubrication can be optimized independently of combustion thermal requirements</li>
+                <li><strong>Combustion Chamber Isolation:</strong> Rotor combustion-facing surfaces remain clean and
+                    uncontaminated by
+                    lubrication residue, preventing oil-fuel interaction and sludge formation</li>
+                <li><strong>Bearing Lubrication Only:</strong> Oil circulates only through the rotor's bearing journals,
+                    mechanical linkages,
+                    and support structures—never entering the combustion chambers</li>
+                <li><strong>Extended Oil Life:</strong> Without combustion contamination, engine oil lasts significantly
+                    longer. Oil degradation
+                    from heat, soot, and acidic combustion products is eliminated</li>
+                <li><strong>Improved Combustion Efficiency:</strong> Combustion chamber walls remain clean and uncoated
+                    by oil residue,
+                    preventing fouling and maintaining optimal heat transfer</li>
+                <li><strong>Simplified Oil Management:</strong> Combustion space can be separately cooled without
+                    overheating engine oil, and
+                    bearing lubrication can be optimized independently of combustion thermal requirements</li>
             </ul>
         </div>
 
@@ -473,122 +721,181 @@
 
             <h3>12.1 vs. Reciprocating Piston Engines</h3>
             <ul>
-                <li><strong>No Dead Zones:</strong> Turbine-rotary system rotates continuously; piston engines have dead zones where zero 
-                power is produced</li>
-                <li><strong>Continuous Combustion:</strong> Multiple simultaneous combustion events vs. single-cylinder, cyclical power 
-                delivery in piston engines</li>
+                <li><strong>No Dead Zones:</strong> Turbine-rotary system rotates continuously; piston engines have dead
+                    zones where zero
+                    power is produced</li>
+                <li><strong>Continuous Combustion:</strong> Multiple simultaneous combustion events vs. single-cylinder,
+                    cyclical power
+                    delivery in piston engines</li>
                 <li><strong>No Compression Stroke Loss:</strong> 20-30% energy advantage over piston engines</li>
-                <li><strong>Direct Drive Capability:</strong> Low-RPM torque eliminates transmission requirement and 10-15% transmission 
-                losses</li>
-                <li><strong>Fewer Moving Parts:</strong> Only the rotor moves; piston engines require pistons, connecting rods, crankshaft, 
-                valve train</li>
-                <li><strong>Simplified Sealing:</strong> Narrow tolerances sufficient on combustion side; piston engines require precision 
-                rings and rod bearings throughout</li>
-                <li><strong>Scalable Injection Points:</strong> Power increases linearly with additional injection points (3, 4, 6, 8+); 
-                piston engines limited by crankshaft mechanical constraints</li>
+                <li><strong>Direct Drive Capability:</strong> Low-RPM torque eliminates transmission requirement and
+                    10-15% transmission
+                    losses</li>
+                <li><strong>Fewer Moving Parts:</strong> Only the rotor moves; piston engines require pistons,
+                    connecting rods, crankshaft,
+                    valve train</li>
+                <li><strong>Simplified Sealing:</strong> Narrow tolerances sufficient on combustion side; piston engines
+                    require precision
+                    rings and rod bearings throughout</li>
+                <li><strong>Scalable Injection Points:</strong> Power increases linearly with additional injection
+                    points (3, 4, 6, 8+);
+                    piston engines limited by crankshaft mechanical constraints</li>
             </ul>
 
             <h3>12.2 vs. Traditional Rotary (Wankel) Engines</h3>
             <ul>
-                <li><strong>Stationary Combustion Chamber:</strong> Optimized for complete combustion vs. elongated, moving chamber in 
-                Wankel</li>
-                <li><strong>No Lubricant Burn:</strong> Oil does not enter combustion chamber, eliminating emission and efficiency penalties</li>
-                <li><strong>Superior Sealing:</strong> Narrow tolerance rolling contact vs. chronically leaking apex seals in Wankel</li>
-                <li><strong>External Compression:</strong> Eliminates compression ratio limitations inherent to Wankel's internal compression</li>
-                <li><strong>Lower Emissions:</strong> Large stationary chamber enables lean-burn operation and complete combustion</li>
-                <li><strong>Multi-Port Injection:</strong> Distributed injection vs. single intake point in traditional rotaries</li>
+                <li><strong>Stationary Combustion Chamber:</strong> Optimized for complete combustion vs. elongated,
+                    moving chamber in
+                    Wankel</li>
+                <li><strong>No Lubricant Burn:</strong> Oil does not enter combustion chamber, eliminating emission and
+                    efficiency penalties</li>
+                <li><strong>Superior Sealing:</strong> Narrow tolerance rolling contact vs. chronically leaking apex
+                    seals in Wankel</li>
+                <li><strong>External Compression:</strong> Eliminates compression ratio limitations inherent to Wankel's
+                    internal compression</li>
+                <li><strong>Lower Emissions:</strong> Large stationary chamber enables lean-burn operation and complete
+                    combustion</li>
+                <li><strong>Multi-Port Injection:</strong> Distributed injection vs. single intake point in traditional
+                    rotaries</li>
             </ul>
 
             <h3>12.3 vs. Electric Motors</h3>
             <ul>
-                <li><strong>Power Density:</strong> Turbine-rotary achieves 10-15 kW/kg vs. electric motors at 2-3 kW/kg</li>
-                <li><strong>Energy Density:</strong> Fuel provides 12 kWh/kg vs. batteries at 0.5-1 kWh/kg, enabling 10-20× longer flight 
-                duration</li>
+                <li><strong>Power Density:</strong> Turbine-rotary achieves 10-15 kW/kg vs. electric motors at 2-3 kW/kg
+                </li>
+                <li><strong>Energy Density:</strong> Fuel provides 12 kWh/kg vs. batteries at 0.5-1 kWh/kg, enabling
+                    10-20× longer flight
+                    duration</li>
                 <li><strong>Rapid Refueling:</strong> 5-minute refuel vs. 1-4 hours battery charge</li>
-                <li><strong>Extended Range:</strong> Multi-hour continuous operation vs. 1-3 hours for electric aircraft</li>
-                <li><strong>Multi-Fuel Flexibility:</strong> Operates on gasoline, diesel, jet fuel, hydrogen, biofuels vs. electric requiring 
-                specific power infrastructure</li>
+                <li><strong>Extended Range:</strong> Multi-hour continuous operation vs. 1-3 hours for electric aircraft
+                </li>
+                <li><strong>Multi-Fuel Flexibility:</strong> Operates on gasoline, diesel, jet fuel, hydrogen, biofuels
+                    vs. electric requiring
+                    specific power infrastructure</li>
             </ul>
         </div>
 
         <div class="section">
             <h2>13. APPLICATIONS AND MARKET OPPORTUNITIES</h2>
             <ul>
-                <li><strong>Freight Locomotives:</strong> Direct-drive alternative to diesel-electric systems; eliminates 50-60% electrical 
-                conversion losses</li>
-                <li><strong>Maritime Vessels:</strong> Large cargo ships and tankers could achieve significant fuel consumption and emissions 
-                reductions</li>
-                <li><strong>Regional Aircraft:</strong> 4-20 seat aircraft with superior range and payload vs. electric alternatives</li>
-                <li><strong>Heavy Industrial Equipment:</strong> Mining, construction, and industrial power generation</li>
+                <li><strong>Freight Locomotives:</strong> Direct-drive alternative to diesel-electric systems;
+                    eliminates 50-60% electrical
+                    conversion losses</li>
+                <li><strong>Maritime Vessels:</strong> Large cargo ships and tankers could achieve significant fuel
+                    consumption and emissions
+                    reductions</li>
+                <li><strong>Regional Aircraft:</strong> 4-20 seat aircraft with superior range and payload vs. electric
+                    alternatives</li>
+                <li><strong>Heavy Industrial Equipment:</strong> Mining, construction, and industrial power generation
+                </li>
                 <li><strong>Portable Power Systems:</strong> Remote location generators and emergency backup power</li>
-                <li><strong>Heavy-Duty Automotive:</strong> Class 8 trucks and buses where electric cannot match range and payload</li>
+                <li><strong>Heavy-Duty Automotive:</strong> Class 8 trucks and buses where electric cannot match range
+                    and payload</li>
             </ul>
         </div>
 
         <div class="prior-art">
             <h2>14. COMPREHENSIVE PRIOR ART CLAIM</h2>
-            <p>This disclosure places the following innovative concepts and system architectures into the public domain as prior art, 
-            establishing a comprehensive defensive publication against future patent claims:</p>
+            <p>This disclosure places the following innovative concepts and system architectures into the public domain
+                as prior art,
+                establishing a comprehensive defensive publication against future patent claims:</p>
 
             <h3>14.1 Architectural Innovations (Prior Art)</h3>
             <ul>
-                <li>The fundamental concept of separating air compression from combustion and expansion by using an external, independent 
-                compression system</li>
-                <li>The application of any compression technology to supply pre-compressed air to a combustion engine at a target compression 
-                ratio</li>
-                <li>The use of a pressure tank or vat to store and regulate high-pressure air for on-demand supply to a combustion chamber</li>
-                <li>The elimination of internal compression strokes from a combustion engine through use of external compression</li>
+                <li>The fundamental concept of separating air compression from combustion and expansion by using an
+                    external, independent
+                    compression system</li>
+                <li>The application of any compression technology to supply pre-compressed air to a combustion engine at
+                    a target compression
+                    ratio</li>
+                <li>The use of a pressure tank or vat to store and regulate high-pressure air for on-demand supply to a
+                    combustion chamber</li>
+                <li>The elimination of internal compression strokes from a combustion engine through use of external
+                    compression</li>
             </ul>
 
             <h3>14.2 Combustion System Innovations (Prior Art)</h3>
             <ul>
                 <li>A turbine-based (not piston-based) combustion engine architecture</li>
                 <li>A modular combustion chamber system featuring interchangeable combustion chamber designs</li>
-                <li>A rotary combustion system featuring multiple fuel-air injection points distributed around a rotating rotor (when used)</li>
-                <li>Sequential fuel-air injection where each injection point aligns with combustion chamber sections as the rotor rotates (when used)</li>
-                <li>Multiple sequential combustion events per single rotation, spanning multiple cylinder-sections, creating high-frequency 
-                power output (when applicable to combustion chamber design)</li>
+                <li>A rotary combustion system featuring multiple fuel-air injection points distributed around a
+                    rotating rotor (when used)</li>
+                <li>Sequential fuel-air injection where each injection point aligns with combustion chamber sections as
+                    the rotor rotates (when used)</li>
+                <li>Multiple sequential combustion events per single rotation, spanning multiple cylinder-sections,
+                    creating high-frequency
+                    power output (when applicable to combustion chamber design)</li>
                 <li>Fuel injection into pre-compressed air chambers without internal compression stroke losses</li>
-                <li>Theoretical combustion triggering mechanisms using externally-supplied, pre-compressed air (including the theoretical concept of pneumatic autoignition, optional and subject to practical verification)</li>
+                <li>Theoretical combustion triggering mechanisms using externally-supplied, pre-compressed air
+                    (including the theoretical concept of pneumatic autoignition, optional and subject to practical
+                    verification)</li>
             </ul>
 
             <h3>14.3 Expansion System Innovations (Prior Art)</h3>
             <ul>
                 <li>Staged expansion mechanism with sequential cylinder-to-expansion-port alignment</li>
-                <li>Progressive conversion of pressure differentials into mechanical energy through sequential chamber alignment</li>
-                <li>Minimization of air movement and parasitic losses through staged, low-turbulence expansion design</li>
+                <li>Progressive conversion of pressure differentials into mechanical energy through sequential chamber
+                    alignment</li>
+                <li>Minimization of air movement and parasitic losses through staged, low-turbulence expansion design
+                </li>
             </ul>
 
             <h3>14.4 System Performance Innovations (Prior Art)</h3>
             <ul>
                 <li>Target compression ratios of 25:1 or higher achieved through two-stage external compression</li>
                 <li>High power density through rapid pressure buildup using high-throughput compressors</li>
-                <li>Elimination of parasitic compression stroke losses inherent to conventional internal combustion engines</li>
+                <li>Elimination of parasitic compression stroke losses inherent to conventional internal combustion
+                    engines</li>
                 <li>Independent optimization of compression, combustion, and expansion subsystems</li>
                 <li>Direct-drive capability delivering torque at low RPM without transmission systems</li>
             </ul>
 
             <h3>14.5 Patent Protection Impact</h3>
-            <p><strong>DISCLAIMER AND LEGAL NOTICE:</strong> Any future patent applications attempting to claim these concepts, or substantial 
-            variations thereof (including but not limited to: separated compression architectures, modular combustion chamber designs, 
-            turbine-based combustion with external compression, theoretical combustion triggering mechanisms, staged expansion mechanisms, 
-            direct-drive rotary engines, or any combination of these elements) should be considered non-novel in light of this publication 
-            and the prior art it establishes. This disclosure is intended to place these innovations into the public domain in perpetuity, 
-            preventing monopolistic control through patent claims. Note that some concepts described herein (including pneumatic autoignition) 
-            are theoretical in nature and may not function as described in practical implementations, but their conceptual placement into 
-            prior art prevents patenting of substantially similar theoretical or practical approaches.</p>
+            <p><strong>DISCLAIMER AND LEGAL NOTICE:</strong> Any future patent applications attempting to claim these
+                concepts, or substantial
+                variations thereof (including but not limited to: separated compression architectures, modular
+                combustion chamber designs,
+                turbine-based combustion with external compression, theoretical combustion triggering mechanisms, staged
+                expansion mechanisms,
+                direct-drive rotary engines, or any combination of these elements) should be considered non-novel in
+                light of this publication
+                and the prior art it establishes. This disclosure is intended to place these innovations into the public
+                domain in perpetuity,
+                preventing monopolistic control through patent claims. Note that some concepts described herein
+                (including pneumatic autoignition)
+                are theoretical in nature and may not function as described in practical implementations, but their
+                conceptual placement into
+                prior art prevents patenting of substantially similar theoretical or practical approaches.</p>
         </div>
 
         <div class="conclusion">
             <h2>15. CONCLUSION</h2>
-            <p>This compartmentalized rotary-turbine engine system represents a fundamental paradigm shift in power generation design. By separating the compression function from the combustion and expansion functions, and by employing a modular, compartmentalized architecture, the system achieves superior efficiency, eliminates parasitic losses, and enables direct-drive operation at extremely low RPM—characteristics impossible with conventional piston or traditional rotary engine architectures.</p>
-            
-            <p><strong>Architectural Modularity as Core Innovation:</strong> The critical innovation is not any single component or combustion implementation, but rather the architectural separation and compartmentalized design that permits independent optimization of compression, combustion, and expansion stages. The modular nature of the system enables substitution of different combustion chamber implementations (including furnace-based, pneumatic autoignition, gas turbine combustion, or novel designs) without requiring fundamental redesign of the compression or expansion subsystems. This modularity represents the most significant architectural advance, enabling continuous innovation in combustion technology while preserving the core efficiency advantages.</p>
-            
-            <p>One exemplary combustion implementation is the furnace-based system described herein, which enables operation on diverse fuels including solid fuels such as coal and biomass. However, the architectural compartmentalization permits alternative combustion designs to be integrated and optimized independently.</p>
-            
-            <p>This disclosure places all described concepts—including the compartmentalized architecture, modular combustion flexibility, furnace-based implementation, and rotary turbine expansion—into the public domain as prior art, preventing future monopolistic control through patent claims. The innovations described herein are intended for the advancement of power generation technology and the public good.</p>
-            
+            <p>This compartmentalized rotary-turbine engine system represents a fundamental paradigm shift in power
+                generation design. By separating the compression function from the combustion and expansion functions,
+                and by employing a modular, compartmentalized architecture, the system achieves superior efficiency,
+                eliminates parasitic losses, and enables direct-drive operation at extremely low RPM—characteristics
+                impossible with conventional piston or traditional rotary engine architectures.</p>
+
+            <p><strong>Architectural Modularity as Core Innovation:</strong> The critical innovation is not any single
+                component or combustion implementation, but rather the architectural separation and compartmentalized
+                design that permits independent optimization of compression, combustion, and expansion stages. The
+                modular nature of the system enables substitution of different combustion chamber implementations
+                (including furnace-based, pneumatic autoignition, gas turbine combustion, or novel designs) without
+                requiring fundamental redesign of the compression or expansion subsystems. This modularity represents
+                the most significant architectural advance, enabling continuous innovation in combustion technology
+                while preserving the core efficiency advantages.</p>
+
+            <p>One exemplary combustion implementation is the furnace-based system described herein, which enables
+                operation on diverse fuels including solid fuels such as coal and biomass. However, the architectural
+                compartmentalization permits alternative combustion designs to be integrated and optimized
+                independently.</p>
+
+            <p>This disclosure places all described concepts—including the compartmentalized architecture, modular
+                combustion flexibility, furnace-based implementation, and rotary turbine expansion—into the public
+                domain as prior art, preventing future monopolistic control through patent claims. The innovations
+                described herein are intended for the advancement of power generation technology and the public good.
+            </p>
+
             <p><strong>Publication Date:</strong> January 3, 2026</p>
         </div>
 
