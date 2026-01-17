@@ -1,0 +1,52 @@
+[
+    {
+      "Medication": "Omeprazole",
+      "Crushable": "TRUE",
+      "Possible Action": "Add to Sig - Open and sprinkle, do not crush granules"
+    },
+    {
+      "Medication": "Pantoprazole",
+      "Crushable": "FALSE",
+      "Possible Action": "Switch To Omeprazole or Lansprazole"
+    },
+    {
+      "Medication": "Lansoprazole",
+      "Crushable": "TRUE",
+      "Possible Action": "Add to Sig - Open and sprinkle, do not crush granules; Special Authority Required"
+    },
+    {
+      "Medication": "Rabeprazole",
+      "Crushable": "FALSE",
+      "Possible Action": "Switch To Omeprazole or Lansprazole"
+    },
+    {
+      "Medication": "Ramipril",
+      "Crushable": "TRUE",
+      "Possible Action": ""
+    },
+    {
+      "Medication": "Venlafaxine",
+      "Crushable": "FALSE",
+      "Possible Action": "Switch to Fluoxetine Liquid"
+    },
+    {
+      "Medication": "Fluoxetine",
+      "Crushable": "FALSE",
+      "Possible Action": "Switch to Fluoxetine Liquid"
+    },
+    {
+      "Medication": "NifedipineXR",
+      "Crushable": "FALSE",
+      "Possible Action": "Switch to Amlodipine"
+    },
+    {
+      "Medication": "Amlodipine",
+      "Crushable": "TRUE",
+      "Possible Action": ""
+    },
+    {
+      "Medication": "Fluoxetine_Liquid",
+      "Crushable": "TRUE",
+      "Possible Action": ""
+    }
+  ]
