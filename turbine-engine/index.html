@@ -178,7 +178,10 @@
                                 Vehicles</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#section-6-4">6.4 Why This Design Overcomes These Failures</a>
+                            <a class="nav-link" href="#section-6-5">6.5 Fundamental Limitations of Jet Engines</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section-6-6">6.6 Why This Design Overcomes These Failures</a>
                         </li>
                     </ul>
                 </li>
@@ -851,8 +854,93 @@
             </div>
             <br>
 
-            <div id="section-6-4" class="sub-section">
-                <h3>6.4 Why This Modular Turbine Design Overcomes These Failures</h3>
+            <div id="section-6-5" class="sub-section">
+                <h3>6.5 Fundamental Limitations of Jet Engines</h3>
+                <br>
+                <strong>Safety: High-Pressure, High-Velocity Exhaust</strong>
+                <ul class="minimal-list">
+                    <li>Jet engine exhaust velocity typically 300+ m/s (extremely dangerous)</li>
+                    <li>Exhaust pressure can exceed 5-10 bar in modern turbofans</li>
+                    <li>High-velocity exhaust creates severe reaction forces and thrust vectors</li>
+                    <li>Rotor debris in failure scenarios becomes lethal projectiles</li>
+                    <li>Exhaust blast damages nearby structures, vehicles, and people</li>
+                    <li>Completely unsuitable for use on domestic streets or populated areas</li>
+                    <li>Requires expensive heavy shielding and deflector systems</li>
+                    <li>Environmental hazard: noise levels 100+ decibels at throttle</li>
+                    <li>Cannot be safely operated near residential areas or city centers</li>
+                </ul>
+                <br><br>
+                <strong>RPM Requirements and Inefficiency at Low Speeds</strong>
+                <ul class="minimal-list">
+                    <li>Jet turbines operate as reaction turbines dependent on blade velocity triangles</li>
+                    <li>Efficiency fundamentally tied to operating RPM</li>
+                    <li>Modern jet engines operate at 30,000-50,000+ RPM</li>
+                    <li>At startup (0 RPM), reaction turbines produce essentially zero torque</li>
+                    <li>Torque only increases significantly above 30% of rated speed</li>
+                    <li>Applications requiring high torque at low speed must use gearboxes</li>
+                    <li>Gearbox adds 10-20% efficiency loss, significant weight, cost, and mechanical complexity</li>
+                    <li>Gearboxes reduce reliability and increase maintenance requirements</li>
+                    <li>Shaft speed matching becomes critical engineering problem</li>
+                    <li>This creates fundamental incompatibility with low-speed torque applications</li>
+                </ul>
+                <br><br>
+                <strong>Non-Positive Displacement Operation and Uncontrolled Expansion</strong>
+                <ul class="minimal-list">
+                    <li>Jet engines use reaction turbines—NOT positive displacement devices</li>
+                    <li>Reaction turbines rely on fluid dynamic forces perpendicular to rotor blades</li>
+                    <li>Gas expansion process is emergent property of fluid dynamics—NOT mechanically predetermined</li>
+                    <li>Actual gas flow path cannot be controlled or optimized mathematically</li>
+                    <li>Secondary flows, shock formations, and vortices create unpredictable losses</li>
+                    <li>Expansion ratio dependent on blade geometry interpretation of flow</li>
+                    <li>Flow patterns change with operating conditions and flight envelope</li>
+                    <li>Off-design operation produces significant losses</li>
+                    <li>Isentropic efficiency can drop from ~90% at design to ~50% off-design</li>
+                    <li>Cannot be engineered for specific pressure drop ratios</li>
+                    <li>Multi-stage turbines attempt to solve this but remain fundamentally fluid-dynamic dependent</li>
+                </ul>
+                <br><br>
+                <strong>Lack of Mathematical Expansion Control</strong>
+                <ul class="minimal-list">
+                    <li>Jet turbines cannot mathematically control total expansion ratio</li>
+                    <li>Each turbine stage designed empirically based on CFD and test data</li>
+                    <li>Expansion characteristics not predetermined by geometry alone</li>
+                    <li>Cannot optimize each pressure drop stage independently</li>
+                    <li>Total thermodynamic efficiency constrained by reaction turbine physics</li>
+                    <li>Cannot achieve theoretical Brayton cycle efficiency due to inherent losses</li>
+                    <li>Real turbine efficiency typically 85-90%, vs. theoretical 95%+ for positive displacement</li>
+                    <li>Compression ratio constraints force compromise in system design</li>
+                    <li>Cannot scale same design across wide RPM range without efficiency penalty</li>
+                </ul>
+                <br><br>
+                <strong>Design Point Optimization vs. Real-World Operation</strong>
+                <ul class="minimal-list">
+                    <li>Jet engines optimized for single design point (cruise altitude/speed)</li>
+                    <li>Aircraft spend <1% of flight time at design point</li>
+                    <li>Takeoff, climb, descent all operate far from design conditions</li>
+                    <li>Efficiency drops significantly during these off-design operations</li>
+                    <li>Throttle variations require continuous compression and turbine adjustments</li>
+                    <li>Variable stator vanes and bleed valves add complexity and losses</li>
+                    <li>Cannot maintain high efficiency across operating envelope</li>
+                    <li>This limitation accepted for aircraft due to aerospace requirement for high altitude operation</li>
+                    <li>Unacceptable for ground-based applications requiring variable-load efficiency</li>
+                </ul>
+                <br><br>
+                <strong>Application Limitations</strong>
+                <ul class="minimal-list">
+                    <li>Jet engines designed specifically for aircraft and high-speed marine applications</li>
+                    <li>Optimized for altitude operation where low density and high speed are advantageous</li>
+                    <li>Poor torque characteristics unsuitable for ground vehicles</li>
+                    <li>Fuel consumption at low RPM/partial load extremely high</li>
+                    <li>Cannot operate efficiently in stop-and-go driving patterns</li>
+                    <li>High noise and vibration unsuitable for civilian transportation</li>
+                    <li>Complex fuel systems and controls require specialized maintenance</li>
+                    <li>Limited to military or experimental ground applications historically</li>
+                </ul>
+            </div>
+            <br>
+
+            <div id="section-6-6" class="sub-section">
+                <h3>6.6 Why This Modular Turbine Design Overcomes These Failures</h3>
                 <br>
                 Advantages Over Reciprocating Engines:
                 <ul class="minimal-list">
